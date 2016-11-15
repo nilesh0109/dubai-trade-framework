@@ -1,0 +1,400 @@
+/* SG
+# Timeline/Left
+
+This section is for the timeline of dubai trade evolution.
+```
+<div class="timeline-container">
+    <h3 class="timeline-title text-center">
+        <span>1995-1999</span>
+    </h3>
+    <div class="milestone-wrapper align-left">
+        <div class="milestone">
+            <h6 class="head">1995-1999</h6>
+            <ul class="timeline-list">
+                <li>Manifest submission throrough EDI Started (MDS)</li>
+                <li>Mirsal System is implemented by cutoms</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="../Res/images/dubai-trade-evolution/logo1.png">
+            </figure>
+        </div>
+    </div>
+    <div class="load-more text-center">
+        <a href="javascript:void(0)" class="load-more-btn"><i class="fa fa-plus-circle">  </i>Load More</a>
+    </div>
+</div>
+```
+*/
+
+/* SG
+# Timeline/Right
+
+```
+<div class="timeline-container">
+    <h3 class="timeline-title text-center">
+        <span>1995-1999</span>
+    </h3>
+    <div class="milestone-wrapper align-right">
+        <div class="milestone">
+            <h6 class="head">2000-2002</h6>
+            <ul class="timeline-list">
+                <li>E-Mirsal launched</li>
+                <li>MyJAFZA, Online portal for free zone is launched</li>
+                <li>MyDPA, Online portal is launched</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="../Res/images/dubai-trade-evolution/logo2.png">
+            </figure>
+        </div>
+    </div>
+   <div class="load-more text-center">
+        <a href="javascript:void(0)" class="load-more-btn"><i class="fa fa-plus-circle">  </i>Load More</a>
+    </div>
+</div>
+```
+*/
+
+/* SG
+# Timeline/no-load-more
+
+If all the milestone are loaded and no more children are left for lazy loading , add the class `has-no-more-children` on `timeline-container` 
+```
+<div class="timeline-container has-no-more-children">
+    <h3 class="timeline-title text-center">
+        <span>1995-1999</span>
+    </h3>
+    <div class="milestone-wrapper align-left">
+        <div class="milestone">
+            <h6 class="head">1995-1999</h6>
+            <ul class="timeline-list">
+                <li>Manifest submission throrough EDI Started (MDS)</li>
+                <li>Mirsal System is implemented by cutoms</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="../Res/images/dubai-trade-evolution/logo1.png">
+            </figure>
+        </div>
+    </div>
+
+    <h3 class="timeline-title text-center">
+        <span>2000-2002</span>
+    </h3>
+    <div class="milestone-wrapper align-right">
+        <div class="milestone">
+            <h6 class="head">2000-2002</h6>
+            <ul class="timeline-list">
+                <li>E-Mirsal launched</li>
+                <li>MyJAFZA, Online portal for free zone is launched</li>
+                <li>MyDPA, Online portal is launched</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="../Res/images/dubai-trade-evolution/logo2.png">
+            </figure>
+        </div>
+    </div>
+   <div class="load-more text-center">
+        <a href="javascript:void(0)" class="load-more-btn"><i class="fa fa-plus-circle">  </i>Load More</a>
+    </div>
+</div>
+```
+*/
+.timeline-container {
+    position: relative;
+    z-index: 1;
+    font-size: $font-14;
+
+    &:before {
+        content: " ";
+        z-index: -1;
+        position: absolute;
+
+        @include left(50%);
+
+        width: 2px;
+        height: 100%;
+
+        @include margin-left(-1px);
+
+        background: #dc2e27;
+    }
+
+    .timeline-title {
+        > span {
+            @include padding($space-10);
+
+            display: inline-block;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #dc2e27;
+            font-size: $font-12;
+        }
+    }
+
+    .milestone-wrapper {
+        position: relative;
+
+        &:before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 74px;
+
+            @include left(50%);
+
+            width: 12px;
+            height: 12px;
+
+            @include margin-left(-6px);
+
+            border: 3px solid #fff;
+            border-radius: 50%;
+            background: #dc2e27;
+
+            @media (max-width: $screen-xs-max) {
+                content: none;
+            }
+        }
+
+        .milestone {
+            @include padding-top($space-20);
+
+            @include padding-bottom($space-30);
+
+            @include padding-left($space-20);
+
+            @include padding-right($space-20);
+
+            display: inline-block;
+            position: relative;
+            margin: 40px 0;
+            max-width: 45%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            text-align: $text-left;
+            background-color: #f8f8f8;
+
+            @media (max-width: $screen-xs-max) {
+                max-width: 100%;
+                width: 80%;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 25px;
+
+                @include left(100%);
+
+                width: 0;
+                height: 0;
+                border-top: 14px solid transparent;
+                border-bottom: 14px solid transparent;
+
+                @include border-left(28px, #ccc);
+
+                @media (max-width: $screen-xs-max) {
+                    content: none;
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 26px;
+
+                @include left(100%);
+
+                width: 0;
+                height: 0;
+                border-top: 13px solid transparent;
+                border-bottom: 13px solid transparent;
+
+                @include border-left(26px, #f8f8f8);
+
+                @media (max-width: $screen-xs-max) {
+                    content: none;
+                }
+            }
+
+            .head {
+                font-size: 1.2em;
+                color: #dc2e27;
+                font-weight: bold;
+            }
+        }
+
+        &.align-left {
+            text-align: $text-right;
+
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+            }
+
+            .milestone {
+                @media (min-width: $screen-md-min) {
+                    @include margin-right(55%);
+                }
+
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    @include margin-right(60%);
+                }
+            }
+        }
+
+        &.align-right {
+            text-align: $text-left;
+
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+            }
+
+            .milestone {
+                &:before {
+                    @include right(100%);
+
+                    @include left(auto);
+
+                    @include left(initial);
+
+                    @include border-right(28px, #ccc);
+
+                    @include border-left(28px, transparent);
+                }
+
+                &:after {
+                    @include right(100%);
+
+                    @include left(auto);
+
+                    @include left(initial);
+
+                    @include border-right(26px, #f8f8f8);
+
+                    @include border-left(26px, transparent);
+                }
+
+                @media (min-width: $screen-md-min) {
+                    @include margin-left(55%);
+                }
+
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    @include margin-left(60%);
+                }
+            }
+        }
+    }
+
+    .timeline-list {
+        -webkit-padding-start: 20px;
+        -moz-padding-start: 20px;
+        padding-start: 20px;
+        list-style-type: none;
+
+        > li {
+            list-style-type: none;
+            margin: 10px 0;
+
+            &:before {
+                content: '\2022';
+                color: $gray;
+                font-size: 24px;
+
+                @include margin-left(-16px);
+
+                @include margin-right(6px);
+
+                position: relative;
+                top: -5px;
+
+                @extend .float-l;
+            }
+        }
+    }
+
+    .load-more {
+        background: #fff;
+        margin-top: 100px;
+
+        .load-more-btn {
+            @include padding-top($space-10);
+
+            @include padding-bottom($space-10);
+
+            @include padding-left($space-30);
+
+            @include padding-right($space-30);
+
+            display: inline-block;
+            border-radius: 5px;
+            font-size: $font-20;
+            color: #fff;
+            background-color: #333333;
+
+            > .fa {
+                @include margin-right($space-10);
+            }
+        }
+
+        &.disabled {
+            .load-more-btn {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &.loader-img:after {
+        content: "";
+        position: absolute;
+        bottom: 50px;
+        height: 450px;
+        right: 0;
+        left: 0;
+        background: #fff;
+        opacity: 0.75;
+        background-image: url("../images/icons/ajax-loader.gif");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &.not-loaded {
+        .load-more {
+            display: none;
+        }
+    }
+
+    &.has-no-more-children {
+        .load-more {
+            display: none;
+        }
+
+        .milestone-wrapper:nth-last-child(2) {
+            &:before {
+                background: red;
+            }
+
+            .milestone {
+                margin-bottom: 0;
+            }
+
+            &:after {
+                background: #fff;
+                content: "";
+                width: 2px;
+                position: absolute;
+                top: 86px;
+                bottom: 0;
+                z-index: -1;
+
+                @include left(50%);
+
+                @include margin-left(-1px);
+            }
+        }
+    }
+}
+
+.timeline-container.noJSONfound {
+    &:after {
+        content: none;
+    }
+}

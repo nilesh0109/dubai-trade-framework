@@ -1,0 +1,412 @@
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.remove-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*--- only for inside content elements not for arabic ---*/
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.display-inline-block-ele {
+    display: inline-block;
+}
+
+.display-block-ele {
+    display: block;
+}
+
+.display-none-ele {
+    display: none;
+}
+
+.display-table-ele {
+    display: table;
+}
+
+.display-table-cell-ele {
+    display: table-cell;
+}
+
+.red-text {
+    color: $red-color !important;
+}
+
+h2.title {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    font-size: $font-30;
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+
+        //  margin-bottom: 15px;
+
+        &.mob-left {
+            text-align: $text-left;
+        }
+    }
+}
+
+h3.title {
+    margin-top: 0;
+    font-size: $font-30;
+}
+
+h4.title {
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+}
+
+h6.title {
+    font-size: 1.4em;
+}
+
+h2.heading {
+    font-size: 28px;
+    margin: 25px 0 10px;
+}
+
+h4.heading {
+    font-size: $font-20;
+    margin: 25px 0 10px;
+}
+
+h5.heading {
+    font-size: $font-16;
+    margin: 10px 0;
+}
+
+.img-container {
+    @extend .float-l;
+
+    @include margin-right($space-20);
+}
+
+.textWrapper {
+    overflow: hidden;
+}
+
+.img-container-right {
+    @extend .float-r;
+
+    @include margin-left($space-20);
+}
+
+.list {
+    list-style: none;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    padding-start: 0;
+}
+
+.underlined-list li {
+    text-decoration: underline;
+}
+
+.line-separater {
+    background: #ccc;
+    height: 1px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.asterisk {
+    @include margin-left(-3px);
+}
+
+.vertical-align-parent {
+    position: relative;
+}
+
+.vertical-align-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertical-center-element {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+ol,
+ol li {
+    list-style-type: none;
+}
+
+.sub-title {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+body {
+    .mob-align-left {
+        @media (max-width: $screen-xs-max) {
+            text-align: $text-left;
+        }
+    }
+
+    .mob-align-right {
+        @media (max-width: $screen-xs-max) {
+            text-align: $text-right;
+        }
+    }
+
+    .mob-align-center {
+        @media (max-width: $screen-xs-max) {
+            text-align: center;
+        }
+    }
+}
+
+a.back-btn {
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 30px;
+    font-size: $font-20;
+    display: inline-block;
+    color: $red-color;
+
+    &:hover {
+        color: $red-color;
+    }
+}
+
+.back-btn:before {
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+
+    @include margin-right(3px);
+
+    @include margin-left(2px);
+
+    @include border-right(2px, #d0322c);
+
+    border-bottom: 2px solid #d0322c;
+    background-color: transparent;
+    transform: rotate(135deg);
+}
+
+.download-link {
+    > img {
+        width: 32px;
+        height: 32px;
+    }
+
+    > strong {
+        @include margin-right($space-10);
+
+        position: relative;
+
+        &:after {
+            content: "";
+            border: 1px solid $red-color;
+            margin-top: 2px;
+            margin-top: 5px;
+            position: absolute;
+            width: 100%;
+
+            @include left(0);
+
+            top: 100%;
+        }
+    }
+}
+
+.red-button-wrapper {
+    margin: 5px 0;
+
+    > a {
+        display: inline-block;
+    }
+}
+
+.red-btn {
+    background: $red;
+    padding: 5px 15px;
+    color: $white !important;
+    text-decoration: none !important;
+    border: 1px solid $red;
+
+    &:hover {
+        color: $white;
+    }
+
+    &.thick {
+        padding: 8px 15px;
+    }
+}
+
+.content {
+    a.red-text {
+        &:hover {
+            color: $red-color !important;
+        }
+
+        &:visited {
+            color: $purple !important;
+
+            &:before, &:after, > :before, > :after {
+                border-color: $purple !important;
+            }
+        }
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+body a:focus {
+    outline: 0;
+}
+
+body > .wrapper {
+    background-color: $white;
+    position: relative;
+    padding-bottom: 300px;
+    min-height: 100%;
+
+    footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+    }
+}
+
+body {
+    font-size: 16px;
+}
+
+body.home {
+    overflow-x: hidden;
+}
+
+.map-container {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.content {
+    background-image: url("../images/home/zigzag.png");
+    background-repeat: no-repeat;
+    background-position: right 60px;
+
+    @media (max-width: $screen-xs-max) {
+        background: none;
+    }
+}
+
+.black-text {
+    color: $black;
+}
+
+.content p.line-height-1 {
+    line-height: 1;
+}
+
+a.link {
+    color: $red;
+    text-decoration: none;
+}
+
+body #at-cv-lightbox, .at-cv-lightbox-background {
+    display: none;
+}
+
+.animatedparent {
+    transform: translate3d(0, 0, 0);
+}
+
+.result-wrapper {
+    padding: 60px 0;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.highlight {
+    background-color: #F58A3C;
+}
+
+.margin-text {
+    margin: 20px 0 200px;
+}
+
+.dashboard .top-nav-wrap, .services .top-nav-wrap {
+    display: none;
+}
+
+body .wrapper {
+    overflow-x: hidden;
+}
+
+.centered-element {
+    margin: 0 50px;
+    display: inline-block;
+}
+
+.bxslider li {
+    max-width: 100%;
+}
+
+.tool-tip-indicator {
+    font-size: 15px;
+    margin-#{$left}: 5px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: -3px;
+    color: #666;
+}
+
+button .fa {
+    margin-#{$right}: 5px;
+}
+
+.icon-hamburger {
+    color: $red;
+    background: $white;
+
+    &:hover, &:active, &:focus {
+        color: $red;
+        background: $white;
+    }
+}
+
+$list: top bottom left right;
+
+.tooltip {
+    .tooltip-inner {
+        background: #dddddd;
+        color: #333;
+    }
+
+    @each $side in $list {
+        &.#{$side} {
+            .tooltip-arrow {
+                border-#{$side}-color: #dddddd;
+            }
+        }
+    }
+}

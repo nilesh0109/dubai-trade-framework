@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+</title></head>
+<body>
+<script>
+function  pseth() {
+	try{
+		var hashString = document.location.hash;
+		var hash = hashString.split("#");
+		var obj = parent.parent.document.getElementById(hash[1]);
+		//obj.style.width = hash[2]+"px";
+		obj.style.height = hash[3]+"px";
+	}catch (error){}
+}
+pseth();
+</script>
+
+</body>
+</html>

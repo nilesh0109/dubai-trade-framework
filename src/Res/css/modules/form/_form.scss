@@ -1,0 +1,532 @@
+.contact-us {
+    #contact-form {
+        margin-bottom: 40px;
+    }
+
+    .content {
+        label {
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        h6.address {
+            font-size: $font-16;
+        }
+
+        .form-control {
+            border-radius: 0;
+        }
+
+        button[type='submit'] {
+            @include padding-top($space-10);
+
+            @include padding-bottom($space-10);
+
+            @include padding-left($space-40);
+
+            @include padding-right($space-40);
+
+            border-radius: 0;
+            color: white;
+            background: $red-color;
+            border: none;
+            font-size: $font-20;
+        }
+
+        .form-control.error {
+            border: 1px solid $red-color;
+        }
+
+        label.error {
+            color: $red-color;
+        }
+
+        textarea {
+            background: $off-white2;
+            height: 125px;
+        }
+
+        .email-container {
+            margin-top: -15px;
+
+            @media (max-width: $screen-xs-max) {
+                margin-top: 0px;
+            }
+        }
+
+        div.contact-data {
+            font-size: 16px;
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+
+            @include margin-top($space-30);
+
+            @include margin-bottom($space-30);
+
+            @include padding-right($space-0);
+
+            @media (max-width: $screen-xs-max) {
+                @include padding-right($space-15);
+
+                width: 100%;
+            }
+
+            &.contact-padding {
+                @include padding-left(15%);
+
+                @media (max-width: $screen-md-max) {
+                    @include padding-left(9%);
+                }
+
+                @media (max-width: $screen-sm-max) {
+                    @include padding-left(5%);
+                }
+
+                @media (max-width: $screen-sm-max) {
+                    @include padding-left(0%);
+                }
+            }
+        }
+
+        div.contact-details {
+            margin-top: 10px;
+
+            @include padding-bottom($space-40);
+
+            @include margin-bottom($space-0);
+
+            border-bottom: 1px solid #ccc;
+
+            .address {
+                @include margin-top($space-5);
+            }
+        }
+
+        div.contact-card {
+            margin-bottom: 40px;
+            font-size: 0;
+
+            @include margin-top($space-20);
+
+            p {
+                @include margin-top($space-10);
+
+                @include margin-bottom($space-10);
+
+                @include margin-left($space-0);
+
+                @include margin-right($space-0);
+
+                + p {
+                    @include margin-top($space-10);
+
+                    @include margin-bottom($space-10);
+
+                    @include margin-left($space-0);
+
+                    @include margin-right($space-0);
+                }
+
+                &.email {
+                    word-break: break-word;
+                }
+            }
+        }
+
+        .reload-captcha {
+            display: block;
+            height: 27px;
+
+            .reload {
+                background: url(..//images/icons/icon-refresh.png) top left no-repeat;
+                width: 21px;
+                height: 22px;
+
+                @extend .float-right;
+
+                cursor: pointer;
+            }
+        }
+
+        .contact-captcha {
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+            text-align: center;
+            color: #e2b116;
+            font-size: 3em;
+            border: 1px solid #ccc;
+            padding: 4px 0;
+            font-family: $Chocolate;
+            font-style: italic;
+            -webkit-user-select: none;
+
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+
+            /* Firefox all */
+            -ms-user-select: none;
+
+            /* IE 10+ */
+            user-select: none;
+
+            /* Likely future */
+        }
+    }
+}
+
+.captcha-form {
+    .contact-captcha {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        text-align: center;
+        color: #e2b116;
+        font-size: 3.25em;
+        border: 1px solid #ccc;
+        max-width: 300px;
+        padding: 4px 0;
+        font-family: Captcha-code;
+        font-style: italic;
+        -webkit-user-select: none;
+    }
+
+    .reload-captcha {
+        display: block;
+        height: 27px;
+
+        .reload {
+            background: url(..//images/icons/icon-refresh.png) top left no-repeat;
+            width: 21px;
+            height: 22px;
+
+            @extend .float-right;
+
+            cursor: pointer;
+        }
+    }
+
+    .captcha-wrap {
+        .form-group {
+            @include margin-top($space-10);
+
+            max-width: 300px;
+        }
+    }
+
+    .form-control.error {
+        border: 1px solid $red-color;
+    }
+
+    label.error {
+        color: $red-color;
+    }
+}
+
+.alert-box {
+    margin: 20px 15px;
+    padding: 10px;
+    border: 1px solid green;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: .9em;
+
+    &.success {
+        color: green;
+    }
+
+    &.error {
+        color: $red;
+        border-color: $red;
+    }
+
+    &.warning {
+        color: $black;
+        border-color: $black;
+    }
+
+    &.info {
+        color: $black;
+        border-color: $black;
+    }
+
+    &.submit-box {
+        padding: 20px;
+        display: block;
+        line-height: 24px;
+        border-color: $black;
+    }
+}
+
+.form-validate {
+    .form-element {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        label.error {
+            font-size: 13px;
+
+            @media (min-width: $screen-sm-min) {
+                position: absolute;
+                bottom: 100%;
+                color: $white;
+                background: $red;
+                padding: 5px 10px;
+                margin-bottom: 5px;
+                border-radius: 3px;
+                display: block;
+
+                &:after {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    display: inline-block;
+                    position: absolute;
+                    top: 100%;
+                    border: 5px solid transparent;
+                    border-top: 5px solid $red;
+                    border-left: 5px solid $red;
+                    transform: rotate(-135deg);
+                    margin-top: -6px;
+                    left: 50%;
+                    margin-left: -5px;
+                }
+
+                &:empty {
+                    padding: 0;
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+
+        .selectList-wrapper {
+            margin: 0px;
+        }
+    }
+
+    .contact-captcha {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        text-align: center;
+        color: #e2b116;
+        font-size: 3.25em;
+        border: 1px solid #ccc;
+        padding: 4px 0;
+        font-family: Captcha-code;
+        font-style: italic;
+        -webkit-user-select: none;
+    }
+
+    .reload-captcha {
+        display: block;
+        margin: 5px 0;
+
+        .reload {
+            background: url(..//images/icons/icon-refresh.png) top left no-repeat;
+            width: 21px;
+            height: 22px;
+
+            @extend .float-right;
+
+            cursor: pointer;
+        }
+    }
+
+    input.error {
+        border: 1px solid $red-color;
+    }
+
+    label {
+        margin: 0px;
+    }
+
+    label.error {
+        color: $red-color;
+        font-weight: normal;
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+
+    .error-block {
+        color: $red;
+        display: none;
+
+        .errorList {
+            list-style: none;
+
+            li {
+                margin-top: 5px;
+                padding-start: 0px;
+                -webkit-padding-start: 0px;
+                -moz-padding-start: 0px;
+                list-style: none;
+                font-size: $font-14;
+                text-align: $text-left;
+
+                &:before {
+                    content: "*";
+                    display: block;
+
+                    @include margin-right(5px);
+
+                    position: relative;
+                    top: 2px;
+
+                    @extend .float-l;
+                }
+
+                > span {
+                    overflow: hidden;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    input.error {
+        ~ .error-block {
+            display: block;
+        }
+    }
+
+    .radio-wrapper {
+        line-height: 2;
+        margin-bottom: 10px;
+
+        .radio-container {
+            display: inline-block;
+            padding: 15px;
+            margin-top: -15px;
+        }
+
+        .radio-error {
+            @include padding-left(10px);
+
+            ~ .radio-container {
+                border: 1px solid $red;
+                margin-top: 0px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        input[type='radio'] {
+            opacity: 0;
+            visibility: hidden;
+
+            @include margin-left(-15px);
+
+            &:checked {
+                + label {
+                    > span.radio-btn {
+                        background-position: top left;
+                    }
+                }
+            }
+        }
+
+        .radio-btn {
+            background-image: url("../images/icons/poll_radio_sprite.png");
+            width: 19px;
+            height: 19px;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            display: inline-block;
+            vertical-align: middle;
+
+            @include margin-right(5px);
+        }
+    }
+
+    .checkbox-wrapper {
+        line-height: 2;
+        margin-bottom: 10px;
+
+        .checkBox-container {
+            display: inline-block;
+            padding: 15px;
+            margin-top: -15px;
+        }
+
+        input[type='checkbox'] {
+            display: inline-block;
+            vertical-align: middle;
+
+            @include margin-right(8px);
+        }
+
+        .checkbox-error {
+            @include padding-left(10px);
+
+            ~ .checkBox-container {
+                border: 1px solid $red;
+                margin-top: 0px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        label[for="checkbox-one"] {
+            @include padding-left(10px);
+        }
+    }
+
+    .select-error {
+        display: block;
+    }
+}
+
+/**************** file explorer *************/
+.file-explorer {
+    .browse-link {
+        background: $red;
+        color: $white;
+        padding: 6px 20px;
+        border-radius: 3px;
+        margin: 0px 10px;
+
+        &:hover, &:active, &:focus {
+            color: $white;
+        }
+    }
+
+    .file-explorer-wrapper + .file-explorer-wrapper {
+        margin-top: 10px;
+    }
+
+    input.file-explorer {
+        width: auto;
+        min-width: 200px;
+
+        ~ #file-explorer-error {
+            display: none;
+        }
+
+        &.error {
+            border: 1px solid $red;
+
+            ~ #file-explorer-error {
+                display: block;
+            }
+        }
+    }
+
+    input[type="file"] {
+        display: inline-block;
+        visibility: hidden;
+        width: 0px;
+    }
+
+    .remove-link, .add-link, .remove-link:hover, .add-link:hover, .remove-link:active, .add-link:active, .remove-link:focus, .add-link:focus {
+        text-decoration: underline;
+        display: inline-block;
+    }
+
+    .add-link {
+        margin-top: 10px;
+    }
+}

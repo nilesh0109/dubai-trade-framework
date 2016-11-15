@@ -1,0 +1,175 @@
+/* SG
+# sharing-icons
+For sharing using addThis , please customize the following parameters .
+data-url : URL to be shared
+data-title: Title of the shared URL
+ 
+```
+<div class='title-icons text-left'>
+    <a class='share' href='javascript:void(0)'></a><span class='pipe'></span>
+    <a class='print' href='javascript:void(0)'></a><span class='pipe'></span>
+    <a class='rss' href='javascript:void(0)'><img class='rssFeed' src='../Res/images/icons/icon-rss.png'></a>
+    <div class="addthis_sharing_toolbox" data-url="www.google.com" data-title="Sharing Dubai Trade" tabindex='-1'></div>
+</div>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56890af56aa98f33" async="async"></script>
+
+```
+*/
+
+.title-icons {
+    display: inline-block;
+
+    @media (min-width: $screen-sm-min) {
+        @include margin-top($space-35);
+    }
+
+    @include margin-bottom($space-10);
+
+    > *:not(.selectList-wrapper) {
+        display: inline-block;
+        width: 38px;
+        height: 32px;
+        vertical-align: middle;
+
+        &.share {
+            background: url("../images/icons/icon-share.png") no-repeat;
+        }
+
+        &.print {
+            background: url("../images/icons/icon-print.png") no-repeat;
+        }
+
+        &.pipe {
+            width: 1px;
+            margin: 0 10px;
+            background: #aaa;
+
+            @media (max-width: 800px) and (min-width: $screen-sm-min) {
+                margin: 0 5px;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                visibility: hidden;
+            }
+        }
+    }
+
+    position: relative;
+
+    .addthis_sharing_toolbox {
+        display: none;
+        z-index: 1;
+        position: absolute;
+
+        @include left(0px);
+
+        text-align: $text-left;
+        top: 100%;
+        width: auto;
+        padding: 10px;
+        background: #fff;
+        height: auto;
+        box-shadow: 0 0 1px 1px #ccc;
+        margin-top: 10px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%) rotate(-45deg);
+
+            @include left(2px);
+
+            @include border-right(#ccc, 1px);
+
+            border-top: 1px solid #ccc;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+        }
+    }
+
+    .rss {
+        display: none;
+    }
+
+    .print ~ .pipe {
+        display: none !important;
+    }
+}
+
+.dt-news, .other-news, .news, .news-detail, .classifieds, .classified-detail, .events, .events-detail {
+    .title-icons {
+        .rss {
+            display: inline-block;
+        }
+
+        .print ~ .pipe {
+            display: inline-block !important;
+        }
+    }
+}
+
+.sidebar {
+    .pipe {
+        @media (max-width: $screen-xs-max) {
+            display: inline-block;
+            visibility: visible;
+        }
+    }
+}
+
+.title-selectList {
+    .selectList-wrapper {
+        display: inline-block;
+
+        @include margin-right(10px);
+    }
+
+    .selectList-wrapper ~ .pipe {
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+
+    .selectList-wrapper ~ .print {
+        @media (max-width: $screen-xs-max) {
+            @include margin-left($space-10);
+        }
+    }
+
+    .title-icons-wrapper {
+        @media (min-width: $screen-sm-min) {
+            display: inline-block;
+
+            .title-icons {
+                @media (max-width: $screen-xs-max) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .title-icons > *:not(.selectList-wrapper).share {
+        width: 30px;
+    }
+
+    .title-icons > *:not(.selectList-wrapper).pipe {
+        visibility: inherit;
+        display: inline-block;
+    }
+}
+
+.search-results, .survey {
+    @media (max-width: $screen-xs-max) {
+        .title-icons {
+            margin-top: 0px;
+            text-align: $text-left;
+        }
+    }
+}

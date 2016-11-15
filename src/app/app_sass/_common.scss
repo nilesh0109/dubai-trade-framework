@@ -1,0 +1,136 @@
+body {
+    font-family: Arial;
+    overflow-x: hidden;
+}
+
+.highlight {
+    font-weight: bold;
+    font-style: italic;
+    background: none !important;
+}
+
+.main-list {
+    margin-left: 15px !important;
+
+    li:before {
+        margin-right: 10px;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #666;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 5px;
+        float: left;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+    }
+
+    li {
+        padding: 5px 0;
+
+        + li {
+            margin: 10px 0;
+        }
+    }
+}
+
+.sub-list {
+    margin-left: 20px !important;
+
+    li:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #666;
+        display: inline-block;
+        float: left;
+        background: transparent;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    li + li {
+        margin: 6px 0;
+    }
+}
+
+strong {
+    display: inline-block;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.left-panel-button {
+    width: 20px;
+    height: 110px;
+    background: #666;
+    display: block;
+    position: fixed;
+    left: -2px;
+    top: 50%;
+    margin-top: -85px;
+    transition: all 0.25s ease-in-out;
+    z-index: 1000;
+
+    .vertical-line {
+        display: block;
+        width: 1px;
+        background: #cccccc;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        position: absolute;
+        left: 9px;
+
+        + .vertical-line {
+            height: 60%;
+            top: 20%;
+            left: 14px;
+        }
+    }
+
+    &:before, &:after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        #{$right}: 0px;
+        border: 20px solid transparent;
+        border-top: 20px solid #666;
+        border-#{$right}: 20px solid #666;
+        transform: rotate(-90deg);
+        transition: all 0.25s ease-in-out;
+    }
+
+    &:after {
+        top: auto;
+        bottom: 100%;
+        transform: rotate(180deg);
+    }
+
+    &:hover, &.active {
+        background: $red;
+
+        &:before, &:after {
+            border-top-color: $red;
+            border-#{$right}-color: $red;
+        }
+    }
+
+    &.active {
+        left: 202px;
+    }
+}

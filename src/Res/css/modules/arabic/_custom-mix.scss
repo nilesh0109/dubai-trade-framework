@@ -1,0 +1,49 @@
+/********************** mixins overwritten for arabic ********************/
+
+/* set padding */
+
+@mixin padding-right($R_value) {
+    padding-left: $R_value;
+}
+
+@mixin padding-left($L_value) {
+    padding-right: $L_value;
+}
+
+/* set margin */
+
+@mixin margin-right($R_value) {
+    margin-left: $R_value;
+}
+
+@mixin margin-left($L_value) {
+    margin-right: $L_value;
+}
+
+/* setting left and right border */
+@mixin border-left($border-weight, $border-color) {
+    border-right: $border-color solid $border-weight;
+}
+
+@mixin border-right($border-weight, $border-color) {
+    border-left: $border-color solid $border-weight;
+}
+
+/* set left and right */
+
+@mixin right($R_value) {
+    left: $R_value;
+}
+
+@mixin left($L_value) {
+    right: $L_value;
+}
+
+/* rotate */
+@mixin rotate($angle) {
+    transform: rotate(-1 * $angle);
+}
+
+@mixin translateX($value) {
+    transform: translateX(-1 * $value);
+}

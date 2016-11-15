@@ -1,0 +1,45 @@
+/************** breadcrumb ****************/
+
+.breadcrumb-container {
+    background: #f1f1f1;
+
+    .breadcrumb {
+        margin: 0 15px;
+        font-size: $font-14;
+        background: none;
+
+        > li {
+            &.breadcrumb-item {
+                > a {
+                    color: #000;
+                    padding: 8px 0;
+                    display: inline-block;
+                }
+
+                &.active {
+                    > a {
+                        color: #d0322c;
+                    }
+                }
+            }
+
+            + li {
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+
+                    @include margin-right(5px);
+
+                    @include border-right(1px, #000);
+
+                    border-top: 1px solid #000;
+                    background-color: transparent;
+
+                    @include rotate(45deg);
+                }
+            }
+        }
+    }
+}

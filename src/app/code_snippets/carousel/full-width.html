@@ -1,0 +1,71 @@
+<script type="text/javascript" src="Res/js/custom/bxslider.js"></script>
+
+<div class="home-slider">
+    <div id="home-hero-slider" class="home-hero-slider">
+        <ul class="bxslider">
+            <li class="vertical-align-parent">
+                <img class="hero-img" src="Res/images/home/home-bannner-2.png" title="">
+                <div class="home-carousel-content vertical-center-element">
+                    <div class="container home-hero-slider-container">
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class="text-uppercase animatedFadeInRight animated"> DUBAI TO BECOME ONE OF WORLD&apos;S TOP maritime center in 5 year</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="vertical-align-parent">
+                <img class="hero-img" src="Res/images/home/home-bannner-1.png" title="">
+                <div class="home-carousel-content vertical-center-element">
+                    <div class="container home-hero-slider-container">
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class="text-uppercase animatedFadeInRight animated animatedFadeInRight"> DUBAI TO BECOME ONE OF WORLD&apos;S TOP maritime center in 5 year - 2</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="vertical-align-parent">
+                <img class="hero-img" src="Res/images/home/home-bannner-2.png" title="">
+                <div class="home-carousel-content vertical-center-element">
+                    <div class="container home-hero-slider-container">
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class="text-uppercase animatedFadeInRight animated animatedFadeInRight"> DUBAI TO BECOME ONE OF WORLD&apos;S TOP maritime center in 5 year - 3</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="vertical-align-parent">
+                <img class="hero-img" src="Res/images/home/home-bannner-1.png" title="">
+                <div class="home-carousel-content vertical-center-element">
+                    <div class="container home-hero-slider-container">
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class="text-uppercase animatedFadeInRight animated animatedFadeInRight"> DUBAI TO BECOME ONE OF WORLD&apos;S TOP maritime center in 5 year - 4</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+    setTimeout(function(){
+        $('.home-hero-slider .bxslider:visible').bxSlider({
+            mode: 'horizontal',
+            captions: false,
+            onSlideAfter: function($ele, oldIndex, newIndex) {
+                $ele.find('.animatedparent .animated').addClass('go');
+                $ele.siblings().find('.animatedparent .animated').removeClass('go');
+            }
+        });
+    },100)
+    
+    </script>

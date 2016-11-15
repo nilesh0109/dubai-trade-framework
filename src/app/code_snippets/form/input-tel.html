@@ -1,0 +1,17 @@
+<script type="text/javascript" src="Res/js/vendor/jquery.maskedinput.js"></script>
+
+<form class="form-validate">
+	<div class="form-group ">
+		<label for="phone-number">Phone Number<span class='regMark'>&#42;</span></label>
+		<div class="form-element">
+			<input type="tel" class="form-control" id="phone-number" name="phone-number" maxlength="13" data-rule-required="true" data-msg-required="Please enter your phone number" pattern="{\d{3}-\d{9}}" data-rule-phone="true" data-msg-phone="Invalid phone number.Please use Numbers Only(i.e. 971501234567,041234567)" data-rule-pattern="true" data-msg-pattern="please enter digits only" autocomplete="off"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-red">Submit</button>
+	</div>
+</form>
+
+<script type="text/javascript">
+	$("#phone-number").mask("999-999999999");
+</script>

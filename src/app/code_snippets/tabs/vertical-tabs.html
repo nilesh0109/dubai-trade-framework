@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-sm-4">
+        <div class="left-panel">
+            <ul>
+                <li class="dubai-trade-and-user-management active"><a href="javascript:void(0)">Dubai Trade &amp; User Management</a></li>
+                <li class="dubai-trade-portal-subscription"><a href="javascript:void(0)">Dubai Trade Portal Subscription</a></li>
+                <li class="rosoom"><a href="javascript:void(0)">Rosoom</a></li>
+                <li class="shipping-agent-services"><a href="javascript:void(0)">Shipping Agent Services</a></li>
+                <li class="cargo-gate-pass"><a href="javascript:void(0)">Cargo Gate Pass</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="right-panel">
+            <section class="show">
+                <div class="section-heading">
+                    Dubai Trade &amp; User Management
+                </div>
+                <div class="col-xs-12">
+                    <p> What is Dubai Trade Portal?</p>
+                    <p>Dubai Trade is an innovative, simple and secure portal that combines all electronic services provided by
+                        DP World, Economic Zones World, Dubai Customs and Dubai Multi Commodities Center
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-heading">
+                    Dubai Trade Portal Subscription
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                        Are there any restrictions for accessing the Dubai Trade Portal and its services?
+                                        Is my Information secure on the Dubai Trade Portal? Can any other user see my company Dubai Trade Portal Available 24x7?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-heading">
+                    Rosoom
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                            window provides exclusive electronic services to the trading communities aiming to be the online centric        hub linking stakeholders through end-to-end trade supply chain.
+                                    Who can avail the services through Dubai Trade Portal?
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="section-heading">
+                    Shipping Agent Services
+                </div>
+                <div class="col-xs-12">
+                    <p>Is my Information secure on the Dubai Trade Portal? Can any other user see my company information?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-heading">
+                    Cargo Gate Pass
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                       Who can avail the services through Dubai Trade Portal?
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>    
+</div>
+
+<script type="text/javascript">
+    
+            $('.left-panel li a').on('click', function(e) {
+            e.preventDefault();
+            var $index = $(this).parent().index();
+            $(this).parent().addClass('active').siblings('li').removeClass('active');
+            $('.right-panel').find('>section').eq($index).addClass('show').siblings('section').removeClass('show');
+        });
+</script>

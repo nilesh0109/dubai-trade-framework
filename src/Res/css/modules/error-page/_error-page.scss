@@ -1,0 +1,52 @@
+.error-page {
+    display: table;
+    height: 100%;
+
+    @include margin-top($space-0);
+
+    @include margin-bottom($space-50);
+
+    @include margin-left(auto);
+
+    @include margin-right(auto);
+
+    > .container {
+        display: table-cell;
+        vertical-align: middle;
+
+        .grey-line {
+            width: 90%;
+            height: 1px;
+            background: #ccc;
+
+            @include margin-top($space-40);
+
+            @include margin-bottom($space-40);
+
+            @include margin-left(auto);
+
+            @include margin-right(auto);
+        }
+
+        [class*='msg-'] {
+            font-size: 2em;
+            color: $darkgrey;
+
+            > .firstLine {
+                font-size: 4em;
+                display: inline-block;
+                line-height: 1em;
+
+                @include margin-top($space-40);
+            }
+        }
+
+        p {
+            color: $black;
+
+            + p {
+                @include margin-top($space-0);
+            }
+        }
+    }
+}

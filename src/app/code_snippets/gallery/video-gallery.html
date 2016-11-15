@@ -1,0 +1,81 @@
+<ul class="gallery-container clearfix">
+ <li class="gallery-element">
+        <a href="javascript:void(0)" data-type="video" data-src="http://www.youtube.com/v/mO4zqCmyuC8">
+            <figure class="poster-image vertical-align-parent">
+                <img class="poster" src="http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg">
+                <div class="overlay"></div>
+                <img class="play-icon vertical-align-element" src="Res/images/video/youtube-play.png">
+            </figure>
+            <div class="textWrapper">
+                <h5 class="heading red-text"><strong>Dubai TV Covering 2015 RAME</strong></h5>
+                <p class="desc">
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                </p>
+                <span class="timestamp"><em>Posted : April 2015</em></span>
+            </div>
+        </a>
+ </li>
+    <li class='gallery-element'>
+        <a href='javascript:void(0)' data-type='video' data-src='http://www.youtube.com/embed/LNYNaRocu3k'>
+            <figure class='poster-image vertical-align-parent'>
+                <img class='poster' src='http://img.youtube.com/vi/LNYNaRocu3k/0.jpg'  />
+                <div class='overlay'></div>
+                <img class='play-icon vertical-align-element' src='Res/images/video/youtube-play.png'/>
+            </figure>
+            <div class='textWrapper'>
+                <h5 class='heading red-text'><strong>CTLP Promo 2013</strong></h5>
+                <p class='desc'>
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                </p>
+                <span class='timestamp'><em>Posted : April 2015</em></span>
+            </div>
+        </a>
+    </li>
+
+ </ul>
+ <div class="gallery-popup vertical-align-parent">
+    <div class="gallery-content text-center vertical-align-element">
+        <a class="close-btn" href="javascript:void(0)">
+
+        </a>
+        <img class="loader vertical-align-element" src="Res/images/icons/ajax-loader2.gif">
+        <div class="gallery-body">
+            <img class="img-responsive" src="Res/images/video/youtube-video.jpg">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    /* ----------------------------------------------- gallery popup  ---------------------------------------------------- */
+    $('.gallery-element > a').on('click', function() {
+
+        var $popup = $('.gallery-popup');
+        if ($('body .wrapper').find('>.gallery-popup').length <= 0) {
+            $popup = $('.gallery-container').next('.gallery-popup');
+            $('body .wrapper').append($popup);
+        }
+
+        $popup.height($(window).height()).css({
+            top: $(window).scrollTop()
+        });
+        $popup.addClass('active');
+        $('body').addClass('gallery-overlay-open');
+        var iframe = '';
+        if ($(this).data('type') == 'image') {
+            iframe = '<img class="popup-image" src="' + $(this).data("src") + '" />';
+        } else if ($(this).data('type') == 'video') {
+            var videoSrc = $(this).data('src').replace(/\/v\//g, '/embed/');
+            if (DT.screen.isMobile())
+                iframe = '<iframe width="320" height="240" frameborder="0" scrolling="no" src="' + videoSrc + '"> </iframe>';
+            else
+                iframe = '<iframe width="640" height="480" frameborder="0" scrolling="no" src="' + videoSrc + '"> </iframe>';
+        }
+        $popup.find('.gallery-body').html(iframe);
+    });
+
+    $('.gallery-popup').not('.gallery-content').on('click', function() {
+        var $popup = $('.gallery-popup');
+        $popup.removeClass('active');
+        $popup.find('iframe').attr('src', '');
+        $('body').removeClass('gallery-overlay-open');
+    });
+ </script>

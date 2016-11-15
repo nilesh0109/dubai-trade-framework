@@ -1,0 +1,89 @@
+<script type="text/javascript" src="Res/js/vendor/jquery.validate.js"></script>
+
+<script type="text/javascript">
+    
+/* ----------------------------------------------- form validation js  ----------------------------------------------- */
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    function validatePhone(phone) {
+        var re = /^(?:\(?\+?[0-9]{1,3}\)?)?[0-9]{9,10}$/;
+        return re.test(phone);
+    }
+    if ($("form.form-validate").length > 0) {
+        $.validator.addMethod("checkbox", function(value, element) {
+
+            return $('.checkbox-one:checked', $(element).closest('.checkBox-container')).length > 0;
+        }, 'At least one option must be selected.');
+
+        $.validator.addMethod("select", function(value, element) {
+            return $(element).val() && $(element).val().length > 0;
+        }, 'Please select an option');
+
+        $.validator.addMethod("email", function(value, element) {
+            return validateEmail(value);
+        }, 'Please enter a valid email address');
+
+        $.validator.addMethod("phone", function(value, element) {
+            return validatePhone(value);
+        }, 'Please enter a valid phone address');
+
+        $.validator.addMethod("pattern", function(value, element) {
+            return (new RegExp($(element).attr('pattern').replace(/^{/,'').replace(/}$/,''),'g')).test(value);
+        }, 'Please enter a valid pattern');
+
+
+
+        $("form.form-validate").each(function() {
+            $(this).on('submit', function(e) {
+                if (!$(this).valid())
+                    return false;
+            });
+            $(this).validate({
+                errorPlacement: function(error, element) {
+                    if (element.is(":radio")) {
+                        element.parent().parent().find('label[for="radio"]').after(error.addClass('radio-error'));
+
+                    } else if (element.is(":checkbox")) {
+
+                        element.parent().parent().find('label[for="checkBox-container"]').after(error.addClass('checkbox-error'));
+                    } else if (element.is("select")) {
+                        element.parent().addClass('selectList-error').after(error.addClass('select-error'));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                highlight: function(element, errorClass) {
+                    if ($(element).is(":radio")) {
+                        $(element).parent().parent().find('.error').addClass('radio-error');
+
+                    } else if ($(element).is(":checkbox")) {
+                        $(element).parent().parent().find('.error').addClass('checkbox-error');
+                    } else if ($(element).is("select")) {
+                        $(element).parent().addClass('selectList-error').find('.error').addClass('select-error');
+                    }
+
+                    //  $(element).show();
+
+                },
+                success: function(label) {
+                    if (label.hasClass('radio-error')) {
+                        label.removeClass('radio-error');
+                    } else if (label.hasClass('checkbox-error')) {
+                        label.removeClass('checkbox-error');
+                    } else if (label.hasClass('select-error')) {
+                        label.removeClass('select-error').siblings().removeClass('selectList-error');
+                    }
+                }
+
+            });
+        });
+
+
+    };
+
+
+</script>

@@ -1,0 +1,79 @@
+form#survey-form {
+    input[type='text'], textarea {
+        padding: 5px;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        max-width: 400px;
+    }
+
+    textarea {
+        max-width: 600px;
+        height: 120px;
+    }
+
+    label {
+        font-weight: normal;
+        margin: 10px 0;
+    }
+
+    button {
+        border: 0;
+    }
+
+    label.error {
+        color: $red;
+        font-size: $font-12;
+        display: inline !important;
+    }
+
+    input.error {
+        border: 1px solid $red;
+        margin-bottom: 0;
+    }
+
+    textarea.error {
+        border: 1px solid $red;
+        margin-bottom: 0;
+
+        ~ .error {
+            margin-bottom: 10px;
+        }
+    }
+
+    .survey-row {
+        @include margin-left(-15px);
+
+        @extend .clearfix;
+
+        .title-container {
+            @include padding-right(0);
+        }
+
+        .lname-container {
+            @include padding-left(0);
+        }
+
+        .border-line {
+            height: 1px;
+            left: 15px;
+            right: 15px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+    }
+
+    label {
+        margin: 0;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    a.red-btn {
+        display: inline-block;
+        margin-top: 30px;
+    }
+}

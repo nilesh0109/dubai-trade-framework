@@ -1,0 +1,25 @@
+<a href="javascript:void(0)" class="red-btn favorite-btn"> open favorites popup</a>
+<div class="favorite-alert-box">
+    <form class="remove-favorite-form" action="">
+        <div class="msg">Do you want to remove <span class="service-name"> JAFZA </span> from Favorites </div>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">CANCEL</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+    var dontOpenInIframe = false;
+    if(typeof DT !== undefined)
+    { 
+        var edit_favorites_popup = DT.modalPopup.createPopup($('.favorite-alert-box'), 'favorite-alert', dontOpenInIframe);
+    }
+
+    $('.favorite-btn').on("click",function(){
+        DT.modalPopup.showPopup(edit_favorites_popup);  
+    });
+
+    $('.remove-favorite-form').on("reset",function(){
+       DT.modalPopup.hidePopup(edit_favorites_popup); 
+    });
+
+</script>

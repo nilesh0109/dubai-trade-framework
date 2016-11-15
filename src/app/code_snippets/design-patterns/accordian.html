@@ -1,0 +1,110 @@
+<style type="text/css">
+.accordian-head {
+  margin-top: 15px;
+  position: relative;
+  padding-left: 5px;
+  background: #f5f5f5;
+  color: #000000;
+  border: 1px solid #ccc; }
+  .accordian-head > a {
+    color: #d72922;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .accordian-head > a .plus {
+      position: absolute;
+      right: 10px;
+      margin-top: 2px; }
+    .accordian-head > a .minus {
+      position: absolute;
+      right: 10px;
+      margin-top: 5px;
+      display: none; }
+  .accordian-head + .accordian-content {
+    border-top: 0px;
+    padding: 15px 0 0;
+    display: none;
+    margin-bottom: -15px; }
+    .accordian-head + .accordian-content.ordered-list li {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+  .accordian-head.slideDown .plus {
+    display: none; }
+  .accordian-head.slideDown .minus {
+    display: inline-block; }    
+    
+</style>
+
+<h6 class="heading accordian-head slideDown">
+    <a href="javascript:void(0)">
+        <strong>Freight Forwarders</strong>
+        <span class="plus"><i class="fa fa-plus"></i></span>
+        <span class="minus"><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class="ordered-list accordian-content clearfix">
+    <li>1. <a href="eservice-detail.html" class="eservice-link">eService description</a></li>
+    <li>2. <a href="eservice-detail.html" class="eservice-link">eService Links</a></li>
+</ol>
+<h6 class="heading accordian-head">
+    <a href="javascript:void(0)">
+        <strong>Exporter</strong>
+        <span class="plus"><i class="fa fa-plus"></i></span>
+        <span class="minus"><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class="ordered-list accordian-content clearfix">
+    <li>1. <a href="eservice-detail.html" class="eservice-link">Donec pharetra</a></li>
+    <li>2. <a href="eservice-detail.html" class="eservice-link">Aenean felis ipsum</a></li>
+</ol>
+<h6 class="heading accordian-head">
+    <a href="javascript:void(0)">
+        <strong>Shipping Line/ Agents</strong>
+        <span class="plus"><i class="fa fa-plus"></i></span>
+        <span class="minus"><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class="ordered-list accordian-content clearfix">
+    <li>1. <a href="eservice-detail.html" class="eservice-link">Berth Booking</a></li>
+    <li>2. <a href="eservice-detail.html" class="eservice-link">Manifest</a></li>
+    <li>3. <a href="eservice-detail.html" class="eservice-link">Lorem ipsum </a></li>
+    <li>4. <a href="eservice-detail.html" class="eservice-link">Dolor sit amet</a></li>
+    <li>5. <a href="eservice-detail.html" class="eservice-link">Consectetur </a></li>
+    <li>6. <a href="eservice-detail.html" class="eservice-link">Adipiscing elit</a></li>
+    <li>7. <a href="eservice-detail.html" class="eservice-link">Mauris lacinia</a></li>
+    <li>8. <a href="eservice-detail.html" class="eservice-link">Laoreet dignissim</a></li>
+    <li>9. <a href="eservice-detail.html" class="eservice-link">Aenean id molestie</a></li>
+    <li>10. <a href="eservice-detail.html" class="eservice-link">Suspendisse condimentum</a></li>
+</ol>
+<h6 class="heading accordian-head">
+    <a href="javascript:void(0)">
+        <strong>Shipping Line/ Agents</strong>
+        <span class="plus"><i class="fa fa-plus"></i></span>
+        <span class="minus"><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class="ordered-list accordian-content clearfix">
+    <li>1. <a href="eservice-detail.html" class="eservice-link">Lorem ipsum </a></li>
+    <li>2. <a href="eservice-detail.html" class="eservice-link">Berth Booking</a></li>
+    <li>3. <a href="eservice-detail.html" class="eservice-link">Manifest </a></li>
+    <li>4. <a href="eservice-detail.html" class="eservice-link">Dolor sit amet</a></li>
+    <li>5. <a href="eservice-detail.html" class="eservice-link">Consectetur </a></li>
+    <li>6. <a href="eservice-detail.html" class="eservice-link">Adipiscing elit</a></li>
+    <li>7. <a href="eservice-detail.html" class="eservice-link">Suspendisse condimentum</a></li>
+    <li>8. <a href="eservice-detail.html" class="eservice-link">Laoreet dignissim</a></li>
+    <li>9. <a href="eservice-detail.html" class="eservice-link">Aenean id molestie</a></li>
+    <li>10. <a href="eservice-detail.html" class="eservice-link">Mauris lacinia</a></li>
+</ol>
+
+<script type="text/javascript">
+    $(document).on('click', '.accordian-head', function() {
+        $(this).toggleClass('slideDown').siblings('.accordian-head').removeClass('slideDown');
+        $(this).next('.accordian-content').slideToggle('slow', 'linear').siblings('.accordian-content').slideUp('slow', 'linear');
+    });
+
+    $('.accordian-head.slideDown').each(function() {
+        var $th = $(this);
+        $(this).next('.accordian-content').slideToggle('slow', 'linear').siblings('.accordian-content').slideUp('slow', 'linear');
+    });
+    
+</script>

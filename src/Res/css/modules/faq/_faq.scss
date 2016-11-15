@@ -1,0 +1,253 @@
+/* SG
+# design-patterns/faq page
+```
+<div class='row'>
+    <div class='col-sm-4'>
+        <div class='left-panel'>
+            <ul>
+                <li class='dubai-trade-and-user-management'><a href='javascript:void(0)'>Dubai Trade & User Management</a></li>
+                <li class='dubai-trade-portal-subscription'><a href='javascript:void(0)'>Dubai Trade Portal Subscription</a></li>
+                <li class='rosoom'><a href='javascript:void(0)'>Rosoom</a></li>
+                <li class='shipping-agent-services'><a href='javascript:void(0)'>Shipping Agent Services</a></li>
+                <li class='cargo-gate-pass'><a href='javascript:void(0)'>Cargo Gate Pass</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class='col-sm-8'>
+        <div class='right-panel'>
+            <section>
+                <div class='section-heading'>
+                    Dubai Trade & User Management
+                </div>
+                <div class="col-xs-12">
+                    <p> What is Dubai Trade Portal?</p>
+                    <p>Dubai Trade is an innovative, simple and secure portal that combines all electronic services provided by
+                        DP World, Economic Zones World, Dubai Customs and Dubai Multi Commodities Center
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class='section-heading'>
+                    Dubai Trade Portal Subscription
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                        Are there any restrictions for accessing the Dubai Trade Portal and its services?
+                                        Is my Information secure on the Dubai Trade Portal? Can any other user see my company Dubai Trade Portal Available 24x7?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class='section-heading'>
+                    Rosoom
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                            window provides exclusive electronic services to the trading communities aiming to be the online centric        hub linking stakeholders through end-to-end trade supply chain.
+                                    Who can avail the services through Dubai Trade Portal?
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class='section-heading'>
+                    Shipping Agent Services
+                </div>
+                <div class="col-xs-12">
+                    <p>Is my Information secure on the Dubai Trade Portal? Can any other user see my company information?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class='section-heading'>
+                    Cargo Gate Pass
+                </div>
+                <div class="col-xs-12">
+                    <p>
+                       Who can avail the services through Dubai Trade Portal?
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>    
+</div>
+
+```
+*/
+
+/* SG
+# design-patterns/accordian
+
+```
+        
+<h6 class='heading accordian-head slideDown'>
+    <a href="javascript:void(0)">
+        <strong>Freight Forwarders</strong>
+        <span class='plus'><i class="fa fa-plus"></i></span>
+        <span class='minus'><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class='ordered-list accordian-content clearfix'>
+    <li>1. <a href='eservice-detail.html' class='eservice-link'>eService description</a></li>
+    <li>2. <a href='eservice-detail.html' class='eservice-link'>eService Links</a></li>
+</ol>
+<h6 class='heading accordian-head'>
+    <a href="javascript:void(0)">
+        <strong>Exporter</strong>
+        <span class='plus'><i class="fa fa-plus"></i></span>
+        <span class='minus'><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class='ordered-list accordian-content clearfix'>
+    <li>1. <a href='eservice-detail.html' class='eservice-link'>Donec pharetra</a></li>
+    <li>2. <a href='eservice-detail.html' class='eservice-link'>Aenean felis ipsum</a></li>
+</ol>
+<h6 class='heading accordian-head'>
+    <a href="javascript:void(0)">
+        <strong>Shipping Line/ Agents</strong>
+        <span class='plus'><i class="fa fa-plus"></i></span>
+        <span class='minus'><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class='ordered-list accordian-content clearfix'>
+    <li>1. <a href='eservice-detail.html' class='eservice-link'>Berth Booking</a></li>
+    <li>2. <a href='eservice-detail.html' class='eservice-link'>Manifest</a></li>
+    <li>3. <a href='eservice-detail.html' class='eservice-link'>Lorem ipsum </a></li>
+    <li>4. <a href='eservice-detail.html' class='eservice-link'>Dolor sit amet</a></li>
+    <li>5. <a href='eservice-detail.html' class='eservice-link'>Consectetur </a></li>
+    <li>6. <a href='eservice-detail.html' class='eservice-link'>Adipiscing elit</a></li>
+    <li>7. <a href='eservice-detail.html' class='eservice-link'>Mauris lacinia</a></li>
+    <li>8. <a href='eservice-detail.html' class='eservice-link'>Laoreet dignissim</a></li>
+    <li>9. <a href='eservice-detail.html' class='eservice-link'>Aenean id molestie</a></li>
+    <li>10. <a href='eservice-detail.html' class='eservice-link'>Suspendisse condimentum</a></li>
+</ol>
+<h6 class='heading accordian-head'>
+    <a href="javascript:void(0)">
+        <strong>Shipping Line/ Agents</strong>
+        <span class='plus'><i class="fa fa-plus"></i></span>
+        <span class='minus'><i class="fa fa-minus"></i></span>
+    </a>
+</h6>
+<ol class='ordered-list accordian-content clearfix'>
+    <li>1. <a href='eservice-detail.html' class='eservice-link'>Lorem ipsum </a></li>
+    <li>2. <a href='eservice-detail.html' class='eservice-link'>Berth Booking</a></li>
+    <li>3. <a href='eservice-detail.html' class='eservice-link'>Manifest </a></li>
+    <li>4. <a href='eservice-detail.html' class='eservice-link'>Dolor sit amet</a></li>
+    <li>5. <a href='eservice-detail.html' class='eservice-link'>Consectetur </a></li>
+    <li>6. <a href='eservice-detail.html' class='eservice-link'>Adipiscing elit</a></li>
+    <li>7. <a href='eservice-detail.html' class='eservice-link'>Suspendisse condimentum</a></li>
+    <li>8. <a href='eservice-detail.html' class='eservice-link'>Laoreet dignissim</a></li>
+    <li>9. <a href='eservice-detail.html' class='eservice-link'>Aenean id molestie</a></li>
+    <li>10. <a href='eservice-detail.html' class='eservice-link'>Mauris lacinia</a></li>
+</ol>
+        
+```
+
+*/
+.left-panel {
+    ul {
+        border: 1px solid $light-gray;
+
+        li {
+            a {
+                display: block;
+                padding: 10px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            + li {
+                border-top: 1px solid $light-gray;
+            }
+
+            &.active {
+                a {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+.right-panel {
+    @media (max-width: $screen-xs-max) {
+        margin-top: 30px;
+    }
+
+    > section {
+        display: none;
+        border-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .section-heading {
+        @include margin-left(15px);
+
+        padding: 10px 20px;
+        font-weight: bold;
+        border: 1px solid $light-gray;
+
+        @media (max-width: $screen-xs-max) {
+            @include margin-left(0px);
+        }
+    }
+
+    .panel {
+        box-shadow: none;
+        background: transparent;
+        margin-bottom: 0;
+
+        .panel-heading {
+            border: 0;
+        }
+    }
+
+    .question {
+        text-decoration: underline;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-top: 3px;
+
+            @include margin-right(10px);
+
+            @include border-right(1px, #000);
+
+            border-top: 1px solid #000;
+            background-color: transparent;
+
+            @include rotate(135deg);
+
+            @extend .float-l;
+        }
+
+        > span {
+            overflow: hidden;
+            display: block;
+        }
+
+        &.collapsed {
+            &:before {
+                margin-top: 5px;
+
+                @include rotate(45deg);
+            }
+        }
+    }
+
+    .panel-body {
+        @include padding-left(34px);
+
+        color: #6c6c6c;
+    }
+}

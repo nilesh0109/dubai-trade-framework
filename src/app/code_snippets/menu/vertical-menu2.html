@@ -1,0 +1,80 @@
+<div class="menu accord" id="accordion-menu1">
+	<nav class='nav-container'>
+		<ul class='menu-nav clearfix text-uppercase'>
+			<li>
+				<a href='javascript:void(0)'>Home</a>
+			</li>
+			<li class='active has-children'>
+				<a href='javascript:void(0)'>About </a>
+				<ul class='submenu'>
+					<li><a href="javascript:void(0)">Vision and Mission</a></li>
+					<li><a href="javascript:void(0)">Trade Board & Management</a></li>
+					<li><a href="javascript:void(0)">CEO Welcome Message</a></li>
+					<li><a href="javascript:void(0)">Tradelines</a></li>
+					<li><a href="javascript:void(0)">Statistics</a></li>
+					<li><a href="javascript:void(0)">Video Gallery</a></li>
+					<li><a href="javascript:void(0)">Dubai Trade Evolution</a></li>
+					<li><a href="javascript:void(0)">Media Kit</a></li>
+				</ul>
+			</li>
+			<li class="has-children">
+				<a href='javascript:void(0)'>Products & Services</a>
+				<ul class='submenu'>
+					<li class="has-children">
+						<a href="javascript:void(0)">eServices</a>
+						<ul class="submenu">
+							<li><a href="javascript:void(0)">jafza</a></li>
+							<li><a href="javascript:void(0)">Dafza</a></li>
+							<li><a href="javascript:void(0)">DP World</a></li>
+							<li><a href="javascript:void(0)">cargo-clearance</a></li>
+							<li><a href="javascript:void(0)">Bill of Lading</a> </li>
+							<li><a href="javascript:void(0)">cargo-acceptance-gc</a></li>
+							<li><a href="javascript:void(0)">Delivery Order</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">Training</a></li>
+					<li class="has-children">
+						<a href="javascript:void(0)">support</a>
+						<ul class="submenu">
+							<li><a href="javascript:void(0)">jafza</a></li>
+							<li><a href="javascript:void(0)">Dafza</a></li>
+							<li><a href="javascript:void(0)">DP World</a></li>
+							<li class="has-children">
+								<a href="javascript:void(0)">cargo-clearance</a>
+								<ul class='submenu'>
+									<li><a href="javascript:void(0)">Laws And Regulations</a></li>
+									<li><a href="javascript:void(0)">Processes And Procedures</a></li>
+									<li><a href="javascript:void(0)">Registration Process</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)">Bill of Lading</a> </li>
+							<li><a href="javascript:void(0)">cargo-acceptance-gc</a></li>
+							<li><a href="javascript:void(0)">Delivery Order</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href='javascript:void(0)'>News</a>
+			</li>
+			<li class="has-children">
+				<a href='javascript:void(0)'>How to start</a>
+				<ul class='submenu'>
+					<li><a href="javascript:void(0)">Laws And Regulations</a></li>
+					<li><a href="javascript:void(0)">Processes And Procedures</a></li>
+					<li><a href="javascript:void(0)">Registration Process</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href='javascript:void(0)'>Contact Us</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<script type="text/javascript">
+	
+	$('#accordion-menu1').on('click','li',function(){
+		$(this).toggleClass('active').siblings().removeClass('active').children('li').removeClass('active');
+	});
+</script>

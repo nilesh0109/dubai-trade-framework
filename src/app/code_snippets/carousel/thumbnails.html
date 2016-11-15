@@ -1,0 +1,131 @@
+<script type="text/javascript" src="Res/js/custom/bxslider.js"></script>
+
+<div class="clearfix">
+    <figure class="img-container thumbnail-slider">
+        <ul class="bxslider clearfix">
+            <li class="active">
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+            <li>
+                <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+            </li>
+        </ul>
+        <div class="caption-bar text-center">
+            <a class="prev-slide" href="javascript:void(0)"></a>
+            <span class="current-slide-no"></span> / <span class="total-slide-count"></span>
+            <a class="next-slide" href="javascript:void(0)"></a>
+        </div>
+        <div id="bx-pager">
+            <ul class="pager-bxslider clearfix">
+                <li>
+                    <a data-slide-index="0" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="1" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="2" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="3" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="4" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="5" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="6" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+                <li>
+                    <a data-slide-index="7" href="javascript:void(0)">
+                        <img class="img-responsive" src="Res/images/news-detail/carousel-img.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </figure>
+    <div>
+    </div>
+</div>
+
+<script type="text/javascript">
+setTimeout(function(){
+    if ($('.thumbnail-slider .bxslider').length > 0)
+        bx_news_detail = $('.thumbnail-slider .bxslider').bxSlider({
+            infiniteLoop: false,
+            controls: false,
+            pagerCustom: '.thumbnail-slider #bx-pager',
+            onSliderLoad: function(currentIndex) {
+                $('.thumbnail-slider .caption-bar .total-slide-count').html($('.thumbnail-slider .bxslider').find('li').length);
+                $('.thumbnail-slider .caption-bar .current-slide-no').html(currentIndex + 1);
+            },
+            onSlideBefore: function($ele, oldIndex, newIndex) {
+                $ele.addClass('active').siblings().removeClass('active');
+                $('.thumbnail-slider .caption-bar .current-slide-no').html(newIndex + 1);
+                pager_news_detail.find('li').eq(newIndex).addClass('active').siblings().removeClass('active');
+                pager_news_detail.goToSlide(newIndex);
+            }
+        });
+    if ($('.thumbnail-slider .pager-bxslider').length > 0)
+        pager_news_detail = $('.thumbnail-slider .pager-bxslider').bxSlider({
+            infiniteLoop: false,
+            slideWidth: ($('.thumbnail-slider #bx-pager').innerWidth() - 30) / 4,
+            slideMargin: 10,
+            minSlides: 1,
+            maxSlides: 4,
+            moveSlides: 1,
+            pager: false,
+            controls: false,
+            onSliderLoad: function(currentIndex) {
+                $('.thumbnail-slider .pager-bxslider > li').eq(currentIndex).addClass('active').siblings().removeClass('active');
+            }
+        });
+
+
+    $('.caption-bar a.prev-slide').click(function() {
+        var current = bx_news_detail.getCurrentSlide();
+        bx_news_detail.goToPrevSlide();
+        pager_news_detail.goToPrevSlide();
+    });
+
+    $('.caption-bar a.next-slide').click(function() {
+        var current = bx_news_detail.getCurrentSlide();
+        bx_news_detail.goToNextSlide();
+        pager_news_detail.goToNextSlide();
+    });
+},100);
+</script>

@@ -1,0 +1,247 @@
+.search-content {
+    @include margin-top($space-10);
+
+    font-size: $font-14;
+.hidden-parameters{
+    display:none;
+}
+    .search-filters {
+        > div {
+            padding: 3px 5px;
+            border: 1px solid $gray;
+            background: #f1f1f1;
+
+            @extend .float-l;
+
+            width: 40%;
+
+            @include margin-right(0.5%);
+
+            line-height: 1.7;
+
+            @media (max-width: $screen-md-max) {
+                width: 100%;
+                float: none;
+                margin-top: 5px;
+            }
+
+            &:last-child {
+                width: 19%;
+
+                @include margin-right(0%);
+
+                @media (max-width: $screen-md-max) {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include margin-bottom($space-10);
+
+        > .search-keyword {
+            padding: 6px 5px;
+
+            .keyword {
+                @extend .float-l;
+
+                @include padding-right($space-5);
+
+                @media (max-width: $screen-xs-min - 1) {
+                    display: block;
+                    float: none;
+                }
+            }
+
+            > div {
+                overflow: hidden;
+
+                > input {
+                    width: 100%;
+                    line-height: 1.3;
+                }
+            }
+
+            .search-btn {
+                background: $red-color;
+                padding: 1px 18px;
+                color: #fff;
+
+                @extend .float-r;
+
+                @include margin-left($space-5);
+            }
+        }
+
+        > .search-for {
+            padding: 6px 5px;
+
+            span.for {
+                @media (max-width: $screen-xs-min) {
+                    display: block;
+                    float: none;
+                }
+            }
+
+            span, input {
+                vertical-align: middle;
+            }
+
+            label {
+                margin-bottom: 0;
+                padding: 0 $space-5;
+
+                @media (max-width: $screen-xs-min) {
+                    display: block;
+                    margin-top: 5px;
+                    padding-left: 0;
+                }
+            }
+
+            input[type='radio'] {
+                display: none;
+            }
+
+            input[type="radio"] + label > span {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+
+                @include margin-right(4px);
+
+                background: url("../images/icons/radio-sprite.png") right top no-repeat;
+                cursor: pointer;
+            }
+
+            input[type="radio"]:checked + label > span {
+                background: url("../images/icons/radio-sprite.png") left top no-repeat;
+            }
+        }
+
+        > .search-ordering {
+            .ordering {
+                @extend .float-l;
+
+                margin-top: 3px;
+
+                @include padding-right($space-5);
+            }
+
+            .selectList-container {
+                overflow: hidden;
+                position: relative;
+                background: #fff;
+
+                .ordering-list {
+                    padding: 1px;
+                    appearance: none;
+                    background: transparent;
+                    position: relative;
+                    width: 100%;
+                    height: 30px;
+
+                    @include padding-right($space-20);
+                }
+
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 8px solid #d72922;
+                    position: absolute;
+                    right: 6px;
+                    top: 10px;
+                }
+
+           /*     .right-caret-icon {
+
+                    display: inline-block;
+                    display:none;
+                    position: absolute;
+
+                    @include right($space-0);
+
+                    top: 0;
+                    height: 100%;
+                    width: 30px;
+                    background: $red-color;
+
+                    &:before, &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 9px;
+                        height: 9px;
+
+                        @include margin-right(3px);
+
+                        @include margin-left(2px);
+
+                        border-right: 2px solid #fff;
+                        border-bottom: 2px solid #fff;
+                        background-color: transparent;
+                        position: absolute;
+
+                        @include right(7px);
+                    }
+
+                    &:before {
+                        transform: rotate(225deg);
+                        top: 7px;
+                    }
+
+                    &:after {
+                        transform: rotate(45deg);
+                        bottom: 7px;
+                    }
+                }
+                */
+            }
+        }
+    }
+
+    .search-results {
+        @include padding($space-15);
+
+        border: 1px solid $gray;
+
+        .tag {
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        ol.result-list {
+            list-style-type: decimal;
+            list-style-position: inside;
+
+            li {
+                list-style-type: decimal;
+
+                @include padding-bottom($space-10);
+
+                border-bottom: 1px solid $gray;
+                font-weight: bold;
+
+                .desc {
+                    @include margin-top($space-10);
+
+                    @include margin-bottom($space-10);
+
+                    font-weight: normal;
+                }
+
+                .timestamp {
+                    font-weight: normal;
+                }
+
+                + li {
+                    @include padding-top($space-10);
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

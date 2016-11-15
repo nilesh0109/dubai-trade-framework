@@ -1,0 +1,92 @@
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: $font-arial;
+    line-height: normal;
+    color: $dark-gray;
+    height: 100%;
+}
+
+div, p, div:focus, span, figure, section, img, p:focus, span:focus, figure:focus, section:focus, img:focus {
+    outline: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+*:focus {
+    outline: 0;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+
+*:not(.articlebody) ul, *:not(.articlebody) ol {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+    list-style: none;
+}
+
+iframe {
+    border: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+@font-face {
+    font-family: gillsans;
+    src: url(../fonts/gillsans.ttf);
+    src: url(../fonts/gillsans.eot);
+    src: url(../fonts/gillsans.woff);
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/*--- media quiries ---*/
+@media (max-width: $screen-xs-max) {}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {}
+
+@media (min-width: $screen-lg-min) {}

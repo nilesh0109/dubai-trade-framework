@@ -1,0 +1,230 @@
+.classifed-sorting-filter-wrapper {
+    border: 1px solid $light-gray;
+    padding: 20px 10px;
+
+    .selectList-wrapper {
+        display: block;
+        max-width: 19%;
+        margin-bottom: 10px;
+
+        @extend .float-l;
+
+        .selectList {
+            &.chosen {
+                color: #333;
+            }
+
+            option:not([disabled]) {
+                color: #333;
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: 0px;
+        }
+
+        + .selectList-wrapper {
+            @include margin-left(1.25%);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            max-width: 220px;
+            float: none;
+
+            @include margin-left(0%);
+
+            + .selectList-wrapper {
+                @include margin-left(0%);
+            }
+        }
+    }
+
+    .to-filter {
+        position: relative;
+
+        .to {
+            position: absolute;
+            bottom: 0px;
+            margin-bottom: 8px;
+
+            @include right(100%);
+
+            color: #ccc;
+            font-weight: bold;
+
+            @media (min-width: $screen-sm-min) {
+                transform: translateX(10px);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                position: static;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    button {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 16px;
+        border: 1px solid $light-gray;
+        color: $red;
+        background: $white;
+
+        &[type="submit"] {
+            background: $red;
+            color: $white;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: 15px;
+        }
+    }
+
+    .filter-label {
+        margin-bottom: 10px;
+
+        ~ .selectList-wrapper {
+            margin-top: 0px;
+        }
+
+        ~ .date-picker {
+            margin-top: 0px;
+        }
+
+        &.date-label {
+            @media (min-width: $screen-sm-min) {
+                width: 200%;
+            }
+        }
+    }
+}
+
+.classifed-sorting {
+    .col-md-8 {
+        @include padding-left(0px);
+
+        .result-count {
+            font-weight: bold;
+            margin: 20px 0 0;
+            display: block;
+            font-size: $font-20;
+        }
+    }
+
+    .col-md-4 {
+        @include padding-right(0px);
+
+        text-align: $text-right;
+
+        @media (max-width: $screen-xs-max) {
+            text-align: $text-left;
+            padding: 0px;
+        }
+    }
+
+    .selectList-wrapper {
+        display: inline-block;
+        margin-top: 15px;
+        max-width: 220px;
+        text-align: $text-left;
+
+        &:after {
+            content: none;
+        }
+
+        .selectList-caret {
+            display: inline-block;
+            position: absolute;
+
+            @include right(10px);
+
+            top: 0px;
+
+            &:before {
+                content: "";
+                width: 0;
+                height: 0px;
+                border: 5px solid transparent;
+                border-top: 8px solid $medgray;
+                transform: rotate(180deg);
+                display: block;
+            }
+
+            &:after {
+                content: "";
+                width: 0;
+                height: 0px;
+                border: 5px solid transparent;
+                border-top: 8px solid $medgray;
+                display: block;
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
+}
+
+.date-picker {
+    margin-top: 28px;
+    width: 100%;
+    max-width: 220px;
+
+    table {
+        cursor: pointer;
+
+        .day {
+            text-align: center;
+
+            &.today {
+                background: #ccc !important;
+            }
+
+            &.active {
+                background: $red !important;
+                border: $red !important;
+                color: $white;
+            }
+
+            &.disabled {
+                color: $gray;
+            }
+        }
+    }
+
+    input.form-control {
+        border-radius: 0;
+        box-shadow: none;
+
+        @include padding-right(0px);
+
+        @include padding-left(10px);
+
+        @include border-right(0px, transparent);
+
+        &:focus {
+            border-color: $light-gray;
+        }
+    }
+
+    .input-group-addon {
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        padding: 6px 10px;
+
+        @include border-left(0px, transparent);
+
+        > i {
+            color: #ccc;
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        margin-top: 0px;
+    }
+}

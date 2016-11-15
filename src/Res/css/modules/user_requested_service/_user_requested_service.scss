@@ -1,0 +1,68 @@
+.user-agent-container {
+    padding: 10px 10px 0;
+    display: none;
+    text-align: $text-left;
+
+    .useragentform-wrapper {
+        padding: 20px 0;
+        display: block;
+    }
+
+    iframe {
+        margin: 10px;
+    }
+
+    #submitFrame {
+        background: #d72922;
+        padding: 8px 30px;
+        color: #fff;
+        border: 0;
+    }
+
+    #agent-agentType {
+        color: #d0322c !important;
+        display: inline-block !important;
+        margin: 10px 10px 10px 0;
+        vertical-align: middle;
+    }
+
+    #customer {
+        &.not_chosen {
+            color: #ccc;
+
+            option:not([disabled]) {
+                color: #333;
+            }
+        }
+    }
+}
+
+.full-screen-popup {
+    .user-agent-container {
+        display: block;
+    }
+
+    &.user-agent-popup {
+        a.close-button {
+            display: none !important;
+        }
+
+        &.clicked {
+            a.close-button {
+                display: inline-block !important;
+            }
+        }
+
+        .error-message {
+            color: $red-color;
+            font-size: $font-12;
+            display: none;
+        }
+
+        #user-agent.invalid-form {
+            .error-message {
+                display: block;
+            }
+        }
+    }
+}

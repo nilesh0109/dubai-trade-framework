@@ -1,0 +1,33 @@
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+<div class="map-container" id="dubaiTrade">
+
+</div>
+
+
+        <script type="text/javascript">
+            
+            function initMap(){
+
+                  var myLatlng = new google.maps.LatLng('24.980832' ,'55.092480'); 
+                        var mapOptions = {
+                        zoom: 10,
+                        center: myLatlng
+                    }
+                   var map = new google.maps.Map(document.getElementById('dubaiTrade'), mapOptions);
+                     var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: 'Dubai Trade'
+                    });
+
+                    google.maps.event.addDomListener(window, "resize", function() {
+                       var center = map.getCenter();
+                       google.maps.event.trigger(map, "resize");
+                       map.setCenter(center); 
+                    });  
+
+                }
+
+
+
+        </script>

@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  function monkeyPatchAutocomplete() {
+
+      // don't really need this, but in case I did, I could store it and chain
+      var oldFn = $.ui.autocomplete.prototype._renderItem;
+
+      $.ui.autocomplete.prototype._renderItem = function( ul, item) {
+          var re = new RegExp('('+this.term+')','i') ;
+          var t = item.label.replace(re,replaceFn);
+          return $( "<li></li>" )
+              .data( "item.autocomplete", item )
+              .append( "<a>" + t + "</a>" )
+              .appendTo( ul );
+      };
+	  function replaceFn(match, grp){
+	  	return "<span style='font-weight:bold;background:yellow;color:blue;'>" + grp + "</span>";
+	  }
+  }	
+  
+</script>
+<form class="form-validate">
+		<div class="form-element ui-front">
+			<input type="text" class="form-control" id="broswers" name="broswers" autocomplete="off">
+		</div>
+</form>
+<script type="text/javascript">
+(function(){
+	monkeyPatchAutocomplete();
+	var tags = ["Internet Explorer","Firefox","Chrome","Opera","Safari","IE8","IE9","IE10"];
+	$( "#broswers" ).autocomplete({
+	      source: tags,
+	      minLength:0
+	}); 
+})();
+
+</script>

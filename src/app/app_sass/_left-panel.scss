@@ -1,0 +1,91 @@
+.logo-header {
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.left-menu-overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.7);
+    display: none;
+    cursor: pointer;
+    transition: left 0.25s ease-in-out;
+}
+
+.left-nav-panel {
+    width: 200px;
+    box-shadow: 1px 1px 2px 2px $gray;
+    border: 1px solid $gray;
+    padding: 0px 0 10px;
+    margin: 0px 15px 0px 2px;
+    position: fixed;
+    overflow-y: auto;
+    top: 0px;
+    bottom: 0px;
+    background: $white;
+    left: -202px;
+    transition: all 0.25s ease-in-out;
+    z-index: 1001;
+
+    &.active {
+        left: 0px;
+        z-index: 1000;
+
+        .left-menu-overlay {
+            display: block;
+            z-index: -1;
+        }
+    }
+
+    .left-nav-item {
+        display: block;
+        transition: all 0.1s ease-in-out;
+        overflow: hidden;
+        font-size: 18px;
+
+        > a {
+            border-bottom: 1px solid $white;
+        }
+
+        a {
+            padding: 5px 10px;
+            display: block;
+        }
+
+        &:hover, &.active {
+            > a {
+                background: $red;
+                color: $white;
+            }
+        }
+
+        .submenu {
+            max-height: 0px;
+            transition: all 0.2s ease-in-out;
+            font-size: 15px;
+            background: $lightgray;
+
+            li {
+                padding-left: 10px;
+                transition: all 0.2s ease-in-out;
+
+                &:hover, &.active {
+                    background: $red;
+
+                    > a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .submenu {
+                max-height: 1500px;
+            }
+        }
+    }
+}

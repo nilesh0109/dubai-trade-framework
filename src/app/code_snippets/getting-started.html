@@ -1,0 +1,96 @@
+<ul class="main-list">
+	<li>
+		<div class="textWrapper">
+			<strong class="margin-bottom-10">To start using this framework, we need to add the given stylesheet(styles.css) and javascript(global.js) along with few dependencies in the following manner.</strong>
+			<div class="underline"></div>
+			<pre>
+				<code>
+&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+		&lt;title&gt;Dubai Trade&lt;/title&gt;
+		&lt;link rel="stylesheet" type="text/css" href="Res/css/styles.css"/&gt;
+		&lt;script src="Res/js/vendor/modernizr-2.6.2.min.js" type="text/javascript"&gt;&lt;/script&gt;
+		&lt;script src="Res/js/vendor/jquery-1.11.0.min.js" type="text/javascript"&gt;&lt;/script&gt;
+		&lt;script src="Res/js/vendor/bootstrap.min.js" type="text/javascript"&gt;&lt;/script&gt;
+		&lt;/head&gt;
+		&lt;body class="accolades"&gt;
+			&lt;div class="wrapper"&gt;
+			lt;header class="header"&gt;
+	&lt;!---------------  Header will come here ------------------&gt;
+			&lt;/header&gt;
+			&lt;section class="content"&gt;
+	&lt;!---------------  Main content will come here ------------------&gt;
+			&lt;/section&gt;
+			&lt;footer class="footer"&gt;
+	&lt;!---------------  Footer will come here ------------------&gt;
+			&lt;/footer&gt;
+			&lt;/div&gt;
+			&lt;script src="Res/js/global.js" type="text/javascript"&gt;&lt;/script&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+				</code>
+			</pre>
+		</div>
+	</li>
+	<li>
+		<div class="textWrapper">
+			<div>
+				<strong class="margin-bottom-10">Below are the default font style that we are using</strong>
+			</div>
+			    <pre>  
+			body{ 
+					font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+					line-height: normal;
+					color: #333;
+					font-size: 16px;
+				}
+			</pre>
+		</div>
+	</li>
+<li>
+	Please note that all the styles has been already added in styles.css , but we have included the component specific style as a part of component also . But the style included in the component is just for illustrations and need not be included in actual impementation as same is already present in styles.css.
+</li>
+	<li>
+		<div class="textWrapper">
+			<strong class="margin-bottom-10">All the font glyphs we are using are coming from fontawesome(<a href="http://www.fontawesome.io/icons" style="text-decoration: underline" target="_blank">fontawesome.io/icons</a>)</strong>
+		</div>
+	</li>
+	<li>
+		<div class="textWrapper">
+			<strong class="margin-bottom-10">We are leveraging the grid layout of bootstrap framework for column stacking across responsive layout .For detailed description , please read on (<a href="https://getbootstrap.com/examples/grid/" style="text-decoration: underline" target="_blank">https://getbootstrap.com/examples/grid/</a>)</strong>
+
+			For the forms , we are sticking to 2 column layout for non mobile screens( i.e. &gt; 767px) and single coumn layout for mobile screens(i.e &lt; 768px) using the following code.
+<pre> 
+
+&lt;form&gt;
+&lt;div class='row'&gt;
+	&lt;div class="form-group col-sm-6 col-xs-12 "&gt;
+		&lt;label for="first_name"&gt;First name&lt;span class='regMark'&gt;&#42;&lt;/span&gt;&lt;/label&gt;
+		&lt;input type="text" class="form-control" id='first-name' name='first-name' /&gt;
+	&lt;/div&gt;
+		
+	&lt;div class="form-group  col-sm-6 col-xs-12"&gt;
+		&lt;label for="last-name"&gt;Last name&lt;span class='regMark'&gt;&#42;&lt;/span&gt;&lt;/label&gt;
+		&lt;input type="text" class="form-control" id='last-name' name='last-name' /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+ 
+<form>
+ <div class='row'>
+  <div class="form-group col-sm-6 ">
+   <label for="first_name">First name<span class='regMark'>&#42;</span></label>
+   <input type="text" class="form-control" id='first-name' name='first-name'/>
+  </div>	
+  <div class="form-group  col-sm-6">
+   <label for="last-name">Last name<span class='regMark'>&#42;</span></label>
+   <input type="text" class="form-control" id='last-name' name='last-name'/>
+  </div>
+ </div>
+</form>
+</div>
+	</li>
+</ul>

@@ -1,0 +1,54 @@
+<style type="text/css">
+.alert-box {
+margin: 20px 15px;
+padding: 10px;
+border: 1px solid green;
+position: relative;
+display: inline-block;
+font-weight: 700;
+font-size: .9em;
+}
+.alert-box.success {
+color: green;
+}
+.alert-box.error {
+color: #d72922;
+border-color: #d72922;
+}
+.alert-box.info {
+color: #000000;
+border-color: #000000;
+    }
+</style>
+<!-- _____________________________ Success box ________________________________ -->
+<div class="alert-box success">
+    <span class="success-sign"><i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i></span> Your request has been sent.
+</div>
+<!-- _____________________________ Error box  _____________________________ -->
+<div class="alert-box error">
+    <span class="error-sign"><i class="fa fa-lg fa-times-circle-o" aria-hidden="true"></i></span> something went wrong.
+</div>
+<!--  _____________________________ warning box  _____________________________ -->
+<div class="warning-box-wrapper">
+    <div class="warning-box">
+        <a href="javscript:void(0)" class="warning-close-btn">
+            
+        </a>
+        <span class="warning-sign"><i class="fa fa-lg fa-exclamation-triangle" aria-hidden="true"></i></span> Your Subscription with Dubai trade has expired, kindly renew to strat using e-Services.
+    </div>
+</div>
+<script type="text/javascript">
+    $('.warning-close-btn').on('click', function() {
+$(this).closest('.warning-box-wrapper').slideUp();
+})
+</script>
+<!-- ___________________________________ information box _____________________________ -->
+<div class="alert-box info">
+    <span class="warning-sign"><i class="fa fa-lg  fa-info-circle" aria-hidden="true"></i></span> Your Subscription with Dubai trade has been renewed.
+</div>
+<!-- ___________________________________ submit box _____________________________ -->
+<br>
+<div class="alert-box success submit-box">
+    <span class="success-sign"><i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i></span> <span>Your request has been sent.</span> 
+    <div class="black-text">Please <a href="javascript:void(0)" onclick="window.print()"><i class="fa fa-lg fa-print" aria-hidden="true"></i></a> your application or visit our <a href="index.html" class="link">home page</a></div>
+</div>

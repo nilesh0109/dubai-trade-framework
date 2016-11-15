@@ -1,0 +1,94 @@
+.dataTables_wrapper {
+    .ui-widget-header {
+        background: $red;
+        border-radius: 0;
+        color: $white;
+
+        select, input {
+            color: $black;
+            padding: 5px;
+            border: 0;
+        }
+
+        .fg-button {
+            border-radius: 0 !important;
+            border-color: $gray;
+        }
+
+        .dataTables_filter {
+            label {
+                line-height: 0;
+                font-size: 0;
+                position: relative;
+
+                &:before {
+                    @extend .fa;
+
+                    top: 5px;
+                    color: #666;
+                    position: absolute;
+                    #{$left}: 12px;
+                    line-height: 16px;
+                    font-size: 16px;
+                    content: '\f002';
+                }
+            }
+
+            input {
+                padding-#{$left}: 20px;
+                width: 180px;
+                line-height: 16px;
+                font-size: 16px;
+            }
+        }
+
+        .dataTables_length {
+            label {
+                line-height: 0;
+                font-size: 0;
+            }
+
+            label select {
+                line-height: 16px;
+                font-size: 14px;
+
+                @media screen and (max-width: 640px) {
+                    padding: 5px 1px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        .dataTables_info, .dataTables_paginate {
+            text-align: $left;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .dataTables_length {
+            float: $left !important;
+            text-align: $left !important;
+        }
+
+        .dataTables_filter {
+            float: $right !important;
+            text-align: $left !important;
+            margin-top: 0px !important;
+
+            input {
+                margin-#{$left}: 10px !important;
+                width: 165px !important;
+            }
+        }
+    }
+
+    .dataTable + .ui-widget-header {
+        background: $gray;
+    }
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    background-color: #666 !important;
+    font-weight: bold;
+}

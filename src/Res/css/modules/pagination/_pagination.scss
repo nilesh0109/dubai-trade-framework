@@ -1,0 +1,168 @@
+/* SG
+
+# pagination 
+```
+    <nav class='pagination-nav'>
+        <ul class="pagination">
+            <li class="disabled"><a href='javascript:void(0)' aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
+            <li><a href='javascript:void(0)'>1 <span class="sr-only">(current)</span></a></li>
+            <li><a href='javascript:void(0)'>2</a></li>
+            <li class="active"><a href='javascript:void(0)'>3</a></li>
+            <li><a href='javascript:void(0)'>4</a></li>
+            <li><a href='javascript:void(0)'>5</a></li>
+            <li><a href='javascript:void(0)'>6</a></li>
+            <li><a href='javascript:void(0)'>7</a></li>
+            <li><a href='javascript:void(0)'>8</a></li>
+            <li class='dots'><span>...</span></li>
+            <li><a href='javascript:void(0)' aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+        </ul>
+    </nav>
+```
+*/
+
+ul.pagination {
+    > li {
+        margin-top: 5px;
+        display: inline-block;
+
+        > a {
+            border-radius: 0px !important;
+            padding: 4px 10px;
+            color: $darkgrey;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cacaca+0,fdfdfd+100 */
+            background: rgb(202, 202, 202);
+
+            /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NhY2FjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZGZkZmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+            background: -moz-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(253, 253, 253, 1) 100%);
+
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(202, 202, 202, 1)), color-stop(100%, rgba(253, 253, 253, 1)));
+
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(253, 253, 253, 1) 100%);
+
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(253, 253, 253, 1) 100%);
+
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(202, 202, 202, 1) 0%, rgba(253, 253, 253, 1) 100%);
+
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(202, 202, 202, 1) 0%, rgba(253, 253, 253, 1) 100%);
+
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#fdfdfd',GradientType=0 );
+
+            /* IE6-8 */
+
+            &[aria-label="Previous"],
+            &[aria-label="Next"] {
+                background: $red-color;
+                color: #fff;
+                border-radius: 0;
+
+                &:hover {
+                    background: $red-color;
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                color: #fff;
+                background: $darkgrey;
+            }
+        }
+
+        + li {
+            > a {
+                @include margin-left(4px);
+            }
+
+            &:last-child {
+                > a {
+                    @include margin-left(4px);
+                }
+            }
+        }
+
+        &.active {
+            > a, a:hover {
+                color: #fff;
+                background: $darkgrey;
+                cursor: pointer;
+                border-color: transparent;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: $screen-xs-max) {
+                display: inline-block;
+            }
+        }
+
+        &.dots {
+            > span {
+                border: 0;
+                font-weight: bold;
+                margin: 0;
+
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    &.search-pagination {
+        li {
+            > a {
+                border: 0;
+                background: #fff;
+
+                @include margin-left($space-0);
+
+                background: #fff;
+                color: $red-color;
+                border: 1px solid $gray;
+
+                @include border-right(0px, transparent);
+
+                border-radius: 0;
+            }
+
+            &:last-child {
+                > a {
+                    @include border-right(1px, $gray);
+                }
+            }
+
+            &.active, &:hover {
+                > a {
+                    color: #fff;
+                    background: $red-color;
+                }
+            }
+
+            &.disabled {
+                > a {
+                    color: $gray;
+                }
+
+                &:hover {
+                    > a {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.seacrh-results {
+    .pagination-nav {
+        text-align: $text-right;
+    }
+}

@@ -1,0 +1,96 @@
+@mixin bg-handle($bg_image, $bg_position_x, $bg_position_y, $bg_repeat) {
+    background-image: $bg_image;
+    background-position-x: $bg_position_x;
+    background-position-x: $bg_position_y;
+    background-repeat: $bg_repeat;
+}
+
+/* set padding */
+
+@mixin padding($T_value) {
+    padding: $T_value;
+}
+
+@mixin padding-top($T_value) {
+    padding-top: $T_value;
+}
+
+@mixin padding-right($R_value) {
+    padding-right: $R_value;
+}
+
+@mixin padding-bottom($B_value) {
+    padding-bottom: $B_value;
+}
+
+@mixin padding-left($L_value) {
+    padding-left: $L_value;
+}
+
+/* set margin */
+@mixin margin($T_value) {
+    margin: $T_value;
+}
+
+@mixin margin-top($T_value) {
+    margin-top: $T_value;
+}
+
+@mixin margin-right($R_value) {
+    margin-right: $R_value;
+}
+
+@mixin margin-bottom($B_value) {
+    margin-bottom: $B_value;
+}
+
+@mixin margin-left($L_value) {
+    margin-left: $L_value;
+}
+
+/* set display */
+@mixin display-ele($E_display) {
+    display: $E_display;
+}
+
+/* set color */
+@mixin color-txt($TXT_color) {
+    color: $TXT_color;
+}
+
+/* set color */
+@mixin floating($TXT_float) {
+    float: $TXT_float;
+}
+
+/* set border */
+@mixin border-left($border-weight, $border-color) {
+    border-left: $border-color solid $border-weight;
+}
+
+@mixin border-right($border-weight, $border-color) {
+    border-right: $border-color solid $border-weight;
+}
+
+/* set left and right */
+
+@mixin right($R_value) {
+    right: $R_value;
+}
+
+@mixin left($L_value) {
+    left: $L_value;
+}
+
+/* rotate */
+@mixin rotate($angle) {
+    transform: rotate($angle);
+}
+
+@mixin translateX($value) {
+    transform: translateX($value);
+}
+
+@function is-odd($some-number) {
+    @return $some-number % 2 == 1;
+}

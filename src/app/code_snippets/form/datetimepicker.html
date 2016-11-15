@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="Res/css/bootstrap-datetimepicker.css">
+
+<form class="form-validate">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group date datetimepicker" id="datetimepicker1">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">
+                            <i class="fa fa-calendar fa-lg"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+</div></div></form>
+<script type="text/javascript" src="Res/js/vendor/moment-with-locales.js"></script>
+<script type="text/javascript" src="Res/js/vendor/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+    $('.datetimepicker').each(function() {
+        $(this).datetimepicker({
+            keepOpen: true,
+            icons: {
+                time: 'fa fa-clock-o',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down',
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-desktop',
+                clear: 'fa fa-trash',
+                close: 'fa fa-times'
+            }
+        });
+        $(this).find('input').on("focus", function() {
+            console.log($(this).closest('.datetimepicker').data("DateTimePicker").show());
+        });
+    });
+</script>

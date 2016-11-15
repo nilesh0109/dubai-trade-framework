@@ -1,0 +1,75 @@
+{
+  "milestones": [
+    {
+      "year": "1995-1999",
+      "list": [
+        "Manifest submission throrough EDI Started (MDS)",
+		"Mirsal System is implemented by cutoms"
+      ],
+      "logoName": "logo1.png"
+    },
+    {
+      "year": "2000-2002",
+      "list": [
+        "E-Mirsal launched",
+		"MyJAFZA, Online portal for free zone is launched",
+		"MyDPA, Online portal is launched"
+      ],
+      "logoName": "logo2.png"
+    },
+	    {
+      "year": "2003-2005",
+      "list": [
+        "Dubai Trade portal launched to consolidate PCFC.",
+		"Dubai Trade incorporated myDPA & myJAFZA services",
+		"eMirsal services come under the fold of Dubai trade",
+		"DMCC launches its first eServices through Dubai trade",
+		"240 eServices reached"
+
+      ],
+      "logoName": "logo3.png"
+    },
+	{
+      "year": "2006-2007",
+      "list": [
+        "Dubai trade launched as an independent department",
+		"Mirsal ll launched",
+		"E-Token launched",
+		"400 e-Services launched"
+      ],
+      "logoName": "logo4.png"
+    },
+	{
+      "year": "2008-2009",
+      "list": [
+        "E-Mirsal launched",
+        "DPA, Online portal is launched",
+        "MyJAFZA, Online portal for free zone is launched",
+        "Manifest submission throrough EDI Started (MDS)"
+      ],
+      "logoName": "logo1.png"
+    },
+    {
+      "year": "2010-2012",
+      "list": [
+        "400 e-Services launched",
+        "Dubai trade launched as an independent department",
+        "DMCC launches its first eServices through Dubai trade",
+        "Dubai Trade incorporated myDPA & myJAFZA services",
+        "Dubai Trade portal launched to consolidate PCFC."
+      ],
+      "logoName": "logo3.png"
+    },
+    {
+      "year": "2013-2015",
+      "list": [
+        "400 e-Services launched",
+        "Dubai trade launched as an independent department",
+        "DMCC launches its first eServices through Dubai trade",
+        "Dubai Trade incorporated myDPA & myJAFZA services",
+        "Dubai Trade portal launched to consolidate PCFC."
+      ],
+      "logoName": "logo3.png"
+    }
+  ]
+}

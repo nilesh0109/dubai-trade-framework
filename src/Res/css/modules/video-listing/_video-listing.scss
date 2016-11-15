@@ -1,0 +1,154 @@
+.gallery-container {
+    list-stype-type: none;
+
+    .gallery-element {
+        display: block;
+
+        @extend .float-l;
+
+        width: 30%;
+
+        @include margin-right(5%);
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            margin: 5% 0;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        &:nth-of-type(3n) {
+            @include margin-right(0%);
+
+            @media (max-width: $screen-xs-max) {
+                @include margin-right(auto);
+            }
+        }
+
+        &:nth-of-type(n+4) {
+            margin-top: 5%;
+        }
+
+        &:nth-of-type(n+2) {
+            @media (max-width: $screen-xs-max) {
+                margin-top: 5%;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: $screen-xs-max) {
+                border-bottom: 0;
+            }
+        }
+
+        > a {
+            display: block;
+
+            > figure {
+                width: 100%;
+
+                .poster {
+                    width: 100%;
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                top: 5px;
+                bottom: 5px;
+
+                @include right($space-5);
+
+                @include left($space-5);
+
+                background: #fff;
+                opacity: 0.7;
+                display: none;
+            }
+
+            &:hover {
+                .overlay {
+                    display: block;
+                }
+            }
+        }
+
+        .textWrapper {
+            @include padding-top($space-20);
+
+            @include padding-bottom($space-20);
+
+            h5.heading {
+                line-height: 1.5;
+
+                strong {
+                    text-decoration: underline;
+                }
+            }
+
+            .desc {
+                @include margin-top($space-20);
+
+                @include margin-bottom($space-20);
+            }
+        }
+    }
+
+    .line-separater {
+        @extend .float-l;
+
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+}
+
+.gallery-popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s ease-in-out;
+    background: rgba(10, 10, 10, 0.8);
+    opacity: 0.7;
+    top: 0;
+    z-index: 1000;
+    left: 0px;
+
+    &.active {
+        opacity: 1;
+        display: block;
+    }
+
+    .close-btn {
+        color: $white;
+        position: absolute;
+
+        @include left(100%);
+
+        bottom: 100%;
+        display: block;
+        line-height: 14px;
+
+        &:before {
+            content: "x";
+            font-size: $font-24;
+        }
+    }
+
+    .gallery-body {
+        position: relative;
+    }
+}
+
+body.gallery-overlay-open {
+    overflow: hidden;
+
+    .top-navigation {
+        z-index: 0;
+    }
+
+    .mobile-menu {
+        z-index: 0;
+    }
+}

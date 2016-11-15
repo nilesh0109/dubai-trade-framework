@@ -1,0 +1,20 @@
+
+<script type="text/javascript" src="Res/js/custom/captcha.js"></script>
+<form class="form-validate contact-us">
+    <div class="clearfix">
+        <label for="captcha-text" class="col-sm-3 no-padding">Type the code shown Above<span class="regMark">*</span></label>
+        <div class="col-sm-9 no-padding">
+            <input type="text" class="form-control" id="input-captcha" name="input-captcha" equalto="#contact-captcha-hidden" data-rule-required="true" data-msg-equalto="Captcha is not matching " data-msg-required="Please enter the below captcha">
+            <div class="clearfix"></div>
+            <div class="form-group">
+                <label class="reload-captcha clearfix" onclick="Captcha();"><span class="reload"></span></label>
+                <input type="hidden" class="form-control" id="contact-captcha-hidden" name="contact-captcha" value="" disabled>
+                <div class="contact-captcha" id="contact-captcha">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+Captcha();
+</script>

@@ -1,0 +1,91 @@
+/* --------------------- top navigation overwritten ----------------------------- */
+
+html.pushed-left {
+    transform: translate(-300px, 0px);
+    direction: ltr;
+}
+
+/* --------------------------- home style overwritten ------------------------------- */
+.home.ar .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+    font-family: $font-ge_ss;
+}
+
+.home.ar .susbscribe-container .subscribe-btn > .fa-arrow-right {
+    display: none;
+}
+
+.home.ar .susbscribe-container .subscribe-btn > .fa-arrow-left {
+    display: inline-block;
+}
+
+.ar .home-content-boxs .trade-news-home-list .read-more-news {
+    a {
+        &:before {
+            border-bottom: 0px;
+            border-top: 2px solid #555655;
+        }
+    }
+}
+
+.ar .title-icons .addthis_sharing_toolbox {
+    &:before {
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+/* ---------------------------- home slider style overwritten ------------------------- */
+
+.ar .bx-wrapper .bx-viewport {
+    direction: ltr;
+}
+
+.ar .bx-wrapper .bx-viewport > * {
+    direction: rtl;
+}
+
+/* -------------------------- dashboard overlay style overwritten --------------------------- */
+.ar .top-bar {
+    .menu-overlay {
+        &.Level2 {
+            > .multilevel-list {
+                @media (max-width: $screen-xs-max) {
+                    transform: translateX(100%);
+                }
+            }
+        }
+
+        &.Level3 {
+            > .multilevel-list {
+                @media (max-width: $screen-xs-max) {
+                    transform: translateX(200%);
+                }
+            }
+        }
+
+        &.Level4 {
+            > .multilevel-list {
+                @media (max-width: $screen-xs-max) {
+                    transform: translateX(300%);
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------------ dashboard page --------------------------- */
+@media (max-width: 767px) {
+    .ar .home-subscribe .container .subscribe .susbscribe-container .subscribe-inputContainer {
+        direction: ltr;
+    }
+
+    .ar .home-subscribe .container .subscribe .susbscribe-container .subscribe-inputContainer .textWrapper input {
+        display: rtl;
+    }
+}
+
+/* --------------------------------- sorting filters --------------------------- */
+@media (max-width: $screen-sm-max) {
+    .sorting-filter-wrapper .to-filter .to {
+        transform: translateX(-10px);
+    }
+}

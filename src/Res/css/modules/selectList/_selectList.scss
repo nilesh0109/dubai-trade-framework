@@ -1,0 +1,150 @@
+.selectList-wrapper {
+    position: relative;
+
+    @include margin-top($space-35);
+
+    @media (max-width: $screen-xs-max) {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .bs-caret {
+        display: none;
+    }
+
+    button[type="button"] {
+        background: transparent !important;
+        border-radius: 0;
+    }
+
+    .dropdown-menu {
+        margin-top: 0px;
+
+        li {
+            &.selected {
+                background: $red !important;
+                color: $white !important;
+
+                a {
+                    background: $red !important;
+                    color: $white !important;
+                }
+            }
+
+            a:hover {
+                background: $red !important;
+                color: $white !important;
+            }
+        }
+    }
+
+    .selectList {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 220px;
+        max-width: 100%;
+
+        @include padding-top(6px);
+
+        @include padding-bottom(6px);
+
+        @include padding-left($space-5);
+
+        @include padding-right(32px);
+
+        border: 1px solid #ccc;
+        outline: 0;
+        background-color: transparent;
+        z-index: 1;
+        position: relative;
+
+        option:not(:disabled) {
+            color: $black;
+        }
+
+        &.not_chosen {
+            color: #ccc;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 8px;
+
+        @include right($space-10);
+
+        width: 11px;
+        height: 11px;
+        border-right: 2px solid #ccc;
+        border-bottom: 2px solid #ccc;
+        background-color: transparent;
+        transform: rotate(45deg);
+    }
+
+    &:before {
+        content: "";
+        background-color: #f1f1f1;
+        width: 32px;
+        height: 100%;
+        position: absolute;
+
+        @include right($space-0);
+
+        @include border-left(1px, #ccc);
+    }
+
+    &.checkmark {
+        li {
+            .glyphicon.check-mark {
+                position: absolute;
+                display: inline-block !important;
+                #{$right}: 15px;
+                margin-top: 5px;
+
+                @extend .fa;
+
+                @extend .fa-square-o;
+            }
+
+            &.selected {
+                .glyphicon.check-mark {
+                    @extend .fa-check;
+                }
+            }
+        }
+    }
+}
+
+.title-icons {
+    .selectList-wrapper {
+        display: inline-block;
+        margin-top: 0;
+
+        @include margin-right($space-20);
+
+        &:after {
+            @include right($space-10);
+        }
+
+        &:before {
+            @include right($space-0);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}

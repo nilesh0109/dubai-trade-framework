@@ -1,0 +1,117 @@
+.flush-cache {
+    .form-group {
+        + .form-group {
+            margin-top: 20px;
+        }
+    }
+
+    #flush-cache-form {
+        margin: 20px 0;
+    }
+
+    input[type='text'] {
+        padding: 5px 10px;
+        max-width: 300px;
+        width: 100%;
+
+        &.error {
+            border: 1px solid $red-color;
+        }
+    }
+
+    .error {
+        font-size: $font-12;
+        color: $red-color;
+        display: block;
+    }
+
+    .selectList-wrapper {
+        margin-top: 0px;
+        max-width: 315px;
+        margin-bottom: 0px;
+
+        @include padding-right(0px);
+
+        select {
+            width: 100%;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+
+        &.selectList-error {
+            .selectList {
+                border: 1px solid $red-color;
+            }
+
+            ~ .error {
+                @include padding-left(15px);
+
+                @media (min-width: $screen-sm-min) {
+                    clear: both;
+
+                    @include margin-left(25%);
+                }
+            }
+        }
+    }
+
+    .submit-cache-form {
+        border: 1px solid $red-color;
+        color: $white;
+        transition: all 0.25s ease-in-out;
+
+        @include margin-left(15px);
+
+        &:hover {
+            color: $red-color;
+            background: $white;
+        }
+    }
+
+    .reload-captcha {
+        display: block;
+        height: 27px;
+        margin-bottom: 0px;
+
+        .reload {
+            background: url(..//images/icons/icon-refresh.png) top left no-repeat;
+            width: 21px;
+            height: 22px;
+            margin-top: 10px;
+
+            @extend .float-right;
+
+            cursor: pointer;
+        }
+    }
+
+    .contact-captcha {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        text-align: center;
+        color: #e2b116;
+        font-size: 3em;
+        border: 1px solid #ccc;
+        padding: 4px 0;
+        font-family: $Chocolate;
+        font-style: italic;
+        -webkit-user-select: none;
+
+        /* Chrome all / Safari all */
+        -moz-user-select: none;
+
+        /* Firefox all */
+        -ms-user-select: none;
+
+        /* IE 10+ */
+        user-select: none;
+
+        /* Likely future */
+    }
+
+    .captcha-container {
+        max-width: 330px;
+    }
+}

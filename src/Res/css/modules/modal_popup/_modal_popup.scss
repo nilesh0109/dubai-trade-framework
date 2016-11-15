@@ -1,0 +1,88 @@
+.full-screen-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    text-align: center;
+
+    &:after {
+        content: "";
+        width: 0px;
+        height: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .full-screen-popup-content {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        vertical-align: middle;
+        position: relative;
+        background: $white;
+
+        .loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            z-index: -1;
+        }
+
+        iframe {
+            border: 0;
+        }
+
+        a.close-button {
+            display: none;
+            position: absolute;
+            left: 100%;
+            bottom: 100%;
+            background: none;
+            width: 24px;
+            height: 24px;
+            display: block;
+            border: 0;
+
+            @media (max-width: $screen-xs-min - 1) {
+                left: 93%;
+            }
+
+            &:before {
+                content: "";
+                background: #fff;
+                width: 4px;
+                height: 100%;
+                left: 50%;
+                display: block;
+                top: 0;
+                transform: rotate(45deg);
+                position: absolute;
+            }
+
+            &:after {
+                content: "";
+                background: #fff;
+                width: 4px;
+                height: 100%;
+                right: 0px;
+                display: block;
+                position: absolute;
+                top: 0;
+                transform: rotate(-45deg);
+                right: 50%;
+            }
+        }
+    }
+}
+
+html.popup-open {
+    overflow-y: hidden;
+}
+
+.modal-popup {}

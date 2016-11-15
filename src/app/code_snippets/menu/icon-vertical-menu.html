@@ -1,0 +1,115 @@
+<div class="menu accord icon-menu" id="icon-menu">
+	<a href="javascript:void(0)" class="icon-hamburger hidden-sm">
+		<i class="fa fa-lg fa-bars" aria-hidden="true"></i>
+	</a>
+	<nav class='nav-container'>
+		<ul class='menu-nav clearfix text-uppercase'>
+			<li>
+				<a href='javascript:void(0)'>
+					<span class="icon"><i class="fa fa-lg fa-home" aria-hidden="true"></i></span>
+					<span class="icon-label">Home</span>
+				</a>
+			</li>
+			<li class='has-children'>
+				<a href='javascript:void(0)'>
+					<span class="icon"><i class="fa fa-lg fa-building" aria-hidden="true"></i></span>
+					<span class="icon-label">About</span>
+				</a>
+				<ul class='submenu'>
+					<li><a href="javascript:void(0)">Vision and Mission</a></li>
+					<li><a href="javascript:void(0)">Trade Board & Management</a></li>
+					<li><a href="javascript:void(0)">CEO Welcome Message</a></li>
+					<li><a href="javascript:void(0)">Tradelines</a></li>
+					<li><a href="javascript:void(0)">Statistics</a></li>
+					<li><a href="javascript:void(0)">Video Gallery</a></li>
+					<li><a href="javascript:void(0)">Dubai Trade Evolution</a></li>
+					<li><a href="javascript:void(0)">Media Kit</a></li>
+				</ul>
+			</li>
+			<li class="has-children">
+				<a href='javascript:void(0)'>
+					<span class="icon"><i class="fa fa-lg fa-bullseye" aria-hidden="true"></i></span>
+					<span class="icon-label">Products & Services</span>
+				</a>
+				<ul class='submenu'>
+					<li class="has-children">
+						<a href="javascript:void(0)">eServices</a>
+						<ul class="submenu">
+							<li><a href="javascript:void(0)">jafza</a></li>
+							<li><a href="javascript:void(0)">Dafza</a></li>
+							<li><a href="javascript:void(0)">DP World</a></li>
+							<li><a href="javascript:void(0)">cargo-clearance</a></li>
+							<li><a href="javascript:void(0)">Bill of Lading</a> </li>
+							<li><a href="javascript:void(0)">cargo-acceptance-gc</a></li>
+							<li><a href="javascript:void(0)">Delivery Order</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void(0)">Training</a></li>
+					<li class="has-children">
+						<a href="javascript:void(0)">support</a>
+						<ul class="submenu">
+							<li><a href="javascript:void(0)">jafza</a></li>
+							<li><a href="javascript:void(0)">Dafza</a></li>
+							<li><a href="javascript:void(0)">DP World</a></li>
+							<li class="has-children">
+								<a href="javascript:void(0)">cargo-clearance</a>
+								<ul class='submenu'>
+									<li><a href="javascript:void(0)">Laws And Regulations</a></li>
+									<li><a href="javascript:void(0)">Processes And Procedures</a></li>
+									<li><a href="javascript:void(0)">Registration Process</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)">Bill of Lading</a> </li>
+							<li><a href="javascript:void(0)">cargo-acceptance-gc</a></li>
+							<li><a href="javascript:void(0)">Delivery Order</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href='javascript:void(0)'>
+					<span class="icon"><i class="fa fa-lg fa-newspaper-o" aria-hidden="true"></i></span>
+					<span class="icon-label">News</span>
+				</a>
+			</li>
+			<li class="has-children">
+				<a href='javascript:void(0)'>
+					<span class="icon"><i class="fa fa-lg fa-hourglass-start" aria-hidden="true"></i></span>
+					<span class="icon-label">How to start</span>
+				</a>
+				<ul class='submenu'>
+					<li><a href="javascript:void(0)">Laws And Regulations</a></li>
+					<li><a href="javascript:void(0)">Processes And Procedures</a></li>
+					<li><a href="javascript:void(0)">Registration Process</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href='javascript:void(0)'>
+					<span class="icon"><i class="fa fa-lg fa-phone" aria-hidden="true"></i></span>
+					<span class="icon-label">Contact Us</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<script type="text/javascript">
+	
+	$('#icon-menu').on('click','li',function(e){
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		var $th = $(this);
+
+		if($th.hasClass('active')){
+				$th.removeClass('active');
+				return true;
+			}
+		$th.closest('.menu').find('li.active').removeClass('active');
+		$th.addClass('active').parentsUntil('.menu','li').each(function(){
+			$(this).addClass('active');
+
+		});
+	});
+	$('#icon-menu').on('click','.icon-hamburger',function(){ 
+		$(this).closest('.menu').find('.menu-nav').slideToggle();
+	});
+</script>

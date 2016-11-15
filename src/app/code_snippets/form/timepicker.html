@@ -1,0 +1,38 @@
+<form class="form-validate">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group date timepicker" id="datetimepicker1">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">
+                            <i class="fa fa-clock-o fa-lg"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div>
+</div></div></form>
+<script type="text/javascript">
+    $('.timepicker').each(function() {
+        $(this).datetimepicker({
+            keepOpen: true,
+            format: 'LT',
+            icons: {
+                time: 'fa fa-clock-o',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down',
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-desktop',
+                clear: 'fa fa-trash',
+                close: 'fa fa-times'
+            }
+        });
+        $(this).find('input').on("focus", function() {
+            $(this).closest('.timepicker').data("DateTimePicker").show();
+        });
+    });
+</script>

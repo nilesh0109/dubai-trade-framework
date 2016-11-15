@@ -1,0 +1,97 @@
+.discussion-detail-btn {
+    color: $white;
+    padding: 7px 20px;
+    background: #a0a0a0;
+    display: inline-block;
+    margin-bottom: 10px;
+
+    @extend .float-r;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        background: url("../images/icons/icon-back.png");
+        background-repeat: no-repeat;
+
+        @include margin-right(10px);
+    }
+
+    &:hover, &:focus {
+        color: $white;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        padding: 8px;
+        float: none;
+
+        @include margin-top(10px);
+    }
+}
+
+.underLine {
+    text-decoration: underline;
+}
+
+.discussion-heading {
+    font-weight: bold;
+    font-size: $font-24;
+
+    @media (max-width: $screen-xs-max) {
+        display: block;
+    }
+}
+
+.discussion-detail-table {
+    display: table;
+    border: 1px solid $light-gray;
+    margin-top: 20px;
+    width: 100%;
+
+    .table-row {
+        display: table-row;
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 8px 15px;
+            position: relative;
+
+            @media (max-width: $screen-xs-max) {
+                padding: 5px;
+                font-size: $font-14;
+            }
+
+            &:first-child {
+                @include border-right(1px, $light-gray);
+
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.discussion-detail-table-2 {
+    display: table;
+    border: 1px solid $light-gray;
+    width: 100%;
+    border-top: 0;
+
+    .table-row {
+        display: table-row;
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 8px 15px;
+            position: relative;
+
+            @media (max-width: $screen-xs-max) {
+                padding: 5px;
+                font-size: $font-14;
+            }
+        }
+    }
+}

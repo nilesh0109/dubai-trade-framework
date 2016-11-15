@@ -1,0 +1,147 @@
+/* SG
+
+# listing/arrowed-list
+```
+    <ul class='list laws-list clearfix'>
+        <li class='col-sm-6'><a href='javascript:void(0)'>Commercial Agency Law</a></li>
+        <li class='col-sm-6 active'><a href='javascript:void(0)'>Companies Law</a></li>
+        <li class='col-sm-6'><a href='javascript:void(0)'>Control Law</a></li>
+        <li class='col-sm-6'><a href='javascript:void(0)'>Electronic Transactions Law</a></li>
+    </ul>
+```
+*/
+
+.laws-list {
+    font-size: $font-14;
+
+    @include margin-top($space-20);
+
+    @include margin-bottom($space-45);
+
+    @include margin-left($space-20);
+
+    @include margin-right($space-0);
+
+    li {
+        margin-top: 15px;
+
+        > a {
+            text-decoration: underline;
+            color: $dark-gray;
+
+            &:hover {
+                color: $red-color;
+            }
+        }
+
+        &.active {
+            > a {
+                color: $red-color;
+            }
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+
+            @include margin-right($space-25);
+
+            @include margin-left(-17px);
+
+            @include border-right(2px, $red-color);
+
+            border-bottom: 2px solid $red-color;
+            background-color: transparent;
+
+            @include rotate(-45deg);
+        }
+    }
+}
+
+.source {
+    @include padding-top($space-30);
+
+    @include padding-bottom($space-30);
+}
+
+.content {
+    section {
+        @include padding-top($space-40);
+
+        @include padding-bottom($space-0);
+
+        @include padding-left($space-0);
+
+        @include padding-right($space-0);
+
+        border-bottom: 1px solid #ccc;
+
+        &:nth-of-type(1) {
+            @include padding-top($space-0);
+        }
+
+        h2.title {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        p {
+            @include margin-top($space-20);
+
+            @include margin-bottom($space-20);
+
+            @include margin-left($space-0);
+
+            @include margin-right($space-0);
+        }
+
+        &.regulation-section {
+            > p {
+                font-size: $font-20;
+            }
+        }
+
+        &.policies-section {
+            .policies-table {
+                margin-top: 40px;
+                display: block;
+            }
+
+            .margin-5 {
+                @include margin-top($space-5);
+
+                @include margin-bottom($space-20);
+
+                display: block;
+            }
+
+            .row {
+                @include margin-left($space-10);
+
+                + .row {
+                    @include margin-top($space-15);
+                }
+
+                + span {
+                    @include margin-top($space-30);
+
+                    display: block;
+                }
+            }
+
+            span {
+                + .row {
+                    @include margin-top($space-30);
+
+                    display: block;
+                }
+            }
+        }
+    }
+}

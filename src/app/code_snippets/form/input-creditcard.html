@@ -1,0 +1,13 @@
+<script type="text/javascript" src="Res/js/vendor/jquery.maskedinput.js"></script>
+<form class="form-validate">
+	<div class="form-group">
+		<label for="phone-number">Credit Card Number<span class='regMark'>&#42;</span></label>
+		<div class="form-element">
+            <input type="tel" class="form-control credit-card-number" id="credit-card-number" name="credit-card-number" placeholder="0000 0000 0000 0000" maxlength="19" pattern="{^\d{4}\s\d{4}\s\d{4}\s\d{4}$}" data-rule-required="true" data-msg-required="Please enter your card number" data-rule-pattern="true" data-msg-pattern="Invalid card number.Only 16 digits are allowed" autocomplete="off"/>
+	   </div>
+    </div>
+	<div class="form-group"><button type="submit" class="btn btn-red">Submit</button></div>
+</form>
+<script type="text/javascript">
+    $("#credit-card-number").mask("9999 9999 9999 9999");
+</script>

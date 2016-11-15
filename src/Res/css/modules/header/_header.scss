@@ -1,0 +1,440 @@
+.header {
+    .top-nav-wrap {
+        background-color: $off-white;
+
+        &.affix {
+            position: static;
+
+            @media (min-width: $screen-sm-min) {
+                position: fixed;
+                width: 100%;
+                z-index: 10;
+
+                ~ .header-wrap {
+                    @include padding-top($space-50);
+                }
+            }
+        }
+
+        ul.lang-wrap {
+            @include margin-top(7px);
+
+            @extend .display-inline-block-ele;
+
+            margin-right: $space-15;
+
+            @include margin-bottom(7px);
+
+            @media (max-width: $screen-xs-max) {
+                @include margin-right($space-0);
+            }
+
+            li {
+                @extend .display-inline-block-ele;
+
+                @include padding-right($space-5);
+
+                a {
+                    text-transform: uppercase;
+
+                    @include color-txt($top-link);
+                }
+
+                .line {
+                    background-color: $top-link;
+                    width: 1px;
+                    height: 12px;
+
+                    @include margin-top(4px);
+
+                    @include margin-left($space-10);
+
+                    @extend .display-inline-block-ele;
+
+                    @extend .pull-right;
+                }
+            }
+
+            .active {
+                a {
+                    color: $red-color;
+                    line-height: 16px;
+                    vertical-align: bottom;
+                    cursor: default;
+                }
+            }
+        }
+
+        ul.top-social-wrap {
+            @include margin-top(7px);
+
+            @include margin-bottom(7px);
+
+            @extend .display-inline-block-ele;
+
+            li {
+                @extend .display-inline-block-ele;
+
+                vertical-align: bottom;
+
+                @include padding-right($space-15);
+
+                &:last-child {
+                    @include padding-right($space-0);
+                }
+            }
+        }
+    }
+
+    .logo-wrap {
+        @include padding-top($space-10);
+
+        @include padding-bottom($space-10);
+
+        > a {
+            display: inline-block;
+        }
+    }
+
+    .account-wrap {
+        @extend .pull-right;
+
+        @media (max-width: $screen-xs-max) {
+            float: none;
+            text-align: center;
+            background: #fbfbfb;
+            padding-bottom: 25px;
+            display: none;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+.login-wrap {
+    @include padding-top($space-30);
+
+    text-align: $text-right;
+
+    @media (max-width: $screen-xs-max) {
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .login-name {
+        width: 30%;
+        max-width: 150px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: $text-left;
+
+        @media (max-width: $screen-xs-max) {
+            width: 45%;
+            text-align: center;
+        }
+    }
+
+    .login-password {
+        width: 30%;
+        max-width: 150px;
+        display: inline-block;
+        vertical-align: top;
+
+        @media (max-width: $screen-xs-max) {
+            width: 45%;
+        }
+    }
+
+    .btn-red {
+        @include margin-right($space-5);
+
+        @extend .float-l;
+
+        width: 47%;
+
+        @media (max-width: $screen-xs-max) {
+            max-width: 130px;
+            float: none;
+        }
+    }
+
+    .btn-orange {
+        @extend .float-l;
+
+        color: $white !important;
+        text-decoration: none !important;
+        width: 50%;
+
+        @media (max-width: $screen-xs-max) {
+            max-width: 130px;
+            float: none;
+        }
+    }
+
+    .forgot-pass {
+        color: $gray;
+        font-size: 12px;
+        padding: 0 12px;
+
+        @include margin-top(3px);
+
+        @extend .display-inline-block-ele;
+
+        @media (max-width: $screen-xs-max) {
+            font-size: 16px;
+            margin-top: 10px;
+            width: 200%;
+        }
+    }
+
+    .login-btns {
+        width: 36%;
+        display: inline-block;
+        vertical-align: top;
+        font-size: $font-14;
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+        }
+    }
+}
+
+.profile-wrap {
+    padding-top: 15px;
+    width: 100%;
+    display: none;
+    font-size: 14px;
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+
+    > div {
+        display: inline-block;
+        vertical-align: bottom;
+        padding: 5px 0px;
+
+        @include padding-left(30px);
+
+        text-align: $text-right;
+
+        @media (max-width: $screen-xs-max) {
+            //    width: 45%;
+        }
+
+        @media (max-width: $screen-md-max) {
+            @include padding-left(15px);
+        }
+
+        @media (max-width: $screen-xs-min - 1) {
+            @include padding-left(5px);
+        }
+
+        &.logout-wrapper {
+            @include padding-left(0px);
+
+            > a {
+                display: inline-block;
+                vertical-align: bottom;
+
+                > img {
+                    height: 18px;
+                    display: inline-block;
+                    vertical-align: bottom;
+                }
+
+                > span {
+                    vertical-align: bottom;
+                }
+            }
+        }
+
+        &.profile-wrapper {
+            text-align: $text-left;
+
+            > a {
+                display: inline-block;
+                vertical-align: bottom;
+
+                > img {
+                    height: 18px;
+                    display: inline-block;
+                    vertical-align: bottom;
+                }
+
+                > span {
+                    vertical-align: bottom;
+                }
+            }
+        }
+
+        &.inbox-wrapper {
+            > a {
+                i, span {
+                    display: inline-block;
+                    vertical-align: bottom;
+                }
+            }
+        }
+
+        &.pic-wrapper {
+            //   width: 40%;
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+                text-align: center;
+            }
+
+            .profile-img {
+                display: inline-block;
+                vertical-align: bottom;
+                max-width: 15%;
+            }
+
+            .welcome-msg {
+                overflow: hidden;
+                display: inline-block;
+                vertical-align: bottom;
+
+                .userAgent {
+                    display: block;
+                }
+
+                .name {
+                    @media (max-width: $screen-xs-max) {
+                        display: block;
+                    }
+                }
+
+                @media (max-width: $screen-sm-max) {
+                    max-width: 250px;
+                }
+
+                @media (max-width: 850px) {
+                    max-width: 190px;
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    text-align: center;
+                    max-width: none;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}
+
+.close-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $darkgrey;
+    border-radius: 50%;
+    position: relative;
+
+    @media (max-width: $screen-xs-max) {
+        display: inline-block !important;
+    }
+
+    &:before, &:after {
+        content: "";
+        width: 1px;
+        height: 25px;
+        background: $darkgrey;
+        position: absolute;
+        left: 50%;
+        top: 6px;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.font-sizing-wrap {
+    .font-sizing-small {
+        @extend .pull-left;
+
+        a {
+            @include margin-top(14px);
+
+            @extend .display-inline-block-ele;
+
+            color: $top-link;
+        }
+    }
+
+    .font-range {
+        @include margin-top(7px);
+
+        padding: 12px 0;
+        display: block;
+
+        @media (max-width: $screen-xs-max) {
+            display: inline-block;
+        }
+
+        a {
+            @include margin-top(14px);
+
+            text-decoration: none !important;
+
+            @extend .display-inline-block-ele;
+
+            color: $top-link;
+            vertical-align: middle;
+        }
+
+        .font {
+            margin: 0;
+        }
+    }
+}
+
+/*--------- media queries ----------------*/
+@media (max-width: $screen-xs-max) {
+    .top-nav-wrap {
+        ul.lang-wrap {
+            @include margin-right($space-0);
+        }
+    }
+
+    .logo-wrap {
+        text-align: center;
+    }
+}
+
+.home .susbscribe-container .subscribe-btn > .fa-arrow-left {
+    display: none;
+}
+
+#login-form {
+    .error {
+        color: $red-color;
+        font-size: $font-10;
+    }
+}
+
+.account-wrap.loggedIn {
+    @include padding-left(0px);
+
+    .profile-wrap {
+        display: table;
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+    }
+
+    .login-wrap {
+        display: none;
+    }
+}
+
+#sticky-login-form {
+    .error {
+        font-size: 0.7em;
+    }
+}

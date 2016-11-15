@@ -1,0 +1,560 @@
+[{
+    "category": "Introduction",
+    "title": "Introduction",
+    "desc": "",
+    "htmlFile": "app/code_snippets/introduction.html",
+    "target": "introduction"
+}, {
+    "category": "Getting Started",
+    "title": "Getting Started",
+    "desc": "",
+    "htmlFile": "app/code_snippets/getting-started.html",
+    "target": "getting-started"
+}, {
+    "category": "Customize Styles",
+    "title": "Customize Styles",
+    "desc": "",
+    "htmlFile": "app/code_snippets/customize-styles.html",
+    "target": "customize-styles"
+}, {
+    "category": "Asset Library",
+    "title": "Asset Library",
+    "desc": "This section includes links to all the resources (CSS and JS).",
+    "htmlFile": "app/code_snippets/asset-library.html",
+    "target": "asset-library"
+}, {
+    "category": "Buttons",
+    "children": [{
+        "title": "Red Button",
+        "desc": "styling for Red Button",
+        "code": "app/code_snippets/buttons/red-btn.html",
+        "target": "red-btn"
+    }, {
+        "title": "back Button",
+        "desc": "styling for back Button",
+        "code": "app/code_snippets/buttons/back-btn.html",
+        "target": "back-btn"
+    }, {
+        "title": "Orange Button",
+        "desc": "styling for Orange Button",
+        "code": "app/code_snippets/buttons/orange-btn.html",
+        "target": "orange-btn"
+    }, {
+        "title": "Download Button",
+        "desc": "styling for Download Button",
+        "code": "app/code_snippets/buttons/download-btn.html",
+        "target": "download-btn"
+    }, {
+        "title": "Form Action Buttons",
+        "desc": "This section includes the styling for common form buttons like submit , cancel .",
+        "code": "app/code_snippets/buttons/form-action-buttons.html",
+        "target": "form-action-buttons"
+    }]
+}, {
+    "category": "Carousel",
+    "children": [{
+        "title": "Custom Width",
+        "desc": "For Custom width carousel , add the following scripts and use the below shown markup.",
+        "code": "app/code_snippets/carousel/custom-width.html",
+        "target": "custom-width"
+    }, {
+        "title": "Full Width",
+        "desc": "For Full width carousel , add the following scripts and use the below shown markup.",
+        "code": "app/code_snippets/carousel/full-width.html",
+        "target": "full-width"
+    }, {
+        "title": "with thumbnails",
+        "desc": "For carousel with Thumbnails, add the following scripts and use the below shown markup.",
+        "code": "app/code_snippets/carousel/thumbnails.html",
+        "target": "thumbnails-carousel"
+    }]
+}, {
+    "category": "Column Layout",
+    "children": [{
+        "title": "3 Column",
+        "desc": "Please use the below markup for achieving 3 Column layout as shown below",
+        "code": "app/code_snippets/column-layout/three-column.html",
+        "target": "three-column"
+    }, {
+        "title": "4 Column",
+        "desc": "Please use the below markup for achieving 4 Column layout as shown below",
+        "code": "app/code_snippets/column-layout/four-column.html",
+        "target": "four-column"
+    }]
+}, {
+    "category": "Content",
+    "children": [{
+        "title": "Horizontally Centered",
+        "desc": "styling for centered text",
+        "code": "app/code_snippets/content/centered-text.html",
+        "target": "centered-text"
+    }, {
+        "title": "Vertically Centered",
+        "desc": "styling for vertically centered text",
+        "code": "app/code_snippets/content/vertically-centered.html",
+        "target": "vertically-centered"
+    }, {
+        "title": "Bold Text",
+        "desc": "styling for bold text",
+        "code": "app/code_snippets/content/bold-text.html",
+        "target": "bold-text"
+    }, {
+        "title": "Italicized Text",
+        "desc": "styling for Italicized text",
+        "code": "app/code_snippets/content/italicized-text.html",
+        "target": "italicized-text"
+    }, {
+        "title": "Red Text",
+        "desc": "styling for Red text",
+        "code": "app/code_snippets/content/red-text.html",
+        "target": "red-text"
+    }, {
+        "title": "Arrowed List",
+        "desc": "",
+        "code": "app/code_snippets/content/arrowed-list.html",
+        "target": "arrowed-list"
+    }, {
+        "title": "Floating Images",
+        "desc": "",
+        "code": "app/code_snippets/content/floating-images.html",
+        "target": "floating-images"
+    }, {
+        "title": "Listing Detail",
+        "desc": "",
+        "code": "app/code_snippets/content/listing-detail.html",
+        "target": "listing-detail"
+    }, {
+        "title": "Common Messages",
+        "desc": "",
+        "code": "app/code_snippets/content/common-messages.html",
+        "target": "common-messages"
+
+    }, {
+        "title": "Tooltip",
+        "desc": "",
+        "code": "app/code_snippets/content/tooltip.html",
+        "target": "tooltip"
+    }]
+}, {
+    "category": "Custom Scroll",
+    "children": [{
+        "title": "Custom Scroll",
+        "desc": "For adding the nicescroll to any div or body(in case of whole page), add the following scripts to the page .",
+        "code": "app/code_snippets/custom-scroll/custom-scroll.html",
+        "target": "custom-scroll"
+    }]
+}, {
+    "category": "Design Patterns",
+    "children": [{
+        "title": "accordian",
+        "desc": "",
+        "code": "app/code_snippets/design-patterns/accordian.html",
+        "target": "accordian"
+    }]
+}, {
+    "category": "Float Images",
+    "children": [{
+        "title": "Left Floating Image",
+        "desc": "For floating the image on left side of the content , please use the below markup .",
+        "code": "app/code_snippets/floating-image/float-image-left.html",
+        "target": "float-image-left"
+    }, {
+        "title": "Right Floating Image",
+        "desc": "For floating the image on right side of the content , please use the below markup .",
+        "code": "app/code_snippets/floating-image/float-image-right.html",
+        "target": "float-image-right"
+    }]
+}, {
+    "category": "Form",
+    "children": [{
+        "title": "checkbox",
+        "desc": "",
+        "code": "app/code_snippets/form/checkbox.html",
+        "target": "checkbox"
+    }, {
+        "title": "radio",
+        "desc": "",
+        "code": "app/code_snippets/form/radio.html",
+        "target": "radio"
+    }, {
+        "title": "input autocomplete",
+        "desc": " Please include <span class='highlight'>jquery-ui.css </span>and <span class='highlight'>jquery-ui.js</span> to make autocomplete to work .",
+        "code": "app/code_snippets/form/autocomplete.html",
+        "target": "autocomplete"
+    }, {
+        "title": "input text",
+        "desc": "",
+        "code": "app/code_snippets/form/input-text.html",
+        "target": "input-text"
+    }, {
+        "title": "input email",
+        "desc": "",
+        "code": "app/code_snippets/form/input-email.html",
+        "target": "input-email"
+    }, {
+        "title": "input phone",
+        "desc": "",
+        "code": "app/code_snippets/form/input-tel.html",
+        "target": "input-tel"
+    }, {
+        "title": "input creditcard",
+        "desc": "",
+        "code": "app/code_snippets/form/input-creditcard.html",
+        "target": "input-creditcard"
+    }, {
+        "title": "basic dropdown",
+        "desc": "",
+        "code": "app/code_snippets/form/basic-dropdown.html",
+        "target": "basic-dropdown"
+    }, {
+        "title": "multiselect dropdown",
+        "desc": "",
+        "code": "app/code_snippets/form/multiselect-dropdown.html",
+        "target": "multiselect-dropdown"
+    }, {
+        "title": "optgroup dropdown",
+        "desc": "",
+        "code": "app/code_snippets/form/optgroup-dropdown.html",
+        "target": "optgroup-dropdown"
+    }, {
+        "title": "filter dropdown",
+        "desc": "",
+        "code": "app/code_snippets/form/filter-dropdown.html",
+        "target": "filter-dropdown"
+    }, {
+        "title": "dependent dropdowns",
+        "desc": "",
+        "code": "app/code_snippets/form/dependent-dropdowns.html",
+        "target": "dependent-dropdowns"
+    }, {
+        "title": "search dropdown",
+        "desc": "",
+        "code": "app/code_snippets/form/search-dropdown.html",
+        "target": "search-dropdown"
+    }, {
+        "title": "dropdown validation",
+        "desc": "",
+        "code": "app/code_snippets/form/dropdown-validation.html",
+        "target": "dropdown-validation"
+    }, {
+        "title": "Google Captcha",
+        "desc": "1. For recaptcha , please register your website first on <a class='highlight' target='_blank' href='https://developers.google.com/recaptcha/docs/start'>https://developers.google.com/recaptcha/docs/start</a> and get the API key.<br>Then include it in your html in following manner.<br>2.For internationalization , please add the language code as the querystring parameter to the script tag <br><span class='highlight'>&lt;script src='https://www.google.com/recaptcha/api.js?hl=ar'&gt;&lt;/script&gt;. </span><br>For complete list of language codes , please visit <a class='highlight' href='https://developers.google.com/recaptcha/docs/language' target='_blank'>https://developers.google.com/recaptcha/docs/language</a> ",
+        "code": "app/code_snippets/form/recaptcha.html",
+        "target": "recaptcha"
+    }, {
+        "title": "Data Tables",
+        "desc": "Basic data table comes with all the default functionalities like sorting , searching , pagination , filtering responsiveness etc .For all the list of options please refer <a target='_blank' href='https://datatables.net/reference/option/' class='highlight'>https://datatables.net/reference/option/</a>  ",
+        "code": "app/code_snippets/form/basic-data-tables.html",
+        "target": "basic-data-tables"
+    }, {
+        "title": "Search DataTable",
+        "desc": "By default , the search field searches the value among all the columns . If you want a particular column not to be looked into while searching , please set the parameter<span class='highlight'>searchable :false</span> while intializing .<span class'highlight'>Target</span> is used to tagret the column using index starting from 0. ",
+        "code": "app/code_snippets/form/custom-search.html",
+        "target": "custom-search"
+    }, {
+        "title": "Responsive DataTable",
+        "desc": "If responsive parameter is set to true , by defalult , in mobile , the columns will start striping out from right and will be shown on click of plus icon. If the user dont want to show the details , please set the parameter <span class='highlight'>detail : false</span> . <br>To set the priority of columns to hide them on responsive screen , user has to set the <span class='highlight'>responsivePriority< /span>. ",
+        "code": "app/code_snippets/form/custom-responsive.html",
+        "target": "custom-responsive"
+    }, {
+        "title": "textarea",
+        "desc": "",
+        "code": "app/code_snippets/form/textarea.html",
+        "target": "textarea"
+    }, {
+        "title": "form validations",
+        "desc": "This section describes the necessary steps to add the validations to all the form fields like input textfield, email field, tel, select list, checkboxes , radio buttons",
+        "code": "app/code_snippets/form/form-validation.html",
+        "target": "form-validation"
+    }, {
+        "title": "date picker",
+        "desc": "This is a bootsrap datepicker . For all the options are documented in detail <a class='highlight'  target='_blank' href='https://bootstrap-datepicker.readthedocs.io/en/latest/options.html'>https://bootstrap-datepicker.readthedocs.io/en/latest/options.html</a>",
+        "code": "app/code_snippets/form/datepicker.html",
+        "target": "datepicker"
+    }, {
+        "title": "datetime picker",
+        "desc": "",
+        "code": "app/code_snippets/form/datetimepicker.html",
+        "target": "datetimepicker"
+    }, {
+        "title": "time picker",
+        "desc": "",
+        "code": "app/code_snippets/form/timepicker.html",
+        "target": "timepicker"
+    }, {
+        "title": "attachments",
+        "desc": "",
+        "code": "app/code_snippets/form/attachments.html",
+        "target": "attachments"
+    }]
+}, {
+    "category": "Gallery",
+    "children": [{
+        "title": "Image Gallery",
+        "desc": "Use the following markup for image gallery ",
+        "code": "app/code_snippets/gallery/image-gallery.html",
+        "target": "image-gallery"
+    }, {
+        "title": "Video Gallery",
+        "desc": "Use the following markup for video gallery ",
+        "code": "app/code_snippets/gallery/video-gallery.html",
+        "target": "video-gallery"
+    }]
+}, {
+    "category": "Icons",
+    "children": [{
+        "title": "Ajax Loaders",
+        "desc": "We have included following 3 ajax loaders<br> 1.<span class='highlight'> small loader </span>(32px x 32px) <br> 2. <span class='highlight'>big black loader</span> 100px x 100px<br> 3. <span class='highlight'>big white loader </span>100px x 100px<br> For generating customized loaders please visit <a class='highlight' target='_blank' href='http://www.ajaxload.info/'>http://www.ajaxload.info/</a>",
+        "code": "app/code_snippets/Icons/ajax-loaders.html",
+        "target": "ajax-loaders"
+    }, {
+        "title": "Font Awesome Glyphs",
+        "desc": "This section covers all the font-awesome icons that we have used across the website. For complete list of icons , please refer <a class='highlight'  target='_blank' href='http://fontawesome.io/icons/'>http://fontawesome.io/icons/</a>",
+        "code": "app/code_snippets/Icons/fa-glyphs.html",
+        "target": "font-awesome-glyphs"
+    }]
+}, {
+    "category": "List",
+    "children": [{
+        "title": "Unordered",
+        "desc": "",
+        "code": "app/code_snippets/list/unordered.html",
+        "target": "unordered"
+    }, {
+        "title": "Underlined",
+        "desc": "",
+        "code": "app/code_snippets/list/underlined.html",
+        "target": "underlined"
+    }, {
+        "title": "Highlighted Ordered List",
+        "desc": "",
+        "code": "app/code_snippets/list/highlighted-ordered-list.html",
+        "target": "highlighted-ordered-list"
+    }, {
+        "title": "Stepwise List",
+        "desc": "For 3 column steps , please use the class <span class='highlight'>three-steps</span> on the <span class='highlight'>tab-component</span> div. Similarly for 4 steps and 5 steps list , use the classname <span class='highlight'>four-steps</span> and <span class='highlight'>five-steps</span> respectively.",
+        "code": "app/code_snippets/list/stepwise-list.html",
+        "target": "stepwise-list"
+    }]
+}, {
+    "category": "Map",
+    "children": [{
+        "title": "Map",
+        "desc": "",
+        "code": "app/code_snippets/map/map.html",
+        "target": "map"
+    }]
+}, {
+    "category": "Menu",
+    "children": [{
+            "title": "Horizontal Menu",
+            "desc": "below is the HTML code for inclusion of the horizontal multilevel menu",
+            "code": "app/code_snippets/menu/horizontal-menu.html",
+            "target": "horizontal-menu"
+        }, {
+            "title": "Vertical Menu",
+            "desc": "below is the HTML code for inclusion of the vertical multilevel menu",
+            "code": "app/code_snippets/menu/vertical-menu.html",
+            "target": "vertical-menu"
+        }, {
+            "title": "Vertical Menu 2",
+            "desc": "",
+            "code": "app/code_snippets/menu/vertical-menu2.html",
+            "target": "vertical-menu2"
+        }, {
+            "title": "Vertical Menu 2 full",
+            "desc": "For full width vertical menu , add the class <span class='highlight'>full-width</span> ro the div with class menu",
+            "code": "app/code_snippets/menu/vertical-menu2-full.html",
+            "target": "vertical-menu2-full"
+        }, {
+            "title": "Icon Vertical Menu",
+            "desc": "",
+            "code": "app/code_snippets/menu/icon-vertical-menu.html",
+            "target": "icon-vertical-menu"
+        }
+
+    ]
+}, {
+    "category": "Mobile Aligned",
+    "description": "For aligning any element(Generally text) only on mobile screens ,please use the class <span class='hightlight'> mob-align-[dir] </span> where dir is one of the values among <span class='hightlight'> {center,left,right}</span> . Please Note this will not impact the alignment of element on tablet and deskop screens.",
+    "children": [{
+        "title": "Center",
+        "desc": "",
+        "code": "app/code_snippets/mobile-aligned/center.html",
+        "target": "center"
+    }, {
+        "title": "Left",
+        "desc": "",
+        "code": "app/code_snippets/mobile-aligned/left.html",
+        "target": "left"
+    }, {
+        "title": "Right",
+        "desc": "",
+        "code": "app/code_snippets/mobile-aligned/right.html",
+        "target": "right"
+    }]
+}, {
+    "category": "Pagination",
+    "children": [{
+        "title": "Pagination",
+        "desc": "",
+        "code": "app/code_snippets/pagination/pagination.html",
+        "target": "pagination"
+    }]
+}, {
+    "category": "Popup",
+    "children": [{
+        "title": "modal popup",
+        "desc": "",
+        "code": "app/code_snippets/Popup/modal.html",
+        "target": "modal"
+    }, {
+        "title": "overlay popup",
+        "desc": "For any overlay popup , get the content from the div and use the following script functions .<br> <span class='highlight'>DT.modalPopup.createPopup:</span> to create the popup It take following four parameters: <br>1. jquery wrapped object of the div from where we need to get the data(URL of the iframe SRC in case of iframe content).<br>2.class name to be attached to the popup outermost div<br> 3.(boolean parameter) do we need to open the popup content in an iframe.<br>4.(optional paramter) path to the ajax loader that needs to be shown while iframe content loads up.<br> <span class='highlight'> DT.modalPopup.showPopup: </span> to show the popup It takes the reference of the created popup as parameter.<br><span class='highlight'>DT.modalPopup.hidePopup:</span> to hide the popup It takes the reference of the created popup as parameter.",
+        "code": "app/code_snippets/Popup/popup.html",
+        "target": "popup"
+    }]
+}, {
+    "category": "Share Icons",
+    "children": [{
+        "title": "Share Icons",
+        "desc": "",
+        "code": "app/code_snippets/share-icons/share-icons.html",
+        "target": "share-icons"
+    }]
+}, {
+    "category": "Sidebar",
+    "children": [{
+        "title": "Sidebar",
+        "desc": "",
+        "code": "app/code_snippets/sidebar/sidebar.html",
+        "target": "sidebar"
+    }]
+}, {
+    "category": "Slider",
+    "children": [{
+        "title": "Range Slider",
+        "desc": " Please include <span class='highlight'>jquery-ui.css </span>and <span class='highlight'>jquery-ui.js</span> to make this range slider work .",
+        "code": "app/code_snippets/slider/range-slider.html",
+        "target": "range-slider"
+    }]
+}, {
+    "category": "Social Media",
+    "children": [{
+        "title": "Social Links",
+        "desc": "",
+        "code": "app/code_snippets/social-media/social-links.html",
+        "target": "social-links"
+    }]
+}, {
+    "category": "Sticky Buttons",
+    "children": [{
+        "title": "Sticky Buttons",
+        "desc": "",
+        "code": "app/code_snippets/sticky-buttons/sticky-buttons.html",
+        "target": "sticky-buttons"
+    }]
+}, {
+    "category": "Table",
+    "children": [{
+        "title": "2 column",
+        "desc": "For the table like eservice details , use the <span class='highlight'>table</span> on encompassing div and for each row use &lt;div class='row'&gt; . For the heading , add the head class to the row element",
+        "code": "app/code_snippets/table/two-column.html",
+        "target": "two-column"
+    }, {
+        "title": "basic layout",
+        "desc": "For the basic table like structure , use the following markup . In mobile , the table will be splitted further, and each row would be converted into 2 column table .",
+        "code": "app/code_snippets/table/basic-layout.html",
+        "target": "basic-layout"
+    }, {
+        "title": "column layout",
+        "desc": "For the grid table like structure , use the following markup . In mobile , the table columns will be stacked keeping left column being at the top and right column at the bottom of the stack ",
+        "code": "app/code_snippets/table/column-layout.html",
+        "target": "column-layout"
+    }, {
+        "title": "grid layout",
+        "desc": "For the grid table like structure , use the following markup . In mobile , the table will be splitted further, and each row would be converted into 2 column table .",
+        "code": "app/code_snippets/table/grid-layout.html",
+        "target": "grid-layout"
+    }]
+}, {
+    "category": "Tabs",
+    "children": [{
+        "title": "Image Heading 1",
+        "desc": "For Image based tab heading , use the class <span class='hightlight'>home-tab-controller</span> on the encompassing div",
+        "code": "app/code_snippets/tabs/image-heading-1.html",
+        "target": "image-heading-1"
+    }, {
+        "title": "Image Heading 2",
+        "desc": "For Image based tab heading , use the class <span class='hightlight'>home-tab-controller</span> on the encompassing div",
+        "code": "app/code_snippets/tabs/image-heading-2.html",
+        "target": "image-heading-2"
+    }, {
+        "title": "Textual Heading",
+        "desc": "For text based tab heading , use the class <span class='hightlight'>tabcontainer</span> on the encompassing div ",
+        "code": "app/code_snippets/tabs/textual-heading.html",
+        "target": "textual-heading"
+    }, {
+        "title": "Vertical Tabs",
+        "desc": "",
+        "code": "app/code_snippets/tabs/vertical-tabs.html",
+        "target": "vertical-tabs"
+    }]
+}, {
+    "category": "Timeline",
+    "description": "This section is for the timeline of dubai trade evolution.",
+    "children": [{
+        "title": "Left",
+        "desc": "For floating any milestone towards the left of the timeline , use the class <span class='highlight'>align-left</span> on the div with class <span class='highlight'>milestone-wrapper</span>",
+        "code": "app/code_snippets/timeline/left.html",
+        "target": "left"
+    }, {
+        "title": "Right",
+        "desc": "For floating any milestone towards the left of the timeline , use the class <span class='highlight'>align-right</span> on the div with class <span class='highlight'>milestone-wrapper</span>",
+        "code": "app/code_snippets/timeline/right.html",
+        "target": "right"
+    }, {
+        "title": "Without Load More",
+        "desc": "If all the milestone are loaded and no more children are left for lazy loading , add the class <span class='hightlight'>has-no-more-children<span> on <span class='hightlight'>timeline-container </span>",
+        "code": "app/code_snippets/timeline/no-load-more.html",
+        "target": "no-load-more"
+    }]
+}, {
+    "category": "Typography",
+    "children": [{
+        "title": "heading h2",
+        "desc": "Custom styling for h2 heading font-size :28px margin-top: 25px margin-bottom: 10px",
+        "code": "app/code_snippets/typography/heading-h2.html",
+        "target": "heading-h2"
+    }, {
+        "title": "heading h4",
+        "desc": "Custom styling for h4 heading font-size :20px margin-top: 25px margin-bottom: 10px",
+        "code": "app/code_snippets/typography/heading-h4.html",
+        "target": "heading-h4"
+    }, {
+        "title": "heading h5",
+        "desc": "Custom styling for h5 heading font-size :16px margin-top: 10px margin-bottom: 10px",
+        "code": "app/code_snippets/typography/heading-h5.html",
+        "target": "heading-h5"
+    }, {
+        "title": "title h2",
+        "desc": "Custom styling for h2 title font-size :30px margin-top: 35px margin-bottom: 35px",
+        "code": "app/code_snippets/typography/title-h2.html",
+        "target": "title-h2"
+    }, {
+        "title": "title h3",
+        "desc": "Custom styling for h3 title font-size :30px margin-top: 0px margin-bottom: 0px",
+        "code": "app/code_snippets/typography/title-h3.html",
+        "target": "title-h3"
+    }, {
+        "title": "title h4",
+        "desc": "Custom styling for h4 title font-size :18px margin-top: 0px margin-bottom: 20px",
+        "code": "app/code_snippets/typography/title-h4.html",
+        "target": "title-h4"
+    }, {
+        "title": "title h6",
+        "desc": "Custom styling for h6 title font-size :22px margin-top: 0px margin-bottom: 0px",
+        "code": "app/code_snippets/typography/title-h6.html",
+        "target": "title-h6"
+    }]
+}]

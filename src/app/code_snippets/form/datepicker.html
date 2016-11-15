@@ -1,0 +1,25 @@
+
+<link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Res/js/custom/bootstrap-datepicker.js"></script>
+
+<form class="form-validate">
+    <div class="row">
+        <div class="form-group col-xs-6">
+            <div class="date-picker input-group date">
+                <input type="text" class="form-control" name="from-date" placeholder="18/12/2016">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar fa-lg "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+        $('.date-picker > input').datepicker({
+            rtl: false,
+            format: 'dd/mm/yyyy',
+            todayHighlight: true,
+            endDate: '+0d',
+            autoclose: true
+        });
+</script>

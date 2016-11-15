@@ -1,0 +1,230 @@
+/* SG
+# Carousel/ with thumbnails
+
+```
+    <div class="clearfix">
+        <figure class='img-container thumbnail-slider'>
+            <ul class='bxslider clearfix'>
+                <li class="active">
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+                <li>
+                    <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                </li>
+            </ul>
+            <div class="caption-bar text-center">
+                <a class='prev-slide' href='javascript:void(0)'></a>
+                <span class='current-slide-no'></span> / <span class='total-slide-count'></span>
+                <a class='next-slide' href='javascript:void(0)'></a>
+            </div>
+            <div id="bx-pager">
+                <ul class='pager-bxslider clearfix'>
+                    <li>
+                        <a data-slide-index="0" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="1" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="2" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="3" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="4" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="5" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="6" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                    <li>
+                        <a data-slide-index="7" href="javascript:void(0)">
+                            <img class='img-responsive' src='../Res/images/news-detail/carousel-img.png' />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </figure>
+    <div>
+
+```
+
+*/
+.detail-container {
+    color: $black;
+
+    @include padding-bottom($space-20);
+
+    @include margin-top($space-20);
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+
+    .img-container {
+        @extend .float-l;
+
+        @include margin-right($space-20);
+
+        max-width: 420px;
+
+        @media (max-width: $screen-xs-max) {
+            @include margin-bottom($space-20);
+
+            @include margin-right($space-0);
+
+            display: inline-block;
+            float: none;
+        }
+    }
+
+    .textWrapper {
+        overflow: visible;
+
+        p {
+            line-height: 2;
+
+            + p {
+                @include margin-top($space-20);
+            }
+
+            &:first-child {
+                margin-top: -8px;
+            }
+        }
+    }
+}
+
+.img-container.thumbnail-slider {
+    max-width: 368px;
+    margin-bottom: 30px;
+
+    .caption-bar {
+        position: relative;
+        background: $darkgrey;
+        opacity: 0.9;
+        padding: 5px 0;
+        color: $white;
+        margin-top: -33px;
+
+        .next-slide, .prev-slide {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+
+            @include margin-left(10px);
+
+            @include border-right(3px, $white);
+
+            border-top: 3px solid $white;
+            background-color: transparent;
+
+            @include rotate(45deg);
+
+            margin-top: 5px;
+        }
+
+        .prev-slide {
+            @include rotate(-135deg);
+
+            @include margin-right(10px);
+
+            @include margin-left(0);
+        }
+    }
+
+    #bx-pager {
+        margin-top: 10px;
+
+        li {
+            > a {
+                border: 5px solid transparent;
+                display: block;
+            }
+
+            &.active {
+                > a {
+                    border: 5px solid $darkgrey;
+                }
+            }
+        }
+    }
+}
+
+.related-news {
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+
+    .news-list {
+        .listitem {
+            border: 0;
+
+            @include padding-top($space-30);
+
+            @include padding-bottom($space-30);
+
+            @include padding-left($space-0);
+
+            @include padding-right($space-0);
+
+            p.timestamp {
+                margin-bottom: 40px;
+
+                @media (max-width: $screen-xs-max) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+span.timestamp {
+    color: $darkgrey;
+    display: inline-block;
+
+    @include margin-top($space-5);
+}
+
+span.detailEmail {
+    display: block;
+    margin-top: 3px;
+}
+
+.title {
+    @include margin-bottom($space-0);
+}

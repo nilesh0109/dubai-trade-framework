@@ -1,0 +1,43 @@
+.detail-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid $light-gray;
+    margin: 20px 0;
+
+    .table-row {
+        display: table-row;
+
+        .table-cell {
+            display: table-cell;
+            padding: 10px;
+            border-bottom: 1px solid $light-gray;
+            vertical-align: middle;
+
+            &:first-child {
+                width: 25%;
+                background: $off-white;
+
+                @media (max-width: $screen-xs-min - 1) {
+                    width: 40%;
+                }
+            }
+
+            &:last-child {
+                width: 75%;
+
+                @include border-left(1px, $light-gray);
+
+                @media (max-width: $screen-xs-min - 1) {
+                    width: 60%;
+                }
+            }
+        }
+
+        &:last-child {
+            .table-cell {
+                border-bottom: 0px solid $light-gray;
+            }
+        }
+    }
+}

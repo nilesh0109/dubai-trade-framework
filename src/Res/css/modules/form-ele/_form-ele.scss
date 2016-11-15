@@ -1,0 +1,70 @@
+input[type="text"] {
+    border-radius: 0;
+}
+
+input[type="password"] {
+    border-radius: 0;
+}
+
+.btn-custom {
+    border: none;
+
+    @include padding-top(8px);
+
+    @include padding-bottom(8px);
+
+    display: inline-block;
+    text-align: center;
+    color: $white;
+}
+
+.btn-red {
+    @extend .btn-custom;
+
+    background-color: $red;
+    border: 1px solid $red;
+
+    &:focus,
+    &:visited {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+/* SG
+
+# Common/ btn-orange
+```
+<a href="javascript:void(0)" class="btn-orange">Register</a>
+```
+
+*/
+.btn-orange {
+    @extend .btn-custom;
+
+    background-color: $orange;
+    border: 1px solid $orange;
+
+    @include padding-left($space-10);
+
+    @include padding-right($space-10);
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.btn-red {
+    @extend .btn-custom;
+
+    background-color: $red;
+    border: 1px solid $red;
+
+    @include padding-left($space-10);
+
+    @include padding-right($space-10);
+
+    &:hover {
+        color: $white;
+    }
+}

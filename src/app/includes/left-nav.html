@@ -1,0 +1,24 @@
+<div class="left-menu-overlay"></div>
+<a href='index.html'  class="logo-header">
+    <figure>
+        <img src="Res/images/global/logo.png" />
+    </figure>
+</a>
+
+<nav >
+    <ul class="left-nav-wrapper"> 
+        <li class="left-nav-item" data-section="{{item.category|formatString}}" ng-repeat='item in vm.items ' ng-class="{'active': $index == vm.activeSectionIndex}">
+            <a ng-href="#{{item.category|formatString}}" ng-click="vm.activeSectionIndex = $index;vm.activeSubSectionIndex = 0;">
+                <ng-if ng-if="!(item.children.length > 0)">{{item.title}}</ng-if>
+                <ng-if ng-if="(item.children.length > 0)">{{item.category}}</ng-if>
+            </a>
+            <ul class="submenu" ng-if="item.children.length > 0">
+                <li ng-repeat="subitem in item.children" ng-class="{'active':$index == vm.activeSubSectionIndex}">
+                    <a ng-href="#{{item.category|formatString}}--{{subitem.target}}"  ng-click="vm.activeSubSectionIndex = $index;
+                    vm.slideToEle();">{{subitem.title}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+ 

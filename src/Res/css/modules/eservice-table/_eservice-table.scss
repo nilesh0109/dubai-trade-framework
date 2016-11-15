@@ -1,0 +1,627 @@
+/* SG
+
+# Table / 2 column
+
+For the table like eservice details , use the `table` on encompassing div and for each row use `<div class='row'>` . For the heading , add the
+`head` class to the `row` element.
+
+```
+<div class='table'>
+    <div class='row head'>
+        <div class='col-sm-4'><strong>Service Name :</strong></div>
+        <div class='col-sm-8 red-text'><strong>Submit Claim</strong></div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-4'><strong>Service Description</strong></div>
+        <div class='col-sm-8'>
+            <p>
+                This service is to sbumit claim for refund of deposit or release of guarantee paid in lieu of Customs duty
+            </p>
+ 
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-4'><strong>Service Link</strong></div>
+        <div class='col-sm-8'>
+            <a href="http://www.dubaitrade.ae" class="red-text">www.dubaitrade.ae</a>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-4'><strong>Documents Required :</strong></div>
+        <div class='col-sm-8'>
+            <ul class='grey-list'>
+                <li><span>Proof of export for goods</span></li>
+            </ul>
+            <p class='asterisk-text'>
+                <strong class='asterisk'>*</strong>documents can vary based on the type of transaction, refer to customer guide for more details
+            </p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-4'><strong>Service Delivery Channels</strong></div>
+        <div class='col-sm-8'>
+            Web/Counter
+        </div>
+    </div>
+</div>
+
+```
+*/
+
+.table {
+    border: 1px solid #ccc;
+
+    > .row {
+        @include margin($space-0);
+
+        &.head {
+            background: #f1f1f1;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+        }
+
+        > div[class*='col-sm-'] {
+            @include padding-top($space-15);
+
+            @include padding-bottom($space-15);
+
+            &:nth-child(2) {
+                @include border-left(1px, #ccc);
+
+                @media (max-width: 767px) {
+                    border-left: 0;
+                }
+            }
+
+            ul.underlined-list {
+                li {
+                    text-decoration: none;
+
+                    strong {
+                        display: inline-block;
+                        margin-bottom: 5px;
+                    }
+
+                    > span {
+                        text-decoration: none;
+                        color: $dark-gray;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        word-wrap: break-word;
+                    }
+
+                    + li {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            ul:not(.list), ol {
+                -webkit-padding-start: 20px;
+                -moz-padding-start: 20px;
+                padding-start: 20px;
+            }
+
+            ul:not(.list), ul:not(.list) li {
+                list-style-type: disc;
+            }
+
+            ol, ol li {
+                list-style-type: decimal;
+                font-weight: bold;
+            }
+
+            ul, ol {
+                > li + li {
+                    @include margin-top($space-10);
+                }
+            }
+
+            p {
+                line-height: 1.75;
+            }
+
+            ul.grey-list {
+                -webkit-padding-start: 15px;
+                -moz-padding-start: 15px;
+                padding-start: 15px;
+
+                li {
+                    color: $gray;
+
+                    > span {
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+        .asterisk-text {
+            @include margin-left(17px);
+
+            margin-top: 5px;
+
+            .asterisk {
+                @include margin-right($space-10);
+
+                @include margin-left(-18px);
+
+                font-size: 1.2em;
+                position: relative;
+                top: -2px;
+                font-weight: 800;
+                color: #000;
+            }
+        }
+    }
+}
+
+.accordian-head {
+    margin-top: 15px;
+    position: relative;
+
+    @include padding-left(5px);
+
+    background: $off-white;
+    color: $black;
+    border: 1px solid #ccc;
+
+    > a {
+        color: $red-color;
+        display: block;
+
+        @include padding-top($space-10);
+
+        @include padding-bottom($space-10);
+
+        .plus {
+            position: absolute;
+
+            @include right(10px);
+
+            margin-top: 2px;
+        }
+
+        .minus {
+            position: absolute;
+
+            @include right(10px);
+
+            margin-top: 5px;
+            display: none;
+        }
+    }
+
+    + .accordian-content {
+        border-top: 0px;
+        padding: 15px 0 0;
+        display: none;
+        margin-bottom: -15px;
+
+        &.ordered-list {
+            li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    &.slideDown {
+        .plus {
+            display: none;
+        }
+
+        .minus {
+            display: inline-block;
+        }
+    }
+}
+
+/* SG
+
+# Table / basic layout
+
+For the basic table like structure , use the following markup . In mobile , the table will be splitted further, and each row would be converted into 
+2 column table . 
+
+```
+<div class="table table-basic">
+    <div class="table-row table-head">
+        <div class="table-col">Column Title 1</div>
+        <div class="table-col">Column Title 2</div>
+        <div class="table-col">Column Title 3</div>
+        <div class="table-col">Column Title 4</div>
+    </div>
+    <div class="table-row">
+        <div class="table-col" data-header="Column Title 1"><div>Loream ipsum</div></div>
+        <div class="table-col" data-header="Column Title 2"><div>Dolor et Amet</div></div>
+        <div class="table-col" data-header="Column Title 3"><div>connefctsure</div></div>
+        <div class="table-col" data-header="Column Title 4"><div>adipiscing elit</div></div>
+    </div>
+    <div class="table-row">
+        <div class="table-col" data-header="Column Title 1"><div>Loream ipsum</div></div>
+        <div class="table-col" data-header="Column Title 2"><div>Dolor et Amet</div></div>
+        <div class="table-col" data-header="Column Title 3"><div>connefctsure</div></div>
+        <div class="table-col" data-header="Column Title 4"><div>adipiscing elit</div></div>
+    </div>
+    <div class="table-row">
+        <div class="table-col" data-header="Column Title 1"><div>Loream ipsum</div></div>
+        <div class="table-col" data-header="Column Title 2"><div>Dolor et Amet</div></div>
+        <div class="table-col" data-header="Column Title 3"><div>connefctsure</div></div>
+        <div class="table-col" data-header="Column Title 4"><div>adipiscing elit</div></div>
+    </div>
+    <div class="table-row">
+        <div class="table-col" data-header="Column Title 1"><div>Loream ipsum</div></div>
+        <div class="table-col" data-header="Column Title 2"><div>Dolor et Amet</div></div>
+        <div class="table-col" data-header="Column Title 3"><div>connefctsure</div></div>
+        <div class="table-col" data-header="Column Title 4"><div>adipiscing elit</div></div>
+    </div>
+    <div class="table-row">
+        <div class="table-col" data-header="Column Title 1"><div>Loream ipsum</div></div>
+        <div class="table-col" data-header="Column Title 2"><div>Dolor et Amet</div></div>
+        <div class="table-col" data-header="Column Title 3"><div>connefctsure</div></div>
+        <div class="table-col" data-header="Column Title 4"><div>adipiscing elit</div></div>
+    </div>
+</div>
+
+```
+*/
+
+/* SG
+
+# Table / grid layout
+
+For the grid table like structure , use the following markup . In mobile , the table will be splitted further, and each row would be converted into 
+2 column table . 
+
+```
+<div>
+    <h4 class="table-title text-center">Table Title</h4>
+    <div class="table table-grid">
+        <div class="table-row table-head">
+            <div class="table-col">Column Title 1</div>
+            <div class="table-col">Column Title 2</div>
+            <div class="table-col">Column Title 3</div>
+        </div>
+        <div class="table-row">
+            <div class="table-col"  data-header="Column Title 1"><div>Loream ipsum</div></div>
+            <div class="table-col"  data-header="Column Title 2"><div>dolor sit amet</div></div>
+            <div class="table-col"  data-header="Column Title 3"><div>consectetur adipiscing elit</div></div>
+        </div>
+        <div class="table-row">
+            <div class="table-col"  data-header="Column Title 1"><div>Loream ipsum</div></div>
+            <div class="table-col"  data-header="Column Title 2"><div>dolor sit amet</div></div>
+            <div class="table-col"  data-header="Column Title 3"><div>consectetur adipiscing elit</div></div>
+        </div>
+        <div class="table-row">
+            <div class="table-col"  data-header="Column Title 1"><div>Loream ipsum</div></div>
+            <div class="table-col"  data-header="Column Title 2"><div>dolor sit amet</div></div>
+            <div class="table-col"  data-header="Column Title 3"><div>consectetur adipiscing elit</div></div>
+        </div>
+        <div class="table-row">
+            <div class="table-col"  data-header="Column Title 1"><div>Loream ipsum</div></div>
+            <div class="table-col"  data-header="Column Title 2"><div>dolor sit amet</div></div>
+            <div class="table-col"  data-header="Column Title 3"><div>consectetur adipiscing elit</div></div>
+        </div>
+        <div class="table-row">
+            <div class="table-col"  data-header="Column Title 1"><div>Loream ipsum</div></div>
+            <div class="table-col"  data-header="Column Title 2"><div>dolor sit amet</div></div>
+            <div class="table-col"  data-header="Column Title 3"><div>consectetur adipiscing elit</div></div>
+        </div>
+    </div>
+</div>
+
+```
+*/
+
+/* SG
+
+# Table / column layout
+
+For the grid table like structure , use the following markup . In mobile , the table columns will be stacked keeping left column being at the top and 
+right column at the bottom of the stack . 
+
+```
+<div class="table table-column">
+<div class="table-row empty-row">
+    <div class="table-col"></div>
+    <div class="table-col vertical-space"></div>
+</div>
+    <div class="table-row table-head">
+        <div class="table-col"></div>
+        <div class="table-col">
+            <h6 class="table-column-title">Table Title And Description</h6>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-col">
+            <figure>
+                <img class="img-responsive" src="../Res/images/accolades/placeholder.png">
+            </figure>
+        </div>
+        <div class="table-col">
+            <div class="column-container">
+                <div class="column first">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum nisl. Vivamus odio elit, euismod a libero pharetra, egestas tristique urna. Duis viverra ipsum sit amet tortor dignissim euismod. In elementum malesuada ipsum nec egestas. Pellentesque quam enim, aliquet eget eros vitae, lacinia imperdiet velit. Nam hendrerit orci ipsum, sit amet scelerisque turpis cursus at. Cras at libero hendrerit, pretium massa a, sodales lectus. Suspendisse potenti. Etiam ut urna metus. Vestibulum eu turpis et erat imperdiet vehicula vel et nisi. Ut vulputate accumsan interdum. Suspendisse viverra id eros sed pretium. Sed sollicitudin ante justo, eu facilisis odio varius sed. Pellentesque finibus aliquam orci, maximus dignissim tellus maximus quis. Aenean non sodales elit, at feugiat mi. Vivamus pulvinar libero auctor risus porta, ac imperdiet ex rhoncus. </div>
+                <div class="column second">
+                    Pellentesque sollicitudin scelerisque tellus. Donec at massa aliquam, vestibulum dolor cursus, vestibulum nibh. Fusce libero erat, tempor id mollis at, semper at massa. Duis nec consequat nibh, eu aliquet orci. Integer scelerisque dolor sit amet hendrerit egestas. Suspendisse mattis risus nisl, et malesuada leo gravida ac. Sed nunc justo, vulputate id consectetur vitae, elementum ut tortor. In hac habitasse platea dictumst. Mauris non aliquet augue, quis malesuada leo. Integer auctor nisl ac urna sagittis, posuere lobortis est ultrices. Cras euismod mauris in enim mattis tempor. Vestibulum sit amet rhoncus risus. Nullam scelerisque feugiat urna, ac blandit ex pulvinar a. Aenean molestie sem massa.
+                </div>
+                <div class="column third">
+                    Morbi pellentesque turpis non nisl posuere placerat. In purus felis, pretium at ullamcorper at, blandit lobortis metus. Sed eu lectus egestas, facilisis nulla a, efficitur leo. Praesent pretium ullamcorper pellentesque. Aenean tincidunt, tellus ultrices porta maximus, sapien odio eleifend nunc, in fermentum justo augue at nunc. Mauris eu tempor est. Quisque sed dui massa. In ut velit mi. Donec tincidunt urna ligula, pharetra posuere lacus sodales hendrerit. In id semper sem. Suspendisse eu porttitor augue, sit amet ullamcorper orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras hendrerit urna elit, interdum sagittis justo egestas eget. Mauris blandit turpis quis nisi semper iaculis. Aliquam ut mi interdum, pharetra ex nec, lacinia orci. Proin at porta turpis.
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+```
+*/
+.table {
+    width: 100%;
+
+    .table-row {
+        display: table-row;
+
+        .table-col {
+            display: table-cell;
+            padding: 10px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        &:last-child {
+            .table-col {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.table-basic {
+        display: table;
+        padding: 5px;
+        border-radius: 5px;
+
+        .table-head {
+            background: #f1f1f1;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            padding: 0px;
+            border: 0px;
+
+            .table-row {
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+                &.table-head {
+                    display: none;
+                }
+
+                + .table-row {
+                    margin-top: 5px;
+                }
+            }
+
+            .table-col {
+                width: 100%;
+                vertical-align: top;
+                border-bottom: 1px solid #ccc !important;
+                display: table;
+                padding: 0px;
+
+                &:last-child {
+                    border-bottom: 0px !important;
+                }
+
+                &:before {
+                    content: attr(data-header);
+                    display: table-cell;
+                    width: 30%;
+                    vertical-align: top;
+                    padding: 10px 5px;
+
+                    @include border-right(1px, #ccc);
+                }
+
+                > div {
+                    width: 70%;
+                    padding: 10px 5px;
+                    display: table-cell;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+
+    &.table-grid {
+        border: 0;
+        display: table;
+        width: 100%;
+
+        .table-row {
+            &:nth-child(odd) {
+                background: #fafafa;
+            }
+
+            &:nth-child(even) {
+                background: #eeeeee;
+            }
+
+            .table-col {
+                border-top: 2px solid #fff;
+
+                @include border-right(2px, white);
+
+                &:last-child {
+                    @include border-right(0px, white);
+                }
+            }
+
+            &.table-head {
+                background: #ccc;
+
+                .table-col {
+                    padding-top: 40px;
+                    vertical-align: bottom;
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            padding: 0px;
+            border: 0px;
+
+            .table-row {
+                display: block;
+                border: 1px solid #ccc;
+
+                &.table-head {
+                    display: none;
+                }
+
+                + .table-row {
+                    margin-top: 5px;
+                }
+            }
+
+            .table-col {
+                width: 100%;
+                vertical-align: top;
+                border-bottom: 1px solid #fff !important;
+                display: table;
+                padding: 0px;
+
+                &:nth-child(odd) {
+                    background: #fafafa;
+                }
+
+                &:nth-child(even) {
+                    background: #eeeeee;
+                }
+
+                &:last-child {
+                    border-bottom: 0px !important;
+                }
+
+                &:before {
+                    content: attr(data-header);
+                    display: table-cell;
+                    width: 30%;
+                    vertical-align: top;
+                    padding: 10px 5px;
+
+                    @include border-right(1px, #fff);
+                }
+
+                > div {
+                    width: 70%;
+                    padding: 10px 5px;
+                    display: table-cell;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+
+    &.table-column {
+        display: table;
+        color: #333;
+
+        .table-col {
+            border: 0px;
+            vertical-align: top;
+
+            &:first-child {
+                background: #efefef;
+                width: 25%;
+            }
+
+            &:last-child {
+                background: #eaeaea;
+                width: 75%;
+            }
+        }
+
+        .table-column-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: $text-left;
+        }
+
+        .vertical-space {
+            height: 40px;
+        }
+
+        .empty-row {
+            @media (max-width: $screen-xs-max) {
+                display: none !important;
+            }
+        }
+
+        .table-head {
+            .table-col {
+                vertical-align: top;
+
+                &:first-child {
+                    background: #dedede;
+                }
+
+                &:last-child {
+                    background: #cacaca;
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            .table-row {
+                display: block;
+                width: 100% !important;
+
+                .table-col {
+                    display: block;
+                    width: 100% !important;
+                    background: #dedede;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #cacaca;
+                }
+            }
+        }
+    }
+}
+
+.table-title {
+    color: $white;
+    background: $dark-gray;
+    padding: 20px;
+}
+
+.column-container {
+    display: table;
+    width: 100%;
+
+    .column {
+        display: table-cell;
+        vertical-align: top;
+
+        @include padding-right(20px);
+
+        &:last-child {
+            @include padding-right(0px);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            padding: 10px  0px;
+            width: 100% !important;
+        }
+    }
+}

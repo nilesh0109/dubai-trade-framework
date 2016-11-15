@@ -1,0 +1,130 @@
+/* SG
+# sidebar 
+
+```
+<div class="row">
+    <div class="col-xs-9">
+    </div>
+    <div class="sidebar col-xs-3">
+        <nav class='nav-sidebar hidden-xs'>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="main-heading text-uppercase"><a href='javascript:void(0)'>about</a></li>
+                <li data-pagename="vision-mission"><a href="vision-mission.html">Vision and Mission</a></li>
+                <li data-pagename="dubai-trade-board"><a href="dubai-trade-board.html">Trade Board & Management</a></li>
+                <li data-pagename="ceo-welcome-message"><a href="ceo-welcome-message.html">CEO Welcome Message</a></li>
+                <li data-pagename="tradelines"><a href="tradelines.html">Tradelines</a></li>
+                <li data-pagename=""><a href="javascript:void(0)">Statistics</a></li>
+                <li data-pagename="video-gallery"><a href="video-gallery.html">Video Gallery</a></li>
+                <li data-pagename="dubai-trade-evolution"><a href="dubai-trade-evolution.html">Dubai Trade Evolution</a></li>
+                <li class='active' data-pagename="media-kit"><a href="media-kit.html">Media Kit</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+```
+
+*/
+
+.sidebar {
+    @media (max-width: $screen-xs-max) {
+        margin-top: 35px;
+    }
+
+    > .nav-sidebar {
+        @include padding-bottom($space-20);
+
+        background-color: $darkgrey;
+        transition: all 0.25s ease-in-out;
+        overflow: hidden;
+
+        ul {
+            > li {
+                + li {
+                    margin-top: 0;
+                }
+
+                &.main-heading {
+                    > a {
+                        cursor: default;
+                        background-color: $red-color;
+
+                        @include margin-bottom($space-5);
+
+                        @include padding-right(30px);
+
+                        &:after {
+                            //  content: "";
+                            content: none;
+                            display: inline-block;
+                            position: absolute;
+
+                            @include right($space-10);
+
+                            width: 12px;
+                            height: 12px;
+
+                            @include margin-left(2px);
+
+                            border-right: 2px solid #fff;
+                            border-bottom: 2px solid #fff;
+                            background-color: transparent;
+                            -webkit-transform: rotate(45deg);
+                            -moz-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+                &:not(.main-heading) {
+                    &:hover, &.active {
+                        &:after {
+                            content: "";
+                            display: inline-block;
+                            position: absolute;
+                            top: 0;
+                            width: 5px;
+                            height: 100%;
+                            background: $red-color;
+                        }
+
+                        > a {
+                            color: $darkgrey;
+                            background-color: #fff;
+                            border-bottom: 1px solid transparent;
+                        }
+                    }
+
+                    > a {
+                        background: $darkgrey;
+                        border-bottom: 1px solid #5c5c5c;
+                    }
+                }
+
+                > a {
+                    @include padding($space-15);
+
+                    word-wrap: break-word;
+                    border-radius: 0;
+                    color: #fff;
+                    -webkit-transition: all 0.25s ease-in-out;
+                    -moz-transition: all 0.25s ease-in-out;
+                    -ms-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
+                }
+
+                &:last-child {
+                    > a {
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+            }
+        }
+
+        &.slideDown {
+            .main-heading > a:after {
+                transform: translateY(50%) rotate(225deg);
+            }
+        }
+    }
+}

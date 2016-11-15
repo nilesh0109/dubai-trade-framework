@@ -1,0 +1,350 @@
+.menu {
+    padding: 0px;
+    width: 100%;
+    z-index: 12;
+
+    a:hover, a:focus, a:hover {
+        text-decoration: none;
+    }
+
+    .menu-nav {
+        background: rgba(219, 62, 56, 0.89);
+
+        > li {
+            @extend .float-l;
+
+            > a {
+                text-transform: uppercase;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                float: none;
+            }
+        }
+    }
+
+    .has-children {
+        > a:after {
+            content: "";
+            position: absolute;
+            top: 12px;
+            #{$right}: 4px;
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            border: 3px solid transparent;
+            border-top: 3px solid $white;
+            border-#{$left}: 3px solid $white;
+            transform: rotate(-135deg);
+
+            @media (max-width: $screen-xs-max) {
+                #{$right}: 15px;
+                border-width: 4px;
+            }
+
+            @media (max-width: 480px) {
+                border-width: 3px;
+                #{$right}: 10px;
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        transition: all 0.15s ease-in-out;
+        margin: 0px;
+
+        a {
+            display: block;
+            color: $white;
+            padding: 10px 20px;
+            font-size: $font-14;
+            margin: 0px;
+
+            @media (max-width: $screen-md-max) {
+                font-size: $font-12;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                font-size: $font-14;
+            }
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            #{$text-left}: 0px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: -1px;
+
+            @media (max-width: $screen-xs-max) {
+                position: static;
+                border: none;
+                display: block;
+                max-height: 0px;
+                overflow: hidden;
+                transition: all 0.25s ease-in-out;
+                font-size: $font-14;
+                margin-#{$left}: 10px;
+            }
+
+            li {
+                position: relative;
+                background: rgba(219, 62, 56, 0.9);
+                min-width: 200px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+                @media (max-width: $screen-xs-max) {
+                    min-width: none;
+                    background: none;
+                }
+
+                &:last-child {
+                    @media (max-width: $screen-xs-max) {
+                        border: 0;
+                    }
+                }
+            }
+
+            .has-children {
+                > a:after {
+                    transform: rotate(135deg);
+                    #{$right}: 10px;
+
+                    @media (max-width: $screen-sm-max) {
+                        transform: rotate(225deg);
+                        #{$right}: 15px;
+                    }
+                }
+            }
+
+            .submenu {
+                #{$text-left}: 100%;
+                top: 0px;
+            }
+        }
+
+        &.active {
+            background: rgba(219, 62, 56, 0.95);
+
+            @media (max-width: $screen-xs-max) {
+                background: none !important;
+
+                > a {
+                    background: rgba(219, 62, 56, 0.95);
+                }
+
+                > .submenu {
+                    max-height: 1500px;
+                }
+            }
+        }
+
+        &:hover {
+            background: rgba(219, 62, 56, 1);
+
+            @media (max-width: $screen-xs-max) {
+                background: none;
+
+                > a {
+                    background: rgba(219, 62, 56, 0.95);
+                }
+            }
+
+            > .submenu {
+                display: block;
+
+                @media (max-width: $screen-xs-max) {
+                    max-height: 1500px;
+                }
+            }
+        }
+    }
+
+    &.vertical {
+        width: auto;
+        display: inline-block;
+
+        .menu-nav {
+            > li {
+                float: none;
+
+                > a {
+                    padding-#{$right}: 40px;
+                }
+            }
+        }
+
+        .has-children {
+            > a:after {
+                #{$right}: 15px;
+                transform: rotate(135deg);
+            }
+
+            .submenu {
+                #{$left}: 100%;
+                top: 0px;
+            }
+        }
+    }
+
+    &.accord {
+        width: auto;
+        display: inline-block;
+
+        &.full-width {
+            display: block;
+        }
+
+        .menu-nav {
+            > li {
+                float: none;
+
+                > a {
+                    padding-#{$right}: 40px;
+                }
+            }
+
+            li {
+                > a {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                }
+
+                &.has-children {
+                    > a:after {
+                        transform: rotate(-135deg);
+                    }
+                }
+
+                &:hover, &.active {
+                    background: none;
+
+                    > a {
+                        background: rgba(219, 62, 56, 0.99);
+                    }
+
+                    > .submenu {
+                        max-height: 1500px;
+                    }
+                }
+            }
+        }
+
+        .submenu {
+            transition: all 0.25s ease-in-out;
+            max-height: 0px;
+            overflow: hidden;
+            display: block;
+            position: static;
+            font-size: $font-14;
+            border: 0px;
+            margin-#{$left}: 10px;
+            margin-top: 0px;
+
+            li {
+                background: none;
+                border: 0px;
+            }
+        }
+
+        .has-children {
+            > a:after {
+                #{$right}: 15px;
+            }
+        }
+    }
+
+    &.icon-menu {
+        position: relative;
+
+        .icon-hamburger {
+            @media (min-width: $screen-sm-min) {
+                display: none;
+            }
+        }
+
+        span.icon {
+            display: inline-block;
+            vertical-align: middle;
+            padding-#{$right}: 10px;
+            font-size: 20px;
+            width: 40px;
+
+            + .icon-label {
+                display: inline-block;
+                vertical-align: middle;
+
+                @media (min-width: $screen-sm-min) {
+                    max-width: 0px;
+                    overflow: hidden;
+                }
+
+                transition: all 0.25s ease-in-out;
+            }
+        }
+
+        .submenu {
+            max-width: 0px;
+            max-height: 0px;
+        }
+
+        .menu-nav {
+            @media (max-width: $screen-xs-max) {
+                display: none;
+            }
+
+            @media (min-width: $screen-sm-min) {
+                display: block;
+
+                > li {
+                    > a {
+                        padding-#{$right}: 0px;
+                    }
+
+                    &.has-children {
+                        > a:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+
+            li.active {
+                > .submenu {
+                    max-width: 0px;
+                    max-height: 0px;
+                }
+            }
+
+            &:hover {
+                > li > a {
+                    padding-#{$right}: 40px;
+                }
+
+                span.icon {
+                    + .icon-label {
+                        max-width: 1000px;
+                    }
+                }
+
+                > li.has-children {
+                    > a:after {
+                        content: "";
+                    }
+                }
+
+                li:hover, li.active {
+                    > a:after {
+                        content: "";
+                    }
+
+                    > .submenu {
+                        max-width: 1000px;
+                        max-height: 1000px;
+                    }
+                }
+            }
+        }
+    }
+}

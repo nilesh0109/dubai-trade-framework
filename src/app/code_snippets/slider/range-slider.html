@@ -1,0 +1,71 @@
+<div class="font-sizing-wrap">
+    <div class="font-range">
+        <a class="decrease-font font" href="javascript:void(0);">A-</a>
+        <div id="defaultSlider" class="range-selector"></div>
+        <a class="increase-font font" href="javascript:void(0);">A+</a>
+    </div>
+</div>
+<div class="content">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+
+<script type="text/javascript">
+    var $bodyFontSize = sessionStorage.bodyFont || '1em';
+    var $font = $bodyFontSize.slice(0, -2) * 100;
+    setBodyFont($bodyFontSize);
+	    $("#defaultSlider.range-selector").each(function() {
+        console.log("slider");
+        $(this).slider({
+            min: 85,
+            max: 115,
+            step: 15,
+            isRTL: $('body').hasClass('ar'),
+            value: $font,
+            slide: function(event, ui) {
+                sessionStorage.bodyFont = (ui.value / 100) + 'em';
+                // window.location.reload();
+                var $bodyFontSize = sessionStorage.bodyFont || '1em';
+                var $font = $bodyFontSize.slice(0, -2) * 100;
+                setBodyFont($bodyFontSize);
+
+            }
+        });
+    });
+
+
+
+    function setBodyFont(fontSize) {
+        if ($('body').hasClass('home')) {
+
+            $('body > .wrapper >*:not(.slide-section,footer)').css('font-size', fontSize);
+            $('.home-slider .home-hero-slider,.home-slider .hero-scroll-down').css('font-size', fontSize);
+        } else {
+            $('.content').css('font-size', fontSize);
+        }
+    }
+
+    $('.increase-font').on('click', function() {
+        var opt = $("#defaultSlider").slider("option");
+        if ($("#defaultSlider").slider("value") != opt.max) {
+            $("#defaultSlider").slider("value", $("#defaultSlider").slider("value") + opt.step);
+            sessionStorage.bodyFont = ($("#defaultSlider").slider("value") / 100) + 'em';
+            var $bodyFontSize = sessionStorage.bodyFont || '1em';
+            var $font = $bodyFontSize.slice(0, -2) * 100;
+            setBodyFont($bodyFontSize);
+            // window.location.reload();
+        }
+    });
+
+    $('.decrease-font').on('click', function() {
+        var opt = $("#defaultSlider").slider("option");
+        if ($("#defaultSlider").slider("value") != opt.min) {
+            $("#defaultSlider").slider("value", $("#defaultSlider").slider("value") - opt.step);
+            sessionStorage.bodyFont = ($("#defaultSlider").slider("value") / 100) + 'em';
+            var $bodyFontSize = sessionStorage.bodyFont || '1em';
+            var $font = $bodyFontSize.slice(0, -2) * 100;
+            setBodyFont($bodyFontSize);
+            // window.location.reload();
+        }
+    });
+
+</script>

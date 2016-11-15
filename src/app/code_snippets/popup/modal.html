@@ -1,0 +1,60 @@
+<script type="text/javascript" src="Res/js/vendor/jquery.validate.js"></script>
+<a href="javascript:void(0)" class="red-btn"  data-toggle="modal" data-target="#myModal">Launch modal</a>
+<!-- Modal -->
+<div class="modal fade modal-popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <form class='form-validate' autocomplete="off">
+          <div class='row'>
+            <div class="form-group col-sm-6 ">
+              <label for="first_name">First name<span class='regMark'>&#42;</span></label>
+              <input type="text" class="form-control" id='first-name' name='first-name' data-rule-required="true" data-msg-required="Please enter your first name" autocomplete="off"/>
+            </div>
+            
+            <div class="form-group  col-sm-6">
+              <label for="last-name">Last name<span class='regMark'>&#42;</span></label>
+              <input type="text" class="form-control" id='last-name' name='last-name' data-rule-required="true" data-msg-required="Please enter your last name" autocomplete="off"/>
+            </div>
+          </div>
+          <div class='row'>
+            <div class="col-sm-6">
+              <div class="form-group" >
+                <label for="company-name">Company Name</label>
+                <input type="text" class="form-control" id="company-name" name="company-name" autocomplete="off"/>
+              </div>
+              <div class="form-group" >
+                <label for="company-address">Company Address</label>
+                <input type="text" class="form-control" id="company-address"  name="company-address" autocomplete="off"/>
+              </div>
+            </div>
+            <div class="form-group  col-sm-6">
+              <label for="comments">Comments</label>
+              <textarea class="form-control" id="comments" name="comments" rows="6" ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="red-btn thick">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
+              <span class="hidden-xs">SUBMIT</span>
+            </button>
+            <button type="cancel"  data-dismiss="modal" class="btn-orange">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              <span class="hidden-xs">CANCEL</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $("form.form-validate").validate();
+</script>

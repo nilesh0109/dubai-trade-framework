@@ -1,0 +1,111 @@
+.polls-container {
+    margin-bottom: 40px;
+
+    p + p {
+        margin: 10px 0;
+    }
+
+    .prev-questions, .total-votes {
+        margin: 20px 0;
+    }
+
+    .poll {
+        a.red-btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: $font-18;
+
+            @include margin-right(10px);
+        }
+
+        a.view-results {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: $font-18;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+
+                @include margin-right(5px);
+
+                @include margin-left(5px);
+
+                @include border-right(3px, $red);
+
+                border-top: 3px solid $red;
+                background-color: transparent;
+
+                @include rotate(45deg);
+            }
+
+            strong {
+                text-decoration: underline;
+            }
+        }
+
+        div.options {
+            line-height: 2;
+
+            input[type='radio'] {
+                display: none;
+
+                &:checked {
+                    + label {
+                        > span.radio-btn {
+                            background-position: top left;
+                        }
+                    }
+                }
+            }
+
+            label {
+                margin: 0;
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .radio-btn {
+                    background-image: url("../images/icons/poll_radio_sprite.png");
+                    width: 19px;
+                    height: 19px;
+                    background-repeat: no-repeat;
+                    background-position: bottom left;
+
+                    @include margin-right(5px);
+                }
+            }
+        }
+
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .result-container {
+        @include margin-right(140px);
+
+        .result {
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+
+            @include margin-right(20px);
+
+            &.result-1 {
+                background: rgb(228, 50, 43);
+                width: 61%;
+            }
+
+            &.result-2 {
+                background: #ec6f6a;
+                width: 39%;
+            }
+        }
+    }
+}

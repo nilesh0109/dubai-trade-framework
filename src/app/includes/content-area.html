@@ -1,0 +1,24 @@
+<div class="content-panel-wrapper">
+	<div class="section" id="{{item.category | formatString}}" ng-repeat='item in vm.items' ng-class="{'active' : $index == vm.activeSectionIndex}">
+		<ng-if ng-if="$index == vm.activeSectionIndex">
+			<div class="section-item" ng-if="!(item.children.length > 0)">
+				<div class="section-item-header">
+					<h3 class="item-title">{{item.title}}</h3>
+					<div class="item-desc" ng-show="item.desc" ng-bind-html="item.description"></div>
+				</div>
+				<div class="section-item-result" ng-if="!(item.children.length > 0)" ng-include="item.htmlFile">
+					
+				</div>
+			</div>
+			<div class="section-desc" ng-show="item.description" ng-bind-html="item.description"></div>
+			<div id="{{item.category | formatString}}--{{subitem.target}}" ng-repeat="subitem in item.children" ng-if="item.children.length > 0" ng-class="['section-item',{'slide-to':$index == vm.activeSubSectionIndex}]" >
+				<div class="section-item-header">
+					<h3 class="item-title">{{subitem.title}}</h3>
+					<div class="item-desc" ng-show="subitem.desc" ng-bind-html="subitem.desc"></div>
+				</div>
+				<div class="section-item-result" ng-include="subitem.code"></div>
+				<div class="section-item-code" format-html code-file-link="{{subitem.code}}"></div>
+			</div>
+		</ng-if>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<div class="tooltip-container">
+	<a href="javscript:void(0)" data-toggle="tooltip" data-placement="top" title="i am on top!" style="margin-right:20px;">Top<i class="fa fa-info-circle tool-tip-indicator" aria-hidden="true"></i></a>
+	<a href="javscript:void(0)" data-toggle="tooltip" data-placement="bottom" title="i am on bottom!" style="margin-right:20px;">Bottom<i class="fa fa-info-circle tool-tip-indicator" aria-hidden="true"></i></a>
+	<a href="javscript:void(0)" data-toggle="tooltip" data-placement="left" title="i am on left!" style="margin-right:20px;">Left<i class="fa fa-info-circle tool-tip-indicator" aria-hidden="true"></i></a>
+	<a href="javscript:void(0)" data-toggle="tooltip" data-placement="right" title="i am on right!">Right<i class="fa fa-info-circle tool-tip-indicator" aria-hidden="true"></i></a>
+</div>
+
+<script type="text/javascript">
+	
+	$('[data-toggle="tooltip"]').each(function(){
+		$(this).tooltip(); 
+	});
+</script>

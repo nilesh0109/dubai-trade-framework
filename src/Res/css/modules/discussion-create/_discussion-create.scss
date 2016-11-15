@@ -1,0 +1,115 @@
+#discussion-board-form {
+    display: none;
+
+    input[type='text'] {
+        width: 100%;
+        max-width: 500px;
+        padding: 5px;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 500px;
+        padding: 5px;
+        height: 80px;
+    }
+
+    button {
+        padding: 8px 30px;
+        border: 0;
+        background: $red;
+        color: $white;
+
+        @include margin-left(-15px);
+
+        &[type='reset'] {
+            background: $gray;
+        }
+
+        + button {
+            @include margin-left(10px);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            padding: 8px 20px;
+        }
+    }
+
+    .error {
+        color: $red;
+        font-size: $font-12;
+        display: block;
+    }
+
+    .reload-captcha {
+        display: block;
+        height: 27px;
+
+        .reload {
+            background: url(..//images/icons/icon-refresh.png) top left no-repeat;
+            width: 21px;
+            height: 22px;
+
+            @extend .float-right;
+
+            cursor: pointer;
+        }
+    }
+
+    .contact-captcha {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        text-align: center;
+        color: #e2b116;
+        font-size: 3.25em;
+        border: 1px solid #ccc;
+        padding: 4px 0;
+        font-family: $Chocolate;
+        font-style: italic;
+        -webkit-user-select: none;
+
+        /* Chrome all / Safari all */
+        -moz-user-select: none;
+
+        /* Firefox all */
+        -ms-user-select: none;
+
+        /* IE 10+ */
+        user-select: none;
+
+        /* Likely future */
+    }
+
+    .captcha-conatiner {
+        max-width: 530px;
+    }
+}
+
+#session_box_container {
+    margin: 10px 0;
+
+    .wsdk-widget-session {
+        .wsdk-session-bar {
+            text-align: center;
+
+            a {
+                color: $red;
+                font-size: 16px;
+            }
+
+            .wsdk-session-bar-user {
+                .wsdk-session-bar-user-short {
+                    .wsdk-session-bar-user-username {
+                        float: none;
+                        text-align: $text-right;
+                    }
+
+                    .wsdk-session-bar-user-actions {
+                        float: none;
+                        text-align: $text-right;
+                    }
+                }
+            }
+        }
+    }
+}

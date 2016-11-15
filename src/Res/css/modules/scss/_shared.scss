@@ -1,0 +1,19 @@
+.pull-right {
+    float: right;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.edit-account {
+    display: block;
+    padding: 10px;
+    color: #858484;
+    cursor: pointer;
+}
+
+select, input[type='text'], input[type='date'] {
+    line-height: normal;
+    min-height: 36px;
+}

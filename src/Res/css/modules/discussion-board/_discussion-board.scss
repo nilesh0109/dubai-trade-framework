@@ -1,0 +1,147 @@
+.discussion-btn {
+    padding: 8px 20px;
+    background: $red;
+    color: $white;
+
+    &:hover {
+        color: $white;
+    }
+
+    &:before {
+        content: "";
+        background: url("../images/icons/icon-sheet.png");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @include margin-right(5px);
+    }
+}
+
+.discussion-board-table {
+    display: table;
+    border: 1px solid $light-gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-bottom: 0px;
+
+    .table-row {
+        display: table-row;
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            border-bottom: 1px solid $light-gray;
+            padding: 8px 15px;
+            position: relative;
+
+            @include border-right(1px, $light-gray);
+
+            @media (max-width: $screen-xs-max) {
+                padding: 5px;
+                font-size: $font-14;
+            }
+
+            &:first-child {
+                &:before {
+                    content: "";
+                    background: url("../images/icons/icon-group.png");
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: absolute;
+                    height: 100%;
+                    top: 0px;
+                    background-position: 0% 50%;
+                }
+
+                > a {
+                    @include margin-left(25px);
+
+                    display: inline-block;
+                }
+            }
+
+            &:nth-child(3) {
+                @include border-right(0px, $light-gray);
+
+                @media (max-width: $screen-xs-min - 1) {
+                    display: none;
+                }
+            }
+
+            > a {
+                text-decoration: underline;
+                color: $black;
+            }
+
+            .last-comment {
+                text-decoration: underline;
+                display: inline-block;
+                max-width: 60%;
+                overflow: hidden;
+                height: 16px;
+                position: relative;
+                vertical-align: middle;
+
+                @include padding-right(14px);
+
+                &:after {
+                    content: "...";
+                    position: absolute;
+                    top: 0px;
+
+                    @include right(0px);
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    display: none;
+                }
+            }
+
+            .timestamp {
+                @include margin-left(5px);
+
+                font-style: italic;
+            }
+        }
+
+        &.head {
+            font-weight: bold;
+            background: $off-white;
+
+            &:before {
+                content: none;
+            }
+
+            .table-cell:before {
+                content: none;
+            }
+        }
+
+        &.newlyAdded {
+            .table-cell:nth-child(1) > a {
+                position: relative;
+
+                @include padding-right(45px);
+
+                &:after {
+                    content: "";
+                    background: url("../images/discussion-board/newlyAdded.png");
+                    width: 44px;
+                    height: 25px;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                    top: -8px;
+                    position: absolute;
+
+                    @include right(0px);
+                }
+            }
+        }
+    }
+}

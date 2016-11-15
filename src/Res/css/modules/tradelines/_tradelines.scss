@@ -1,0 +1,148 @@
+.tradelines-container {
+    list-style: none;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    padding-start: 0;
+    -moz-padding-start: 0;
+    margin-top: -8px;
+
+    .tradeline {
+        @include padding($space-0);
+
+        list-style: none;
+        list-style-type: none;
+        -webkit-padding-start: 0;
+        padding-start: 0;
+        -moz-padding-start: 0;
+
+        @extend .float-l;
+
+        width: 30%;
+
+        @include margin-right(5%);
+
+        border: 1px solid #ccc;
+        font-size: 2em;
+        background: #fdfdfd;
+
+        &:nth-child(3n) {
+            @include margin-right($space-0);
+        }
+
+        &:nth-child(n+4) {
+            @include margin-top(5%);
+
+            @include margin-bottom($space-0);
+        }
+
+        &:nth-last-child(-n+3) {
+            @include margin-bottom(5%);
+        }
+
+        @media (max-width: $screen-sm-max) {
+            width: 47.5%;
+
+            &:not(:nth-child(2n)) {
+                @include margin-right(5%);
+            }
+
+            &:nth-child(2n) {
+                @include margin-right(0%);
+            }
+
+            &:nth-child(n+3) {
+                @include margin-top(5%);
+
+                @include margin-bottom($space-0);
+            }
+
+            &:nth-last-child(-n+2) {
+                @include margin-bottom(5%);
+            }
+        }
+
+        @media (max-width: $screen-xs-min - 1) {
+            width: 90%;
+            margin: 5%  !important;
+        }
+
+        .tradeline-header {
+            background: #f1f1f1;
+
+            @include padding-top($space-10);
+
+            @include padding-bottom($space-10);
+
+            @include padding-left($space-0);
+
+            @include padding-right($space-0);
+
+            border-bottom: 1px solid #ccc;
+        }
+
+        .tradeline-footer {
+            border-top: 1px solid #ccc;
+
+            > span {
+                transition: all 0.25s ease-in-out;
+                cursor: pointer;
+
+                @include padding-top($space-10);
+
+                @include padding-bottom($space-10);
+
+                @include padding-left($space-0);
+
+                @include padding-right($space-0);
+
+                &:first-child {
+                    @include border-right(1px, #ccc);
+                }
+
+                > a {
+                    color: #888888;
+                    font-size: 0.825em;
+                    transition: all 0.25s ease-in-out;
+                }
+
+                &:hover {
+                    background: #d0322c;
+
+                    > a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .tradeline-content {
+            @include padding-top($space-20);
+
+            @include padding-bottom($space-20);
+
+            @include padding-left($space-0);
+
+            @include padding-right($space-0);
+
+            font-weight: bold;
+
+            .quater {
+                color: #d0322c;
+                font-size: 0.9em;
+            }
+
+            .trade-no {
+                display: inline-block;
+                background-color: #d0322c;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                line-height: 80px;
+                vertical-align: middle;
+                color: #fff;
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
+        }
+    }
+}

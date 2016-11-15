@@ -1,0 +1,85 @@
+<div class="home-tab-controller tab-component">
+    <ul class="nav nav-tabs hidden-xs" role="tablist">
+        <li role="presentation" class="text-center">
+            <a href="#tabContent1" aria-controls="tabContent1" role="tab" data-toggle="tab">
+                All Category
+            </a>
+        </li>
+        <li role="presentation" class="text-center active">
+            <a href="#tabContent2" aria-controls="tabContent1" role="tab" data-toggle="tab">
+                <img src="Res/images/home/dubai-customs.png" alt="" title="">
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent3" aria-controls="tabContent2" role="tab" data-toggle="tab">
+                <img src="Res/images/home/dubai-trade.png" alt="" title="">
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent4" aria-controls="tabContent3" role="tab" data-toggle="tab">
+                <img src="Res/images/home/jafza.png" alt="" title="">
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent5" aria-controls="tabContent3" role="tab" data-toggle="tab">
+                <img src="Res/images/home/dp-world.png" alt="" title="">
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="tabContent1">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <span>All Category</span>
+            </a>
+            <div class="page-desc">
+                <p> tab 1 Content </p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane active" id="tabContent2">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <figure>
+                    <img src="Res/images/home/dubai-customs.png" alt="" title="">
+                </figure>
+            </a>
+            <div class="page-desc">
+                <p> tab 2 Content </p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent3">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <figure>
+                    <img src="Res/images/home/dubai-trade.png" alt="" title="">
+                </figure>
+            </a>
+            <div class="page-desc">
+                <p> tab 3 Content </p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent4">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <figure>
+                    <img src="Res/images/home/jafza.png" alt="" title="">
+                </figure>
+            </a>
+            <div class="page-desc">
+                <p> tab 4 Content </p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent5">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <figure>
+                    <img src="Res/images/home/dp-world.png" alt="" title="">
+                </figure>
+            </a>
+            <div class="page-desc">
+                <p> tab 5 Content </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$('.home-tab-controller.tab-component').on('click','.tab-title',function(e){ 
+    e.stopImmediatePropagation(); 
+    $(this).closest('.tab-pane').toggleClass('active').siblings().removeClass('active');
+});
+</script>

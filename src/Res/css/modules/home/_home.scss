@@ -1,0 +1,1224 @@
+/* SG
+# Custom Scroll
+
+For adding the nicescroll to any div or body(in case of whole page), add the following scripts to the page .
+
+`<script type="text/javascript" src="../Res/js/custom/jquery.nicescroll.min.js"></script>`
+
+```
+<script type="text/javascript">
+
+    $('body').niceScroll({
+        'cursorwidth': '8px',
+        'horizrailenabled': false
+    });
+    
+</script>
+```
+*/
+/* SG
+
+# Carousel/full-width
+For Full width carousel , add the following scripts and use the below shown markup.
+1. `<script type="text/javascript" src="../Res/js/custom/bxslider.js"></script>`
+
+```
+<div class="home-slider">
+    <div id="home-hero-slider" class="home-hero-slider">
+        <ul class="bxslider">
+            <li class='vertical-align-parent'>
+                <img class='hero-img' src="../Res/images/home/home-bannner-2.png" title="" />
+                <div class='home-carousel-content vertical-center-element'>
+                    <div class='container home-hero-slider-container'>
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class='text-uppercase animatedFadeInRight animated'> DUBAI TO BECOME ONE OF WORLD'S TOP maritime center in 5 year</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class='vertical-align-parent'>
+                <img class='hero-img' src="../Res/images/home/home-bannner-1.png" title="" />
+                <div class='home-carousel-content vertical-center-element'>
+                    <div class='container home-hero-slider-container'>
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class='text-uppercase animatedFadeInRight animated animatedFadeInRight'> DUBAI TO BECOME ONE OF WORLD'S TOP maritime center in 5 year - 2</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li  class='vertical-align-parent'>
+                <img class='hero-img' src="../Res/images/home/home-bannner-2.png" title="" />
+                <div class='home-carousel-content vertical-center-element'>
+                    <div class='container home-hero-slider-container'>
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class='text-uppercase animatedFadeInRight animated animatedFadeInRight'> DUBAI TO BECOME ONE OF WORLD'S TOP maritime center in 5 year - 3</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li  class='vertical-align-parent'>
+                <img class='hero-img' src="../Res/images/home/home-bannner-1.png" title="" />
+                <div class='home-carousel-content vertical-center-element'>
+                    <div class='container home-hero-slider-container'>
+                        <div class="carousel-caption hero-main-caption animatedparent">
+                            <h3 class='text-uppercase animatedFadeInRight animated animatedFadeInRight'> DUBAI TO BECOME ONE OF WORLD'S TOP maritime center in 5 year - 4</h3>
+                            <span class="animated animatedFadeInLeft hidden-xs"> A recent international survey conducted by Menon Business Economics Group, the organization for benchmarking maritime capitals of the world, predicts that Dubai will rank among the top 7 leading maritime centres in the world in the next five years
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+  <script type="text/javascript">
+        $('.home-hero-slider .bxslider:visible').bxSlider({
+            mode: 'horizontal',
+            captions: false,
+            onSlideAfter: function($ele, oldIndex, newIndex) {
+                $ele.find('.animatedparent .animated').addClass('go');
+                $ele.siblings().find('.animatedparent .animated').removeClass('go');
+            }
+        });    
+    </script>
+
+
+
+```
+*/
+/* SG
+
+# Carousel/custom-width
+
+For Custom width carousel , add the following scripts and use the below shown markup.
+1. `<script type="text/javascript" src="../Res/js/custom/owl.carousel.js"></script>`
+
+
+```
+            <div class="owl-carousel">
+                <div class="col-md-12">
+                    <img src="../Res/images/home/your-new-habit.png" alt="" title="" />
+                </div>
+                <div class="col-md-12">
+                    <img src="../Res/images/home/ccp.png" alt="" title="" />
+                </div>
+                <div class="col-md-12">
+                    <img src="../Res/images/home/ctpl.png" alt="" title="" />
+                </div>
+                <div class="col-md-12">
+                    <img src="../Res/images/home/ccp.png" alt="" title="" />
+                </div>
+                <div class="col-md-12">
+                    <img src="../Res/images/home/ctpl.png" alt="" title="" />
+                </div>
+                <div class="col-md-12">
+                    <img src="../Res/images/home/ccp.png" alt="" title="" />
+                </div>
+                <div class="col-md-12">
+                    <img src="../Res/images/home/ctpl.png" alt="" title="" />
+                </div>
+            </div>
+
+<script type="text/javascript">
+ 
+        $(".owl-carousel").owlCarousel({items:5});   
+   
+
+</script>
+
+```
+*/
+
+.home-slider {
+    position: relative;
+
+    .home-hero-slider {
+        width: 100%;
+
+        .home-carousel-content {
+            position: absolute;
+            left: 0;
+            width: 100%;
+
+            .hero-main-caption {
+                left: 0;
+                right: 0;
+                padding-bottom: $space-30;
+                max-width: 75%;
+                position: static;
+                width: 100%;
+                max-width: 670px;
+
+                h3 {
+                    font-family: $gillsans;
+                    margin-bottom: $space-40;
+                    text-align: $text-left;
+                    font-size: $font-44;
+                }
+
+                span {
+                    display: inline-block;
+                    width: 100%;
+                    line-height: $space-25;
+
+                    @include border-left(1px, white);
+
+                    @include padding-left($space-15);
+
+                    text-align: $text-left;
+                }
+            }
+        }
+
+        .hero-img {
+            min-height: 250px;
+        }
+
+        .bx-controls {
+            position: absolute;
+            width: 100%;
+            bottom: 90px;
+
+            .bx-pager.bx-default-pager .bx-pager-link {
+                background-color: $white;
+            }
+
+            .bx-pager.bx-default-pager .bx-pager-link.active {
+                background-color: $red;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                bottom: 50px;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                bottom: 10px;
+            }
+        }
+    }
+
+    .hero-scroll-down {
+        display: table;
+        margin: 0 auto;
+        min-width: 115px;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+
+        .scroll-down-txt {
+            color: $white;
+            display: block;
+            margin-top: 15px;
+            animation: bouncing 1.5s linear infinite;
+        }
+    }
+}
+
+/* about us */
+.about-dubai-trade-wrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    h4 {
+        font-size: $font-26;
+        font-weight: bold;
+    }
+
+    .border-left {
+        @include border-left(2px, $red);
+
+        display: inline-block;
+
+        @include padding-left($space-35);
+
+        line-height: $space-25;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .btn-red {
+        margin-top: $space-30;
+        margin-left: $space-35;
+
+        @include padding-left($space-20);
+
+        @include margin-left($space-35);
+
+        @include padding-right($space-20);
+
+        font-size: $font-20;
+    }
+}
+
+/* about us */
+
+/* product and services */
+.home-list-wrap {
+    background-color: $medgray;
+    color: $white;
+    padding: $space-60 0px 80px 0px;
+
+    .product-service-head {
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: $font-30;
+
+            @include margin-top($space-30);
+
+            @include margin-bottom(60px);
+
+            text-transform: uppercase;
+
+            @media (max-width: $screen-xs-min - 1) {
+                font-size: $font-24;
+            }
+        }
+    }
+
+    .home-product-service {
+        .owl-wrapper-outer {
+            .owl-wrapper {
+                .owl-item {
+                    .product-service {
+                        text-align: center;
+
+                        @include padding-left($space-30);
+
+                        @include padding-right($space-30);
+
+                        .product-info-img {
+                            @include margin-bottom($space-50);
+                        }
+
+                        .service-title {
+                            @include margin-bottom($space-30);
+
+                            font-weight: bold;
+                            font-size: $font-30;
+                        }
+
+                        .product-info-txt {
+                            line-height: $space-25;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-img-list-wrap {
+    @include padding-top($space-60);
+
+    @include padding-bottom($space-60);
+
+    .home-image-listing {
+        .home-image-list {
+            text-align: center;
+        }
+    }
+}
+
+.home-content-boxs {
+    @include padding-top($space-60);
+
+    @include padding-bottom($space-60);
+
+    .trade-news-head {
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            font-size: $font-30;
+
+            @include margin-top($space-30);
+
+            @include margin-bottom($space-60);
+
+            text-transform: uppercase;
+
+            @media (max-width: $screen-xs-max) {
+                @include margin-top($space-0);
+            }
+
+            @media (max-width: $screen-xs-min - 1) {
+                font-size: $font-24;
+            }
+        }
+    }
+
+    .all-news-btn-hold {
+        text-align: center;
+
+        @include padding-top($space-60);
+
+        @include padding-left(0);
+
+        @include padding-right(0);
+
+        @include padding-top($space-50);
+
+        .btn-red {
+            @include padding-left($space-40);
+
+            @include padding-right($space-40);
+
+            font-size: $font-20;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            @include padding-top($space-0);
+        }
+    }
+
+    .trade-news-home-list {
+        @include padding-bottom($space-30);
+
+        @include padding-top($space-10);
+
+        .news-wrap {
+            border: 1px solid #cbcbcb;
+            display: inline-block;
+            width: 100%;
+
+            > img {
+                width: 100%;
+            }
+
+            .news-title {
+                display: block;
+                color: $red;
+                font-size: 1em;
+                padding: $space-20 $space-20 $space-20 $space-20;
+            }
+
+            .date-btn {
+                @extend .btn-orange;
+
+                @include padding-bottom($space-5);
+
+                @include padding-top($space-5);
+
+                @include margin-left($space-20);
+
+                color: $white;
+                display: inline-block;
+            }
+        }
+
+        .dubai-trade-teaser-news {
+            display: block;
+
+            @include padding-top($space-20);
+
+            @include padding-right($space-20);
+
+            @include padding-bottom($space-20);
+
+            @include padding-left($space-20);
+
+            line-height: $space-25;
+
+            @media (max-width: $screen-sm-min - 1) {
+                @include padding-left($space-0);
+
+                @include padding-right($space-0);
+            }
+        }
+
+        .read-more-news {
+            display: block;
+            background-color: #ededed;
+            padding: $space-10 $space-20;
+            border-top: 1px solid #cbcbcb;
+
+            a {
+                padding: $space-5 $space-0;
+                color: #555655;
+                font-weight: bold;
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+
+                    @include margin-right($space-10);
+
+                    @include border-right(2px, #555655);
+
+                    border-bottom: 2px solid #555655;
+                    background-color: transparent;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+/* home slider tabs */
+.home-slider-tabs {
+    background-color: #efefef;
+
+    @include padding-top(70px);
+
+    @include padding-bottom($space-60);
+
+    .carousel-caption {
+        position: static;
+    }
+
+    .home-train-calen {
+        .home-train-calen-head {
+            h3 {
+                text-align: center;
+                font-weight: bold;
+                font-size: $font-30;
+
+                @include margin-top($space-30);
+
+                @include margin-bottom($space-60);
+
+                text-transform: uppercase;
+
+                @media (max-width: $screen-xs-min - 1) {
+                    font-size: $font-24;
+                }
+            }
+        }
+
+        .bx-wrapper .bx-controls-direction a {
+            width: 41px;
+            height: 65px;
+            cursor: pointer;
+            top: 0px;
+            margin-top: 10px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: $bulletgray;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: $red;
+        }
+
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+            background: url(../images/icons/icon-left-arrow.png) top left no-repeat;
+            left: -160px;
+
+            @media (max-width: 1300px) {
+                left: -115px;
+            }
+
+            @media (max-width: $screen-md-max) {
+                left: -100px;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                left: -60px;
+            }
+        }
+
+        .bx-wrapper .bx-controls-direction a.bx-next {
+            background: url(../images/icons/icon-right-arrow.png) top right no-repeat;
+            right: -160px;
+
+            @media (max-width: 1300px) {
+                right: -115px;
+            }
+
+            @media (max-width: $screen-md-max) {
+                right: -100px;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                right: -60px;
+            }
+        }
+    }
+}
+
+.home-tips-hints {
+    background: $off-white;
+
+    @include padding-top($space-30);
+
+    @include padding-bottom($space-60);
+
+    .bx-wrapper .bx-controls-direction a {
+        top: 0;
+        margin-top: 10px;
+    }
+
+    .carousel-inner {
+        min-height: 250px;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: $font-30;
+
+        @include margin-top($space-20);
+
+        @include margin-bottom($space-60);
+
+        @media (max-width: $screen-xs-max) {
+            @include margin-bottom($space-20);
+        }
+
+        @media (max-width: $screen-xs-min - 1) {
+            font-size: $font-24;
+        }
+    }
+
+    .heading {
+        @extend .desc;
+
+        font-size: 1.2em;
+    }
+
+    .desc {
+        @include margin-bottom($space-20);
+    }
+
+    .bx-wrapper .bx-controls-direction a {
+        width: 41px;
+        height: 65px;
+        cursor: pointer;
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a {
+        background: $bulletgray;
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: $red;
+    }
+
+    .bx-wrapper .bx-controls-direction a.bx-prev {
+        background: url(../images/icons/icon-left-arrow.png) top left no-repeat;
+        left: -160px;
+
+        @media (max-width: 1300px) {
+            left: -110px;
+        }
+
+        @media (max-width: $screen-md-max) {
+            left: -90px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            left: -40px;
+        }
+    }
+
+    .bx-wrapper .bx-controls-direction a.bx-next {
+        background: url(../images/icons/icon-right-arrow.png) top right no-repeat;
+        right: -160px;
+
+        @media (max-width: 1300px) {
+            right: -110px;
+        }
+
+        @media (max-width: $screen-md-max) {
+            right: -90px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            right: -40px;
+        }
+    }
+}
+
+.home-subscribe {
+    background: $light-gray;
+    padding: 20px 0;
+    overflow: hidden;
+
+    .container .subscribe {
+        > [class*='col-sm-'] {
+            @include padding-left($space-20);
+
+            @include padding-right($space-50);
+
+            @include margin-top($space-20);
+
+            @include margin-bottom($space-20);
+
+            @media (max-width: $screen-sm-max) {
+                @include padding-right($space-20);
+            }
+
+            &:first-child {
+                @include border-right(1px, $gray);
+            }
+
+            &:last-child {
+                @include padding-right($space-15);
+
+                @include padding-left($space-50);
+
+                @media (max-width: $screen-sm-max) {
+                    @include padding-left($space-20);
+                }
+            }
+
+            .susbscribe-container {
+                input {
+                    border: none;
+
+                    //    height: 32px;
+
+                    @media (max-width: $screen-xs-max) {
+                        //        height: 31px;
+                    }
+                }
+            }
+
+            .Newsletter-container {
+                @include padding(22px);
+
+                border: 1px solid #d4d4d4;
+                background: $off-white;
+
+                @media (max-width: $screen-xs-max) {
+                    background: none;
+                    border: 0;
+                }
+
+                > figure {
+                    &.tradeline-logo {
+                        //  @extend .float-l;
+                        text-align: center;
+
+                        @media (max-width: $screen-sm-max) {
+                            //  float: none;
+                            // text-align: center;
+                        }
+                    }
+
+                    &.newsletter {
+                        @extend .float-r;
+
+                        @media (max-width: $screen-sm-max) {
+                            float: none;
+                            text-align: center;
+                        }
+
+                        > span {
+                            font-size: 1.2em;
+                            vertical-align: bottom;
+                            padding-bottom: 4px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .susbscribe-container {
+            margin-top: 25px;
+            margin-bottom: 40px;
+
+            .subscribe-text {
+                font-size: $font-24;
+
+                @include margin-right(20px);
+
+                @extend .float-l;
+
+                @media (max-width: $screen-xs-max) {
+                    display: block;
+                    float: none;
+                }
+            }
+
+            .subscribe-inputContainer {
+                overflow: hidden;
+
+                @media (max-width: $screen-xs-max) {
+                    direction: rtl;
+                }
+
+                .textWrapper {
+                    input {
+                        width: 100%;
+                        padding: 3px 10px;
+                        border: 1px solid #d2d2d2;
+                        font-size: 1.33333333em;
+                        line-height: .75em;
+
+                        @media (max-width: $screen-xs-max) {
+                            width: auto;
+                        }
+                    }
+
+                    @media (max-width: $screen-xs-max) {
+                        display: inline-block;
+                        vertical-align: middle;
+                        direction: ltr;
+                    }
+                }
+            }
+
+            .subscribe-btn {
+                padding: 6px 9px;
+                background: $off-white;
+                vertical-align: top;
+                border: 1px solid #d2d2d2;
+
+                @extend .float-r;
+
+                display: inline-block;
+
+                @include margin-left(-6px);
+
+                &:hover {
+                    color: $red-color;
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    float: none;
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.home-tips-hints .text-center {
+    line-height: $space-25;
+}
+
+.home-hero-slider .bx-wrapper .bx-pager {
+    bottom: 0;
+}
+
+/*--- media quiries ---*/
+@media (max-width: $screen-xs-max) {
+    .home-slider .home-hero-slider {
+        min-height: 242px;
+    }
+
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption span {
+        border: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+        font-size: $font-20;
+        margin-bottom: $space-15;
+        text-align: center;
+    }
+
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption {
+        position: static;
+        max-width: 100%;
+
+        h3 {
+            font-size: $font-20;
+        }
+    }
+
+    .home-slider .home-hero-slider .bx-wrapper img, .home-slider .home-hero-slider .bx-wrapper .bx-viewport {
+        height: 280px;
+    }
+
+    /* home about us */
+    .about-dubai-trade-wrap {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .about-dubai-trade-wrap h4 {
+        margin-bottom: $space-15;
+    }
+
+    .about-dubai-trade-wrap .border-left {
+        padding-left: 0;
+        border: none;
+    }
+
+    .about-dubai-trade-wrap {
+        text-align: center;
+    }
+
+    /*home product and service listing */
+    .owl-theme .owl-controls .owl-page span {
+        opacity: inherit;
+    }
+
+    .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+        background-color: $red;
+    }
+
+    .home-list-wrap {
+        @include padding-top($space-30);
+
+        @include padding-bottom($space-30);
+
+        .product-service-head h3 {
+            @include margin-top(0);
+
+            @include margin-bottom($space-30);
+        }
+    }
+
+    .home-list-wrap .home-product-service .owl-wrapper-outer .owl-wrapper .owl-item .product-service .product-info-img {
+        @include margin-bottom($space-20);
+    }
+
+    /* home image listing */
+    .home-img-list-wrap .owl-theme .owl-controls .owl-page span {
+        background-color: $gray;
+    }
+
+    .home-img-list-wrap .owl-theme .owl-controls .owl-page.active span, .home-img-list-wrap .owl-theme .owl-controls.clickable .owl-page:hover span {
+        background-color: $red;
+    }
+
+    .home-img-list-wrap {
+        @include padding-top($space-60);
+
+        @include padding-bottom($space-60);
+    }
+
+    /*home content boxs */
+    .home-content-boxs .owl-theme .owl-controls .owl-page span {
+        background-color: $gray;
+    }
+
+    .home-content-boxs .owl-theme .owl-controls .owl-page.active span, .home-content-boxs .owl-theme .owl-controls.clickable .owl-page:hover span {
+        background-color: $red;
+    }
+
+    .home-content-boxs .trade-news-head h2 {
+        @include margin-bottom($space-20);
+    }
+
+    .home-content-boxs .all-news-brn-hold {
+        @include padding-top($space-20);
+    }
+
+    .home-content-boxs .trade-news-home-list {
+        @include padding-bottom(0);
+
+        text-align: center;
+    }
+
+    .home-content-boxs .trade-news-home-list .news-wrap {
+        border: none;
+    }
+
+    .home-content-boxs .trade-news-home-list .read-more-news {
+        display: inline-block;
+        border-top: none;
+    }
+
+    /* home slider tabs */
+    .home-slider-tabs {
+        @include padding-top($space-30);
+
+        @include padding-bottom($space-30);
+    }
+
+    .home-slider-tabs .home-train-calen {
+        @include padding-left(0);
+
+        @include padding-right(0);
+    }
+
+    .home-slider-tabs .home-train-calen .nav > li > a > img {
+        width: 25px;
+    }
+
+    .home-slider-tabs .home-train-calen .home-tab-controller .tab-content .tab-pane {
+        text-align: center;
+    }
+
+    /*tips and hints */
+    .home-subscribe .container .subscribe > [class*='col-sm-'] .Newsletter-container > figure.tradeline-logo {
+        @include margin-bottom($space-40);
+    }
+
+    .home-subscribe .container .subscribe .susbscribe-container .subscribe-text {
+        @include margin-bottom($space-40);
+
+        @media (max-width: $screen-xs-max) {
+            @include margin-bottom($space-25);
+        }
+    }
+
+    .home-subscribe {
+        @include padding-bottom($space-20);
+    }
+
+    .home-subscribe .container .subscribe > [class*='col-sm-']:first-child {
+        border: none;
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption {
+        max-width: 75%;
+    }
+
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+        font-size: $font-25;
+    }
+
+    .home-img-list-wrap {
+        @include padding-top($space-60);
+
+        @include padding-bottom($space-60);
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption {
+        max-width: 60%;
+    }
+
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+        font-size: $font-30;
+    }
+
+    /* product and services */
+    .home-product-service {
+        .owl-wrapper-outer {
+            .owl-wrapper {
+                width: inherit !important;
+
+                .owl-item {
+                    width: 33.33% !important;
+                }
+            }
+        }
+    }
+
+    /* home image listing */
+    .home-img-list-wrap {
+        .owl-wrapper-outer {
+            .owl-wrapper {
+                width: inherit !important;
+
+                .owl-item {
+                    width: 33.33% !important;
+                }
+            }
+        }
+    }
+
+    /* home content box */
+    .home-content-boxs {
+        .owl-carousel {
+            .owl-wrapper {
+                width: inherit !important;
+
+                .owl-item {
+                    width: 33.33% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    /* home image listing */
+    .home-product-service {
+        .owl-wrapper-outer {
+            .owl-wrapper {
+                width: inherit !important;
+
+                .owl-item {
+                    width: 33.33% !important;
+                }
+            }
+        }
+    }
+
+    /* home image listing */
+    .home-img-list-wrap {
+        @include padding-top($space-60);
+
+        @include padding-bottom($space-60);
+
+        .owl-wrapper-outer {
+            .owl-wrapper {
+                width: inherit !important;
+
+                .owl-item {
+                    width: 33.33% !important;
+                }
+            }
+        }
+    }
+
+    /* home content box */
+    .home-content-boxs {
+        .owl-carousel {
+            .owl-wrapper {
+                width: inherit !important;
+
+                .owl-item {
+                    width: 33.33% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+        font-size: 1em;
+    }
+
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption span {
+        font-size: 0.80em;
+        line-height: 1.5em;
+    }
+
+    .about-dubai-trade-wrap h4 {
+        br {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 809px) {
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+        font-size: 1.2em;
+
+        @include margin-bottom($space-10);
+    }
+}
+
+@media (min-width: 810px) and (max-width: 1030px) {
+    .home-slider .home-hero-slider .home-carousel-content .hero-main-caption h3 {
+        font-size: 1.5em;
+
+        @include margin-bottom($space-20);
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .home-slider-tabs .home-train-calen .bx-wrapper .bx-controls-direction a, .home-tips-hints .bx-wrapper .bx-controls-direction a {
+        display: none;
+    }
+}
+
+.about-dubai-trade-wrap h4 {
+    @media (max-width: $screen-xs-min - 1) {
+        font-size: $font-24;
+    }
+}
+
+.product-service-head h3 {
+    @media (max-width: $screen-xs-min - 1) {
+        font-size: $font-24;
+    }
+}
+
+#training-cal-slider, .tips-slider-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+*:not(.bx-viewport) {
+    > .home-tips-hints-slider {
+        width: 1000%;
+
+        li {
+            float: left;
+        }
+    }
+}
+
+.bx-wrapper .bx-controls-direction a.bx-prev,
+.bx-wrapper .bx-controls-direction a.bx-next {
+    z-index: 2;
+    transform: translatez(0);
+}
+
+.vertical-align-parent {
+    .vertical-align-element.container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-img-list-wrap {
+        padding-top: 80px;
+    }
+}
+
+#training-cal-slider .bxslider > li {
+    overflow: hidden;
+}
+
+.home-left-wid-col, .home-list-wrap, .home-img-list-wrap, .home-slider-tabs,
+.home-content-boxs {
+    @media (max-width: $screen-xs-max) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.nicescroll-rails {
+    z-index: 50 !important;
+}
+
+.about-dubai-trade-wrap {
+    .left-text-wrapper {
+        @extend .float-l;
+
+        max-width: 300px;
+
+        @include padding-right(35px);
+
+        @media (max-width: $screen-xs-max) {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+
+    .about-dubai-trade {
+        overflow: hidden;
+    }
+}
+
+.home-subscribe .container .subscribe .susbscribe-container .subscribe-inputContainer .textWrapper {
+    input.error {
+        border: 1px solid $red-color;
+    }
+
+    label.error {
+        color: $red-color;
+        font-size: $font-12;
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            position: absolute;
+            margin-bottom: 10px;
+            text-align: $text-left;
+        }
+    }
+}

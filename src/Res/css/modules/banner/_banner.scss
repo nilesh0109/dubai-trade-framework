@@ -1,0 +1,22 @@
+/*************** hero block ******************/
+
+.hero-container {
+    position: relative;
+}
+
+.hero-container > .hero-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 2em;
+    color: #fff;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@media (max-width: $screen-xs-max) {
+    .hero-container > .hero-text {
+        font-size: 1em;
+    }
+}

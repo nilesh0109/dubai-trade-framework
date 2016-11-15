@@ -1,0 +1,342 @@
+.related-service-content {
+    position: relative;
+
+    .header-bar {
+        margin: 0px 0 -1px;
+
+        .related-button {
+            @extend .float-l;
+
+            z-index: 10;
+            position: relative;
+            margin-bottom: 10px;
+
+            @media (max-width: $screen-xs-max) {
+                z-index: 0;
+            }
+
+            a.related-btn {
+                border: 1px solid $light-gray;
+                background: $off-white;
+                padding: 8px 0;
+                min-width: 200px;
+                text-decoration: none;
+                color: #333;
+                display: inline-block;
+
+                @include padding-left(15px);
+
+                @include padding-right(15px);
+
+                @media (max-width: $screen-xs-max) {
+                    display: block;
+                    font-size: $font-20;
+                }
+            }
+
+            .plus {
+                display: inline-block;
+
+                > .fa {
+                    vertical-align: middle;
+                }
+            }
+
+            .minus {
+                display: none;
+
+                > .fa {
+                    vertical-align: middle;
+                }
+            }
+
+            .plus, .minus {
+                color: #333;
+                font-size: $font-12;
+
+                @extend .float-r;
+            }
+
+            + .related-button {
+                @include margin-left(20px);
+            }
+
+            &.slideDown {
+                margin-bottom: 0px;
+                box-shadow: 1px -1px 1px 0px #ccc;
+
+                .related-btn {
+                    padding-bottom: 20px;
+                    border-bottom: 0;
+                }
+
+                .plus {
+                    display: none;
+                }
+
+                .minus {
+                    display: inline-block;
+                }
+            }
+
+            &.favourite {
+                background: $white;
+                transition: all 0.25s ease-in-out;
+
+                #favoriteForm {
+                    a.related-btn {
+                        transition: all 0.15s ease-in-out;
+                        background: transparent;
+                        color: $red;
+
+                        @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+                            min-width: 0;
+
+                            > span {
+                                display: none !important;
+                            }
+                        }
+
+                        @media (max-width: $screen-xs-max) {
+                            display: block;
+
+                            > span {
+                                display: inline;
+                            }
+                        }
+
+                        &:after {
+                            content: "";
+                            display: inline-block;
+                            width: 21px;
+                            height: 17px;
+                            background: url("../images/icons/heart.png");
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            vertical-align: middle;
+
+                            @include margin-left(10px);
+
+                            @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+                                @include margin-left(0px);
+                            }
+                        }
+
+                        &:hover {
+                            background: $red;
+                            color: $white;
+
+                            &:after {
+                                background: url("../images/icons/heart-hover.png");
+                            }
+                        }
+
+                        > span.added {
+                            display: none;
+                        }
+                    }
+
+                    &.added {
+                        a {
+                            > span.added {
+                                display: inline-block;
+                            }
+
+                            > span.add {
+                                display: none;
+                            }
+
+                            background: $red;
+                            color: $white;
+
+                            &:after {
+                                background: url("../images/icons/heart-hover.png");
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                float: none;
+
+                + .related-button {
+                    margin-top: 10px;
+
+                    @include margin-left(0px);
+                }
+            }
+        }
+
+        .select-user-agent {
+            @include margin-left(20px);
+
+            @extend .float-l;
+
+            @media (max-width: $screen-sm-max) {
+                @include margin-left(0px);
+            }
+
+            > a.related-btn {
+                transition: all 0.15s ease-in-out;
+                background: transparent;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                color: $red;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+
+                    @include margin-left(10px);
+
+                    width: 21px;
+                    height: 21px;
+                    background: url("../images/icons/UserAgent.png");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+
+                    @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+                        @include margin-left(0px);
+                    }
+                }
+
+                &:hover {
+                    background: $red;
+                    color: $white;
+
+                    &:after {
+                        background: url("../images/icons/UserAgent_rollover.png");
+                    }
+                }
+            }
+
+            @media (max-width: $screen-sm-max) {
+                > a.related-btn {
+                    min-width: 0px;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                text-align: center;
+
+                > a.related-btn {
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordion-wrapper {
+        display: none;
+        border: 1px solid $light-gray;
+        padding: 10px;
+        font-size: 0;
+        position: absolute;
+        background: $white;
+        z-index: 9;
+        margin-bottom: 50px;
+        width: 100%;
+        background: $off-white;
+        box-shadow: 1px 1px 5px 1px #ccc;
+
+        @media (max-width: $screen-xs-max) {
+            top: 50px;
+            box-shadow: 1px 1px 1px 0px #ccc;
+            border-top: 0px;
+
+            &#other-operations-wrapper {
+                top: 100px;
+            }
+        }
+
+        > .accordion-ele {
+            font-size: 16px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: top;
+            width: 25%;
+            position: relative;
+
+            span {
+                overflow: hidden;
+                width: 90%;
+                display: inline-block;
+
+                @include margin-left(5px);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                margin-top: 6px;
+
+                @extend .float-l;
+
+                width: 6px;
+                height: 6px;
+                background: transparent;
+                border: 1px solid transparent;
+                border-top: 1px solid $red;
+
+                @include border-left(1px, $red);
+
+                transform: rotate(135deg);
+                vertical-align: middle;
+            }
+
+            &:after {
+                content: "";
+                width: 90%;
+                height: 1px;
+                background: $light-gray;
+                position: absolute;
+                bottom: 0px;
+                margin-top: 5px;
+
+                @include left(5%);
+            }
+
+            &:nth-child(n+13) {
+                display: none;
+            }
+        }
+
+        .load-more-wrapper {
+            border-bottom: 0px;
+
+            .load-more-services {
+                font-size: 18px;
+
+                @include padding-left(15px);
+            }
+        }
+
+        &.loaded {
+            .accordion-ele:nth-child(n+13) {
+                display: inline-block;
+            }
+
+            .load-more-wrapper {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/* SG
+
+# Common/Range slider
+
+please add the following css & script to the page to make it work .
+
+`<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>`
+
+```
+                <div class="font-sizing-wrap">
+                    <div class='font-range'>
+                        <a class='decrease-font font' href="javascript:void(0);">A-</a>
+                        <div id="defaultSlider" class='range-selector'></div>
+                        <a class='increase-font font' href="javascript:void(0);">A+</a>
+                    </div>
+                </div>
+                <div class="content">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+```
+*/
+
+#defaultSlider {
+    background: none;
+    border: 0;
+    height: 1px;
+    width: 130px;
+    background: $gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+
+    .ui-slider-handle {
+        background: none;
+        border: 3px solid $red-color;
+        border-radius: 50%;
+        background: $white;
+        width: 15px;
+        height: 15px;
+        margin-top: -2px;
+        cursor: pointer;
+    }
+}

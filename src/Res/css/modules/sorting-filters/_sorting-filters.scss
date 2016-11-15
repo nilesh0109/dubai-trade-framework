@@ -1,0 +1,235 @@
+.sorting-filter-wrapper {
+    border: 1px solid $light-gray;
+    padding: 20px 10px;
+
+    .selectList-wrapper {
+        display: block;
+        max-width: 45%;
+        margin-bottom: 10px;
+
+        @extend .float-l;
+
+        .selectList {
+            &.chosen {
+                color: #333;
+            }
+
+            option:not([disabled]) {
+                color: #333;
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: 0px;
+        }
+
+        + .selectList-wrapper {
+            @include margin-left(10%);
+        }
+
+        @media (max-width: $screen-xs-max) {
+            max-width: 220px;
+            float: none;
+
+            @include margin-left(0%);
+
+            + .selectList-wrapper {
+                @include margin-left(0%);
+            }
+        }
+    }
+
+    .to-filter {
+        position: relative;
+
+        .to {
+            position: absolute;
+            bottom: 0px;
+            margin-bottom: 8px;
+
+            @include right(100%);
+
+            color: #ccc;
+            font-weight: bold;
+
+            @media (min-width: $screen-sm-min) {
+                transform: translateX(10px);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                position: static;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        display: inline-block;
+
+        @include margin-left(15px);
+
+        padding: 5px 10px;
+        font-size: 16px;
+        border: 1px solid $light-gray;
+        color: $red;
+        background: $white;
+
+        &[type="submit"] {
+            background: $red;
+            color: $white;
+        }
+    }
+
+    .date-picker {
+        margin-top: 28px;
+        width: 100%;
+        max-width: 220px;
+
+        input.form-control {
+            border-radius: 0;
+            box-shadow: none;
+
+            @include padding-right(0px);
+
+            @include padding-left(10px);
+
+            @include border-right(0px, transparent);
+
+            &:focus {
+                border-color: $light-gray;
+            }
+        }
+
+        .input-group-addon {
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            padding: 6px 10px;
+
+            @include border-left(0px, transparent);
+
+            > i {
+                color: #ccc;
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: 0px;
+        }
+    }
+
+    .filter-label {
+        margin-bottom: 10px;
+
+        ~ .selectList-wrapper {
+            margin-top: 0px;
+        }
+
+        ~ .date-picker {
+            margin-top: 0px;
+        }
+
+        &.date-label {
+            @media (min-width: $screen-sm-min) {
+                width: 200%;
+            }
+        }
+    }
+}
+
+.datepicker.datepicker-dropdown, .bootstrap-datetimepicker-widget {
+    table {
+        cursor: pointer;
+
+        .day {
+            text-align: center;
+
+            &.active {
+                background: $red !important;
+                border: $red !important;
+                color: $white;
+            }
+
+            &.today {
+                background: #ccc !important;
+                color: $black !important;
+            }
+
+            &.disabled {
+                color: $gray;
+            }
+        }
+    }
+}
+
+.selectFilters {
+    .selectList-wrapper {
+        opacity: 0.3;
+        transition: all 0.15s ease-in-out;
+
+        &.vis {
+            opacity: 1;
+        }
+    }
+}
+
+.bootstrap-datetimepicker-widget {
+    button[data-action="togglePeriod"] {
+        margin: 0px;
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    a[data-action="togglePicker"] span {
+        background-color: rgba(60, 59, 60, 1);
+        color: #fff;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            background-color: rgba(60, 59, 60, 1);
+        }
+    }
+
+    .datepicker {
+        td {
+            transition: all 0.15s ease-in-out;
+
+            &.active {
+                background: rgba(251, 169, 25, 1);
+                color: #fff;
+
+                &:before {
+                    content: none;
+                }
+            }
+        }
+
+        th[data-action="previous"], th[data-action="next"] {
+            background: rgba(251, 169, 25, 1);
+        }
+    }
+
+    .timepicker {
+        .fa.fa-chevron-up, .fa.fa-chevron-down {
+            color: rgba(222, 41, 41, 1);
+        }
+
+        button[data-action="togglePeriod"] {
+            background-color: rgba(222, 41, 41, 1);
+            border: 0;
+        }
+
+        td span {
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                color: rgba(222, 41, 41, 1);
+            }
+        }
+    }
+}

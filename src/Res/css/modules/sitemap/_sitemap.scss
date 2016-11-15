@@ -1,0 +1,199 @@
+/* SG
+
+# column layout/4 column
+```
+<div class='sitemap-page'>
+    <div class="row">
+        <div class="col-sm-3">
+                    <h3  class='title text-uppercase'><a href='javascript:void(0)'>About</a></h3>
+                    <ul class='list'>
+                        <li><a href='javascript:void(0)'>CEO Message</a></li>
+                        <li><a href='javascript:void(0)'>About DT (mission/vision)</a></li>
+                        <li><a href='javascript:void(0)'>Board & Management</a></li>
+                        <li><a href='javascript:void(0)'>Dubai Trade Evolution</a></li>
+                        <li><a href='javascript:void(0)'>Tradelines</a></li>
+                        <li><a href='javascript:void(0)'>Statistics</a></li>
+                        <li><a href='javascript:void(0)'>Upcoming Projects</a></li>
+                        <li><a href='javascript:void(0)'>Video Gallery </a></li>
+                    </ul>    
+        </div>
+        <div class="col-sm-3">
+                    <h3 class='title text-uppercase'><a href='javascript:void(0)'>Products & Services</a></h3>
+                    <ul class='list'>
+                        <li  class='has-subList'>
+                            <a href='javascript:void(0)'>E-Services</a>
+                            <ul class='sub-list'>
+                                <li><a href='javascript:void(0)'>CTLP</a></li>
+                                <li><a href='javascript:void(0)'>CCB</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='javascript:void(0)'>Support</a></li>
+                    </ul>
+        </div>
+        <div class="col-sm-3">
+                    <h3  class='title text-uppercase' ><a href='javascript:void(0)'>News</a></h3>
+                    <ul class='list'>
+                        <li><a href='javascript:void(0)'>DT News</a></li>
+                        <li><a href='javascript:void(0)'>Other News</a></li>
+                        <li><a href='javascript:void(0)'>Video Gallery</a></li>
+                    </ul>        
+        </div>
+        <div class="col-sm-3">
+                    <h3  class='title text-uppercase' ><a href='javascript:void(0)'>News</a></h3>
+                    <ul class='list'>
+                        <li><a href='javascript:void(0)'>DT News</a></li>
+                    </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+                    <h3  class='title text-uppercase' ><a href='javascript:void(0)'>News</a></h3>
+                    <ul class='list'>
+                        <li><a href='javascript:void(0)'>DT News</a></li>
+                        <li><a href='javascript:void(0)'>Other News</a></li>
+                        <li><a href='javascript:void(0)'>Video Gallery</a></li>
+                    </ul>  
+        </div>
+        <div class="col-sm-3">
+                    <h3  class='title text-uppercase' ><a href='javascript:void(0)'>News</a></h3>  
+        </div>
+
+    </div>
+</div>
+```
+
+*/
+
+/* SG
+
+# column layout/3 column
+
+```
+<div class='dashboard-content'>
+    <div class='services-container clearfix'>
+        <div>
+            <p class='heading'><strong>Last 5 Services</strong></p>
+            <ul class='services-list list'>
+                <li>
+                    <figure class="service-logo">
+                        <img src="../Res/images/dashboard/service-logo1.png" />
+                    </figure>
+                    <span><a href='javascript:void(0)'>Lorem ipsum dolor sit amet consectetur </a></span>
+                </li>
+                <li>
+                    <figure class="service-logo">
+                        <img src="../Res/images/dashboard/service-logo4.png" />
+                    </figure>
+                    <span><a href='javascript:void(0)'>Morbi consectetur laoreet tempus.</a></span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <p class='heading'><strong>Last 5 Services</strong></p>
+            <ul class='services-list list'>
+                <li>
+                    <figure class="service-logo">
+                        <img src="../Res/images/dashboard/service-logo5.png" />
+                    </figure>
+                    <span><a href='javascript:void(0)'>Nulla vulputate lectus ac turpis imperdiet</a></span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <p class='heading'><strong>Last 5 Services</strong></p>
+            <ul class='services-list list'>
+                <li>
+                    <figure class="service-logo">
+                        <img src="../Res/images/dashboard/service-logo2.png" />
+                    </figure>
+                    <span><a href='javascript:void(0)'>Mauris elit dolor, tincidunt at tincidunt nec, vulputate sollicitudin est.</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+```
+
+*/
+
+.sitemap-page {
+    @include padding-bottom($space-20);
+
+    @include margin-top($space-20);
+
+    h3.title > a {
+        color: #d0322c;
+        font-size: 0.8em;
+        font-weight: 600;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .list {
+        margin-top: 10px;
+
+        @include margin-left($space-10);
+
+        li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            > a, > a:active, > a:hover {
+                color: $black;
+                display: block;
+                overflow: hidden;
+                text-decoration: none;
+            }
+
+            .sub-list {
+                @include margin-left($space-20);
+
+                li {
+                    a {
+                        color: $red-color;
+                    }
+
+                    &:before {
+                        content: none;
+                    }
+                }
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                position: relative;
+
+                @include left(-10px);
+
+                width: 8px;
+                height: 8px;
+                border-right: 1px solid $red-color;
+                border-bottom: 1px solid $red-color;
+                background-color: transparent;
+                transform: rotate(-45deg);
+                vertical-align: middle;
+                margin-top: 5px;
+
+                @extend .float-l;
+            }
+
+            &.has-subList {
+                &:before {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        @include margin-bottom($space-30);
+    }
+
+    .col-sm-3 {
+        @media (min-width: $screen-sm-min) {
+            width: 20%;
+        }
+    }
+}

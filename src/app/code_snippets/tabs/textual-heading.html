@@ -1,0 +1,54 @@
+<div class="tabContainer tab-component">
+    <ul class="nav nav-tabs hidden-xs" role="tablist">
+        <li role="presentation" class="text-center active">
+            <a href="#textTabContent1" aria-controls="textTabContent1" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Community</span>
+                <span class="visible-xs">Community</span>
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#textTabContent2" aria-controls="textTabContent2" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Service provider</span>
+                <span class="visible-xs">Service provider</span>
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#textTabContent3" aria-controls="textTabContent3" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Activity</span>
+                <span class="visible-xs">Activity</span>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="textTabContent1">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <span>Community</span>
+            </a>
+            <div class="page-desc">
+                <p> tab 1 Content </p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="textTabContent2">
+            <a  href="javascript:void(0)" class="tab-title visible-xs">
+                <span>Service provider</span>
+            </a>
+            <div class="page-desc">
+                <p> tab 2 Content </p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="textTabContent3">
+            <a href="javascript:void(0)" class="tab-title visible-xs">
+                <span>Activity</span>
+            </a>
+            <div class="page-desc">
+                <p> tab 3 Content </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$('.tabContainer.tab-component').on('click','.tab-title',function(e){ 
+    e.stopImmediatePropagation(); 
+    $(this).closest('.tab-pane').toggleClass('active').siblings().removeClass('active');
+});
+</script>

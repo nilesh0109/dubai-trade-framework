@@ -1,0 +1,78 @@
+.registration-list {
+    font-size: $font-14;
+
+    li {
+        @extend .float-l;
+
+        width: 46%;
+        height: 100px;
+
+        @include margin-top(4%);
+
+        @include margin-right(4%);
+
+        border: 1px solid #ccc;
+        background: #f8f8f8;
+
+        @media (max-width: $screen-sm-max) {
+            height: 120px;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            float: none;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        > a {
+            display: block;
+            text-decoration: none !important;
+            color: initial;
+            height: 100%;
+
+            > * {
+                @include padding-top($space-10);
+
+                @include padding-bottom($space-10);
+
+                @include padding-left($space-10);
+
+                @include padding-right($space-10);
+            }
+        }
+
+        .imgContainer {
+            @include padding-top($space-10);
+
+            @include padding-bottom($space-10);
+
+            @include padding-left($space-15);
+
+            @include padding-right($space-15);
+
+            @extend .float-r;
+
+            width: 30%;
+            height: 100%;
+
+            @include border-left(1px, #ccc);
+
+            background-color: #fff;
+
+            @media (max-width: $screen-sm-max) {
+                width: 40%;
+            }
+        }
+
+        .textWrapper {
+            width: 70%;
+            height: 100%;
+            overflow: hidden;
+
+            @media (max-width: $screen-sm-max) {
+                width: 60%;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.sidebar {
+    float: left;
+    width: 24%;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    margin: 10px;
+
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        width: 95%;
+        margin: 15px auto;
+    }
+}
+
+.content {
+    float: right;
+    width: 72%;
+    margin-right: 5px;
+    color: #095e99;
+
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        width: 95%;
+        margin: 15px auto;
+    }
+}
+
+.sidebarHeader {
+    text-align: center;
+    background: #d9d9d9;
+    height: 35px;
+}
+
+.sideHeaderTxt {
+    padding-top: 8px;
+}
+
+ul li {
+    margin-top: 20px;
+}
+
+li a {
+    text-decoration: none;
+    width: 87%;
+    display: inline-block;
+}
+
+.badge {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    margin-right: 20px;
+}
+
+.txtLeft {
+    text-align: left;
+    margin-left: 10px;
+    width: 97%;
+    padding-top: 4px;
+}
+
+.cur {
+    font-size: 0.7em;
+    margin-left: 2px;
+}
+
+.listItem {
+    border: 1px solid #b7b7b7;
+    margin-top: 10px;
+}
+
+.listHeaderBar {
+    text-align: center;
+    background: #d9d9d9;
+    display: flex;
+}
+
+.mtop {
+    width: 23px;
+    height: 23px;
+    background: #858484;
+    border-radius: 50px;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    margin: 2px 13px;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.detailLeft {
+    display: inline-block;
+    font-size: 2em;
+    padding: 13px;
+    margin-left: 5px;
+}
+
+.detailRight {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.newBtn {
+    width: 100%;
+    height: 40px;
+    border: 1px dashed #0000FF;
+    margin-top: 20px;
+}
+
+.newBtn a {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
